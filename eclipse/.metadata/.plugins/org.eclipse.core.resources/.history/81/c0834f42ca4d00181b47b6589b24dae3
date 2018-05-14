@@ -1,0 +1,99 @@
+package com.hexopygate.Telgttatium;
+
+import java.util.Collection;
+import java.util.Map;
+import java.util.Set;
+
+public class EnityDictionary  implements Map<K,M>{
+
+	@Override
+	public void clear() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean containsKey(Object arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean containsValue(Object arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Set<Entry<K, M>> entrySet() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public M get(Object arg0) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Set<K> keySet() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public M put(K arg0, M arg1) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void putAll(Map<? extends K, ? extends M> arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public M remove(Object arg0) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Collection<M> values() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public M get(Object key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public M put(K key, M value) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public M remove(Object key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

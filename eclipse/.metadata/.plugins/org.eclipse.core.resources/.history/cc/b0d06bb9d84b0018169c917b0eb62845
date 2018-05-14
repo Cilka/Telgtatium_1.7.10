@@ -1,0 +1,9 @@
+package com.hexopygate.Telgttatium;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+
+public class TelWool extends Block{
+ public TelWool(Material wool) {
+	 super(wool);	 
+ }
+}

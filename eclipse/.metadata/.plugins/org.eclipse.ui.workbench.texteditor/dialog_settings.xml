@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="409" key="DIALOG_X_ORIGIN"/>
+		<item value="223" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="field_150100_a" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="field_150100_a"/>
+			<item value="field_150102_N"/>
+			<item value="BlockPane"/>
+			<item value="Instance"/>
+			<item value="canPaneConnectTo"/>
+			<item value="canPaneConnectToBlock"/>
+			<item value="   public final boolean canPaneConnectToBlock(Block p_150098_1_)"/>
+			<item value="field_149998_a"/>
+			<item value="glass"/>
+			<item value="stained"/>
+			<item value="__O"/>
+			<item value="field_149996_a"/>
+			<item value="opaque"/>
+			<item value="Block"/>
+			<item value="Pane"/>
+		</list>
+		<list key="replacehistory">
+			<item value="tabGlass"/>
+			<item value="tabNatrualBlocks"/>
+			<item value="="/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="284" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="391" key="DIALOG_HEIGHT"/>
+		<item value="86" key="DIALOG_X_ORIGIN"/>
+		<item value="93" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

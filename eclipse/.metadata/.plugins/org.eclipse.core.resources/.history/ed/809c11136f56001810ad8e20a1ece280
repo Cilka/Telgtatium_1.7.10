@@ -1,0 +1,26 @@
+package com.hexopygate.Telgttatium.buildingblocks.glass;
+
+import com.hexopygate.Telgttatium.TelGlass;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
+
+public class Clear_Glass extends TelGlass {
+
+	public Clear_Glass()
+	{
+		this("Clear_Glass",Material.glass,false);
+	}
+
+	public Clear_Glass(String string, Material glass, boolean b) {
+		super(string,glass,b);
+	}
+	@Override
+    @SideOnly(Side.CLIENT)
+    public void registerBlockIcons(IIconRegister p_149651_1_)
+    {
+        this.blockIcon = p_149651_1_.registerIcon("Clear_Glass");
+    }
+}

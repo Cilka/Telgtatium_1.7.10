@@ -1,0 +1,13 @@
+package com.hexopygate.Telgttatium;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+
+public class TelCarpet extends Block {
+
+	protected TelCarpet(Material carpet) {
+		super(carpet);
+		// TODO Auto-generated constructor stub
+	}
+
+}

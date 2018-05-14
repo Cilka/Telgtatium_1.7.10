@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.Mod"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.event.FMLPreInitializationEvent"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.Mod.EventHandler"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.event.FMLInitializationEvent"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.event.FMLPostInitializationEvent"/>
+<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.ItemTable"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
+<fullyQualifiedTypeName name="net.minecraft.item.ItemStack"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Items"/>
+<fullyQualifiedTypeName name="net.minecraft.block.material.Material"/>
+<fullyQualifiedTypeName name="net.minecraft.block.BlockContainer"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.TelWool"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.registry.GameRegistry"/>
+<fullyQualifiedTypeName name="net.minecraft.util.IIcon"/>
+<fullyQualifiedTypeName name="net.minecraft.creativetab.CreativeTabs"/>
+<fullyQualifiedTypeName name="net.minecraft.client.renderer.texture.IIconRegister"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.buildingblocks.natrualblocks.Ashed_Ashed_Grass"/>
+<fullyQualifiedTypeName name="java.util.Dictionary"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.buildingblocks.Ceramics.BigBlock.Big_Black_Block_Blue"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.buildingblocks.Ceramics.CheckeredFloor.Black_Block_Blue"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.buildingblocks.natrualblocks.Dirt.Ashed_Dirt"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.buildingblocks.natrualblocks.TreeLeaves.Autumn_Leaves"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.buildingblocks.Empire.Empire_Gray"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.Biomes.Winter.Ice_Floor"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.TelSnow"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.Biomes.Volcano.Lava"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.buildingblocks.nevoevolution.Bionic_Flower_Floor_Aqua"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.buildingblocks.nevoevolution.bionicstained.Bionic_Stained_Blue"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.buildingblocks.nevoevolution.nvestained.NvE_Stained_Blue"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.buildingblocks.nevoevolution.nvetchtiles.NvE_Tch_Tile_Blue"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.buildingblocks.glass.Celtic_Glass_Another_World"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.buildingblocks.glass.FrameBoarders.Down_Frame__Simple"/>
+<fullyQualifiedTypeName name="net.minecraft.block.BlockGlass"/>
+<fullyQualifiedTypeName name="net.minecraft.block.BlockBreakable"/>
+<fullyQualifiedTypeName name="net.minecraft.block.Block"/>
+<fullyQualifiedTypeName name="com.hexopygate.Telgttatium.TelNormalGlassPane"/>
+<fullyQualifiedTypeName name="net.minecraft.block.BlockPane"/>
+</qualifiedTypeNameHistroy>

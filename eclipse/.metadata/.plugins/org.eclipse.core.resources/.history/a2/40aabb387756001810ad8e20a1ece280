@@ -1,0 +1,49 @@
+package com.hexopygate.Telgttatium;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.BlockPane;
+import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.util.IIcon;
+
+public class TelGlassPane extends BlockPane {
+	 String name = this.getClass().getSimpleName();
+	 private IIcon icon;
+	protected TelGlassPane(String p_i45432_1_, String p_i45432_2_, Material p_i45432_3_, boolean p_i45432_4_) {
+		
+		super(p_i45432_1_, p_i45432_2_, p_i45432_3_, p_i45432_4_);
+		// TODO Auto-generated constructor stub
+		 
+         
+		this.setBlockName(name).setBlockTextureName("tel:"+name);
+		
+		 GameRegistry.registerBlock(this, this.getUnlocalizedName().substring(5));
+		
+	}
+
+	public TelGlassPane()
+	{
+		
+	
+		 this("","",Material.glass,false);
+	
+	}
+	
+	@Override
+    @SideOnly(Side.CLIENT)
+    public void registerBlockIcons(IIconRegister i)
+    {
+        this.blockIcon = i.registerIcon(name);
+        icon = i.registerIcon(name);
+        
+    }
+	@Override
+    @SideOnly(Side.CLIENT)
+    public IIcon func_150097_e()
+    {
+        return icon;
+    }
+
+}

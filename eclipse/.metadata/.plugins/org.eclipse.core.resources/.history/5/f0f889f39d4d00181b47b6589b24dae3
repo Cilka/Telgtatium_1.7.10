@@ -1,0 +1,148 @@
+package com.hexopygate.Telgttatium;
+
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.CelticWoolAnotherWorld;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.CelticWoolBlue;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.CelticWoolCream;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.CelticWoolGold;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.CelticWoolGreen;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.CelticWoolGrey;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.CelticWoolLightBlue;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.CelticWoolMagenta;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.CelticWoolPurple;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.CelticWoolPurpleAnotherWorld;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.CelticWoolRed;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.CelticWoolWhite;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.CelticWoolYellow;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.CoolMountainSportRed;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.DynamicDiamond;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.DynamicWarmMountain;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.DynamicWarmMountainYellowWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.ElegantDiamondBlueWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.ElegantDiamondDeepBlueWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.ElegantDiamondGreenWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.ElegantDiamondOrangeWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.ElegantDiamondPinkWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.ElegantDiamondPurpleWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.ElegantDiamondRedWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.ElegantDiamondWhiteWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.ElegantDiamondYellowWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.EmpireMedievalCarpetBlue;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.EmpireMedievalCarpetGreen;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.EmpireMedievalCarpetRed;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.ExoBlueWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.ExoCyanWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.ExoOrangeWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.ExoPinkWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.ExoPurpleWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.LuminariaBlue;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.LuminariaCream;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.LuminariaGreen;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.LuminariaPink;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.LuminariaPurple;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.MedievalLeaWallWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.WarmerMountainWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.WinterMountainBlueWool;
+import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.WinterMountainRedWool;
+
+import cpw.mods.fml.client.registry.ClientRegistry;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+
+@Mod(modid="tel", name="Telgttatium", version = "1.0")
+public class Telgttatium {
+//public static Item itemTable;
+	public static String ModId = "tel";
+	public static String Name = "Telgttatium";
+	public static String Version = "1.0";
+public static Block celticWoolAW,celticWoolBlue,celticWoolCream,celticWoolGold,celticWoolGreen,
+celticWoolGrey, celticWoolLightBlue,celticWoolMagenta, celticWoolPurpleAW, celticWoolpurple,
+celticWoolRed,celticWoolWhite,celticWoolYellow,coolMountainSportRed, dynamicDiamond, dynamicWarmMountain,
+dynamicWarmMountainYellow,elegentDiamondDeepBlue, elegentDiamondGreen, elegentDiamondOrange,
+elegentDiamondPink,elegentDiamondPurple, elegentDiamondRed,elegentDiamondWhite,elegentDiamondYellow,elegentDiamondBlue,
+empireMedievalCarpetBlue,empireMedievalCarpetGreen,empireMedievalCarpetRed
+,exoBlue,exoCyan,exoOrange, exoPink, exoPurple,
+luminariaBlue, luminariaCream,luminariaGreen,luminariaPink,luminariaPurple,
+medievalLeaWallWool, warmerMountain, winterMountainBlue, winterMountainRed,telWool,telCarpet;
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event) {
+		//Item/Block init and registering
+		//config handling
+		//itemTable =  new ItemTable().setUnlocalizedName("ItemTable").setTextureName("tel:itemTable").setCreativeTab(tabTelgttatium);
+		
+		celticWoolAW = new CelticWoolAnotherWorld().setCreativeTab(tabTelgttatium);
+		celticWoolBlue = new CelticWoolBlue().setCreativeTab(tabTelgttatium);
+		celticWoolCream = new CelticWoolCream(Material.cloth).setCreativeTab(tabTelgttatium);
+		celticWoolGold = new CelticWoolGold(Material.cloth).setCreativeTab(tabTelgttatium);
+		celticWoolGrey = new CelticWoolGrey(Material.cloth).setCreativeTab(tabTelgttatium);
+		celticWoolGreen = new CelticWoolGreen(Material.cloth).setCreativeTab(tabTelgttatium);
+		celticWoolLightBlue = new CelticWoolLightBlue(Material.cloth).setCreativeTab(tabTelgttatium);
+		celticWoolMagenta = new CelticWoolMagenta(Material.cloth).setCreativeTab(tabTelgttatium);
+		celticWoolpurple = new CelticWoolPurple(Material.cloth).setCreativeTab(tabTelgttatium);
+		celticWoolPurpleAW = new CelticWoolPurpleAnotherWorld(Material.cloth).setCreativeTab(tabTelgttatium);
+		celticWoolRed = new CelticWoolRed(Material.cloth).setCreativeTab(tabTelgttatium);
+		celticWoolWhite = new CelticWoolWhite(Material.cloth).setCreativeTab(tabTelgttatium);
+		celticWoolYellow = new CelticWoolYellow(Material.cloth).setCreativeTab(tabTelgttatium);
+		coolMountainSportRed = new CoolMountainSportRed(Material.cloth).setCreativeTab(tabTelgttatium);
+		dynamicDiamond = new DynamicDiamond(Material.cloth).setCreativeTab(tabTelgttatium);
+		dynamicWarmMountain = new DynamicWarmMountain(Material.cloth).setBlockName("DynamicWarmMountainWool").setBlockTextureName("tel:Dynamic Warm Mountain").setCreativeTab(tabTelgttatium);
+		dynamicWarmMountainYellow = new DynamicWarmMountainYellowWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		elegentDiamondBlue = new ElegantDiamondBlueWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		elegentDiamondDeepBlue = new ElegantDiamondDeepBlueWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		elegentDiamondGreen = new ElegantDiamondGreenWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		elegentDiamondOrange = new ElegantDiamondOrangeWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		elegentDiamondPink = new ElegantDiamondPinkWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		elegentDiamondPurple = new ElegantDiamondPurpleWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		elegentDiamondRed = new ElegantDiamondRedWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		elegentDiamondWhite = new ElegantDiamondWhiteWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		elegentDiamondYellow = new ElegantDiamondYellowWool(Material.cloth).setBlockName("ElegantDiamondYellowWool").setBlockTextureName("tel:Elegant Diamond Yellow Wool").setCreativeTab(tabTelgttatium);
+		empireMedievalCarpetGreen = new EmpireMedievalCarpetGreen(Material.carpet).setCreativeTab(tabTelgttatium);
+		empireMedievalCarpetRed = new EmpireMedievalCarpetRed(Material.carpet).setCreativeTab(tabTelgttatium);
+		empireMedievalCarpetBlue = new EmpireMedievalCarpetBlue(Material.carpet).setCreativeTab(tabTelgttatium);
+		exoBlue =  new ExoBlueWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		exoCyan =  new ExoCyanWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		exoOrange =  new ExoOrangeWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		exoPink =  new ExoPinkWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		exoPurple =  new ExoPurpleWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		luminariaBlue =  new LuminariaBlue(Material.cloth).setCreativeTab(tabTelgttatium);
+		luminariaCream =  new LuminariaCream(Material.cloth).setCreativeTab(tabTelgttatium);
+		luminariaGreen =  new LuminariaGreen(Material.cloth).setCreativeTab(tabTelgttatium);
+		luminariaPink =  new LuminariaPink(Material.cloth).setCreativeTab(tabTelgttatium);
+		luminariaPurple =  new LuminariaPurple(Material.cloth).setCreativeTab(tabTelgttatium);
+		medievalLeaWallWool =  new MedievalLeaWallWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		warmerMountain =  new WarmerMountainWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		winterMountainBlue =  new WinterMountainBlueWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		winterMountainRed =  new WinterMountainRedWool(Material.cloth).setCreativeTab(tabTelgttatium);
+		ClientRegistry.bindTileEntitySpecialRenderer(TECarpet.class, new TESRCarpet());
+		  
+	}
+	
+	@EventHandler
+	public void init(FMLInitializationEvent event)
+	{
+		//Proxy, TileEntitiy, entity, gui and packet registration
+		//GameRegistry.addRecipe(new ItemStack(itemTable), new Object [] {"WWW"," W "," W ",'W',Blocks.planks});
+	//	GameRegistry.addRecipe(new ItemStack(blockTable),new Object[] {"CRC","RRR","CRC",'C',Blocks.coal_block, 'R',Items.redstone});
+	
+	}
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent event) {
+		
+	}
+	public static CreativeTabs tabTelgttatium = new CreativeTabs("tabTelBuildingBlocks") {
+		@Override
+		public Item getTabIconItem() {
+			return new ItemStack(celticWoolAW).getItem();
+		}
+	};
+}

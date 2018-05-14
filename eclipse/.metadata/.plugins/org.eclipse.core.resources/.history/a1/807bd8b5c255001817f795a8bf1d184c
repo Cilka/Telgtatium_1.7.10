@@ -1,0 +1,30 @@
+package com.hexopygate.Telgttatium.buildingblocks.nevoevolution.nvetchtiles;
+
+import com.hexopygate.Telgttatium.TelStone;
+
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.util.IIcon;
+
+public class TechTiles extends TelStone {
+	protected IIcon[] icons = new IIcon[6];
+	String name = null;
+	   @Override
+	    public void registerBlockIcons(IIconRegister reg)
+	    {
+		  String [] nameSplit =  name.split("_");
+		  String grassColor = nameSplit[1];
+		  String dirtType =  nameSplit[0];
+		 
+	      icons[0] = reg.registerIcon("tel:"+grassColor+"_"+"Dirt");
+	      icons[1]= reg.registerIcon("tel:"+grassColor+"_"+"Grass");
+	      icons[2]=reg.registerIcon("tel:"+dirtType+"_"+grassColor+"_"+"side");
+	      icons[3]=reg.registerIcon("tel:"+dirtType+"_"+grassColor+"_"+"side");
+	      icons[4]=reg.registerIcon("tel:"+dirtType+"_"+grassColor+"_"+"side");
+	      icons[5]=reg.registerIcon("tel:"+dirtType+"_"+grassColor+"_"+"side");
+	    }
+	   @Override
+	    public IIcon getIcon(int side, int meta)
+	    {
+	        return icons[side];
+	    }
+}

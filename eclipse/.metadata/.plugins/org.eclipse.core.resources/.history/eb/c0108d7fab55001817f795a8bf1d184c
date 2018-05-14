@@ -1,0 +1,7 @@
+package com.hexopygate.Telgttatium.Biomes.Winter;
+
+import net.minecraft.block.Block;
+
+public class Ice_Floor extends Block {
+
+}

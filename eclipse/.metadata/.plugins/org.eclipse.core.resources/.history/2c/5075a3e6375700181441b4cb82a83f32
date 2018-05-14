@@ -1,0 +1,7 @@
+package com.hexopygate.Telgttatium.buildingblocks.glass;
+
+import com.hexopygate.Telgttatium.TelGlass;
+
+public class Dark_Blue_Glass extends TelGlass {
+
+}

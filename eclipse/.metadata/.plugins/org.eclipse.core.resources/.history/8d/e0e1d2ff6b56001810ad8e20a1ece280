@@ -1,0 +1,29 @@
+package com.hexopygate.Telgttatium;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockBreakable;
+import net.minecraft.block.BlockGlass;
+import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
+
+public class TelGlass extends BlockBreakable {
+	String oName = this.getClass().getSimpleName();
+	public TelGlass(String name, Material mat, boolean isTransparent) {
+		super(name,mat,isTransparent);
+		// TODO Auto-generated constructor stub
+		
+		
+		 this.setBlockName(oName).setBlockTextureName("tel:"+oName);
+		 
+		    GameRegistry.registerBlock(this, this.getUnlocalizedName().substring(5));
+	}
+
+	public TelGlass()
+	{
+		this(Class.class.getSimpleName(),Material.glass,false);
+		System.out.println(Class.class.getSimpleName());
+	}
+}

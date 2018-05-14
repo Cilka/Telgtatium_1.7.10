@@ -1,0 +1,9 @@
+package com.hexopygate.Telgttatium;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+
+public class TelTabs {
+
+}

@@ -1,0 +1,34 @@
+package com.hexopygate.Telgttatium;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
+import net.minecraft.block.material.Material;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
+
+public class TelCarpet extends BlockContainer {
+
+	public TelCarpet(Material carpet) {
+		super(carpet);
+		 String name = this.getClass().getSimpleName();
+		 this.setBlockName(name).setBlockTextureName("tel:"+ name);
+	    this.setBlockBounds(p_149676_1_, p_149676_2_, p_149676_3_, p_149676_4_, p_149676_5_, p_149676_6_);
+		    GameRegistry.registerBlock(this, this.getUnlocalizedName().substring(5));
+	}
+
+	public TelCarpet() {
+		this(Material.carpet);
+	}
+
+	@Override
+	public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+@Override
+public boolean renderAsNormalBlock()
+{
+return 	false;
+}
+}
