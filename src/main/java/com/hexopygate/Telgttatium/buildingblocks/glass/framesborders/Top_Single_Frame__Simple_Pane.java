@@ -9,5 +9,9 @@ public class Top_Single_Frame__Simple_Pane extends TelNormalGlassPane {
 		super(texture);
 		// TODO Auto-generated constructor stub
 	}
+public Top_Single_Frame__Simple_Pane(String faceTex, String trimTex) {
+		super(faceTex,trimTex);
+		// TODO Auto-generated constructor stub
+	}
 
 }

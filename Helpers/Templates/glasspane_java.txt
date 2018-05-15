@@ -1,4 +1,4 @@
-package com.hexopygate.Telgttatium.buildingblocks.glass.panes.colored;
+package com.hexopygate.Telgttatium.buildingblocks.glass.framesborders;
 
 import com.hexopygate.Telgttatium.TelGlass;
 import com.hexopygate.Telgttatium.TelNormalGlassPane;
@@ -7,6 +7,10 @@ public class #{classname} extends TelNormalGlassPane {
 
 	public #{classname}(String texture) {
 		super(texture);
+		// TODO Auto-generated constructor stub
+	}
+public #{classname}(String faceTex, String trimTex) {
+		super(faceTex,trimTex);
 		// TODO Auto-generated constructor stub
 	}
 

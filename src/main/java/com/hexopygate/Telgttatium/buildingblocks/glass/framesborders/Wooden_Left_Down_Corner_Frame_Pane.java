@@ -9,5 +9,9 @@ public class Wooden_Left_Down_Corner_Frame_Pane extends TelNormalGlassPane {
 		super(texture);
 		// TODO Auto-generated constructor stub
 	}
+public Wooden_Left_Down_Corner_Frame_Pane(String faceTex, String trimTex) {
+		super(faceTex,trimTex);
+		// TODO Auto-generated constructor stub
+	}
 
 }
