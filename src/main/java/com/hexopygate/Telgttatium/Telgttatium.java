@@ -44,6 +44,7 @@ import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Simple_Full_Fra
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.White_Glass;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Wooden_Full_Frame;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Yellow_Glass;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.panes.*;
 import com.hexopygate.Telgttatium.buildingblocks.natrualblocks.*;
 import com.hexopygate.Telgttatium.buildingblocks.natrualblocks.Dirt.*;
@@ -452,6 +453,35 @@ blockRef.put("Wooden_Top_single_Frame_Pane",new Wooden_Top_single_Frame_Pane("Wo
 	
 blockRef.put("Simple_Full_Frame__Simple",new Simple_Full_Frame__Simple().setCreativeTab(tabGlass));
 blockRef.put("Wooden_Full_Frame",new Wooden_Full_Frame().setCreativeTab(tabGlass));
+
+blockRef.put("Black_Glass_Pane",new Black_Glass_Pane("Black_Glass").setCreativeTab(tabGlass));
+	
+blockRef.put("Clear_Glass_Pane",new Clear_Glass_Pane("Clear_Glass").setCreativeTab(tabGlass));
+	
+blockRef.put("Cyan_Glass_Pane",new Cyan_Glass_Pane("Cyan_Glass").setCreativeTab(tabGlass));
+	
+blockRef.put("Dark_Blue_Glass_Pane",new Dark_Blue_Glass_Pane("Dark_Blue_Glass").setCreativeTab(tabGlass));
+	
+blockRef.put("Dark_Green_Glass_Pane",new Dark_Green_Glass_Pane("Dark_Green_Glass").setCreativeTab(tabGlass));
+	
+blockRef.put("Dark_Purple_Glass_Pane",new Dark_Purple_Glass_Pane("Dark_Purple_Glass").setCreativeTab(tabGlass));
+	
+blockRef.put("Green_Glass_Pane",new Green_Glass_Pane("Green_Glass").setCreativeTab(tabGlass));
+	
+blockRef.put("Magenta_Glass_Pane",new Magenta_Glass_Pane("Magenta_Glass").setCreativeTab(tabGlass));
+	
+blockRef.put("Orange_Glass_Pane",new Orange_Glass_Pane("Orange_Glass").setCreativeTab(tabGlass));
+	
+blockRef.put("Pink_Glass_Pane",new Pink_Glass_Pane("Pink_Glass").setCreativeTab(tabGlass));
+	
+blockRef.put("Purple_Glass_Pane",new Purple_Glass_Pane("Purple_Glass").setCreativeTab(tabGlass));
+	
+blockRef.put("Red_Glass_Pane",new Red_Glass_Pane("Red_Glass").setCreativeTab(tabGlass));
+	
+blockRef.put("White_Glass_Pane",new White_Glass_Pane("White_Glass").setCreativeTab(tabGlass));
+	
+blockRef.put("Yellow_Glass_Pane",new Yellow_Glass_Pane("Yellow_Glass").setCreativeTab(tabGlass));
+	
 
 	}
 	
