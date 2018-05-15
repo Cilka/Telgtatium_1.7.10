@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.hexopygate.Telgttatium.buildingblocks.bricks.*;
-import com.hexopygate.Telgttatium.buildingblocks.glass.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.framesborders.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Black_Glass;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Celtic_Glass_Another_World;
@@ -41,7 +40,9 @@ import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Orange_Glass;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Pink_Glass;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Purple_Glass;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Red_Glass;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Simple_Full_Frame__Simple;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.White_Glass;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Wooden_Full_Frame;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Yellow_Glass;
 import com.hexopygate.Telgttatium.buildingblocks.glass.panes.*;
 import com.hexopygate.Telgttatium.buildingblocks.natrualblocks.*;
@@ -449,7 +450,8 @@ blockRef.put("Wooden_Top_Frame_Pane",new Wooden_Top_Frame_Pane("Wooden_Top_Frame
 	
 blockRef.put("Wooden_Top_single_Frame_Pane",new Wooden_Top_single_Frame_Pane("Wooden_Top_single_Frame","Glass_Trim").setCreativeTab(tabGlass));
 	
-
+blockRef.put("Simple_Full_Frame__Simple",new Simple_Full_Frame__Simple().setCreativeTab(tabGlass));
+blockRef.put("Wooden_Full_Frame",new Wooden_Full_Frame().setCreativeTab(tabGlass));
 
 	}
 	
