@@ -6,7 +6,7 @@ import java.util.Map;
 
 import com.hexopygate.Telgttatium.buildingblocks.bricks.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.*;
-import com.hexopygate.Telgttatium.buildingblocks.glass.FrameBoarders.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.framesborders.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Black_Glass;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Celtic_Glass_Another_World;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Celtic_Glass_Blue;
@@ -43,8 +43,7 @@ import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Purple_Glass;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Red_Glass;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.White_Glass;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Yellow_Glass;
-import com.hexopygate.Telgttatium.buildingblocks.glass.panes.Celtic_Glass_Blue_Pane;
-import com.hexopygate.Telgttatium.buildingblocks.glass.panes.Celtic_Glass_Cream_Pane;
+import com.hexopygate.Telgttatium.buildingblocks.glass.panes.*;
 import com.hexopygate.Telgttatium.buildingblocks.natrualblocks.*;
 import com.hexopygate.Telgttatium.buildingblocks.natrualblocks.Dirt.*;
 import com.hexopygate.Telgttatium.buildingblocks.natrualblocks.TreeLeaves.*;
@@ -347,9 +346,17 @@ public class Telgttatium {
 	blockRef.put("Celtic_Glass_Red",new Celtic_Glass_Red().setCreativeTab(tabGlass));
 	blockRef.put("Celtic_Glass_Yellow",new Celtic_Glass_Yellow().setCreativeTab(tabGlass));
 	
-	blockRef.put("Celtic_Glass_Cream_Pane",new Celtic_Glass_Cream_Pane("tel:Celtic_Glass_Cream").setCreativeTab(tabGlass));
-	blockRef.put("Celtic_Glass_Blue_Pane",new Celtic_Glass_Blue_Pane("tel:Celtic_Glass_Blue").setCreativeTab(tabGlass));
-
+	blockRef.put("Celtic_Glass_Cream_Pane",new Celtic_Glass_Cream_Pane("Celtic_Glass_Cream").setCreativeTab(tabGlass));
+	blockRef.put("Celtic_Glass_Blue_Pane",new Celtic_Glass_Blue_Pane("Celtic_Glass_Blue").setCreativeTab(tabGlass));
+	blockRef.put("Celtic_Glass_Another_World_Pane",new Celtic_Glass_Another_World_Pane("Celtic_Glass_Another_World").setCreativeTab(tabGlass));
+	blockRef.put("Celtic_Glass_Green_Pane",new Celtic_Glass_Green_Pane("Celtic_Glass_Green").setCreativeTab(tabGlass));
+	blockRef.put("Celtic_Glass_Gold_Pane",new Celtic_Glass_Gold_Pane("Celtic_Glass_Gold").setCreativeTab(tabGlass));
+	blockRef.put("Celtic_Glass_Grey_Pane",new Celtic_Glass_Grey_Pane("Celtic_Glass_Grey").setCreativeTab(tabGlass));
+	blockRef.put("Celtic_Glass_Light_Blue_Pane",new Celtic_Glass_Light_Blue_Pane("Celtic_Glass_Light_Blue").setCreativeTab(tabGlass));
+	blockRef.put("Celtic_Glass_Purple_Pane",new Celtic_Glass_Purple_Pane("Celtic_Glass_Purple").setCreativeTab(tabGlass));
+	blockRef.put("Celtic_Glass_Purple_Another_World_Pane",new Celtic_Glass_Purple_Another_World_Pane("Celtic_Glass_Purple_Another_World").setCreativeTab(tabGlass));
+	blockRef.put("Celtic_Glass_Red_Pane",new Celtic_Glass_Red_Pane("Celtic_Glass_Red").setCreativeTab(tabGlass));
+	blockRef.put("Celtic_Glass_Yellow_Pane",new Celtic_Glass_Yellow_Pane("Celtic_Glass_Yellow").setCreativeTab(tabGlass));
 	
 	blockRef.put("NvE_Black",new NvE_Black().setCreativeTab(tabGlass));
 	blockRef.put("NvE_Blue",new NvE_Blue().setCreativeTab(tabGlass));
@@ -362,6 +369,18 @@ public class Telgttatium {
 	blockRef.put("NvE_Purple",new NvE_Purple().setCreativeTab(tabGlass));
 	blockRef.put("NvE_Red",new NvE_Red().setCreativeTab(tabGlass));
 	blockRef.put("NvE_Yellow",new NvE_Yellow().setCreativeTab(tabGlass));	
+	
+	blockRef.put("NvE_Black_Pane",new NvE_Black_Pane("NvE_Black").setCreativeTab(tabGlass));
+	blockRef.put("NvE_Blue_Pane",new NvE_Blue_Pane("NvE_Blue").setCreativeTab(tabGlass));
+	blockRef.put("NvE_Cyan_Pane",new NvE_Cyan_Pane("NvE_Cyan").setCreativeTab(tabGlass));
+	blockRef.put("NvE_Dark_Blue_Pane",new NvE_Dark_Blue_Pane("NvE_Dark_Blue").setCreativeTab(tabGlass));
+	blockRef.put("NvE_Dark_Orange_Pane",new NvE_Dark_Orange_Pane("NvE_Dark_Orange").setCreativeTab(tabGlass));
+	blockRef.put("NvE_Dark_Purple_Pane",new NvE_Dark_Purple_Pane("NvE_Dark_Purple").setCreativeTab(tabGlass));
+	blockRef.put("NvE_Orange_Pane",new NvE_Orange_Pane("NvE_Orange").setCreativeTab(tabGlass));
+	blockRef.put("NvE_Purple_Pane",new NvE_Purple_Pane("NvE_Purple").setCreativeTab(tabGlass));
+	blockRef.put("NvE_Pink_Pane",new NvE_Pink_Pane("NvE_Pink").setCreativeTab(tabGlass));
+	blockRef.put("NvE_Red_Pane",new NvE_Red_Pane("NvE_Red").setCreativeTab(tabGlass));
+	blockRef.put("NvE_Yellow_Pane",new NvE_Yellow_Pane("NvE_Yellow").setCreativeTab(tabGlass));
 	
 	blockRef.put("Black_Glass",new Black_Glass().setCreativeTab(tabGlass));
 	blockRef.put("Clear_Glass",new Clear_Glass().setCreativeTab(tabGlass));
@@ -378,31 +397,75 @@ public class Telgttatium {
 	blockRef.put("White_Glass",new White_Glass().setCreativeTab(tabGlass));
 	blockRef.put("Yellow_Glass",new Yellow_Glass().setCreativeTab(tabGlass));
 	
-	blockRef.put("Down_Frame__Simple",new Down_Frame__Simple().setCreativeTab(tabGlass));
-	blockRef.put("Down_Single_Frame__Simple",new Down_Single_Frame__Simple().setCreativeTab(tabGlass));
-	blockRef.put("Left_Down_Corner_Frame__Simple",new Left_Down_Corner_Frame__Simple().setCreativeTab(tabGlass));
-	blockRef.put("Left_Single_Frame__Simple",new Left_Single_Frame__Simple().setCreativeTab(tabGlass));
-	blockRef.put("Left_Top_Corner_Frame__Simple",new Left_Top_Corner_Frame__Simple().setCreativeTab(tabGlass));
-	blockRef.put("Middle_Single_Frame__Simple",new Middle_Single_Frame__Simple().setCreativeTab(tabGlass));
-	blockRef.put("Right_Down_Corner_Frame__Simple",new Right_Down_Corner_Frame__Simple().setCreativeTab(tabGlass));
-	blockRef.put("Right_Frame__Simple",new Right_Frame__Simple().setCreativeTab(tabGlass));
-	blockRef.put("Right_Single_Frame__Simple",new Right_Single_Frame__Simple().setCreativeTab(tabGlass));
-	blockRef.put("Right_Top_Corner_Frame__Simple",new Right_Top_Corner_Frame__Simple().setCreativeTab(tabGlass));
-	blockRef.put("Single_Full_Frame__Simple",new Single_Full_Frame__Simple().setCreativeTab(tabGlass));
-	blockRef.put("Wooden_Down_Frame",new Wooden_Down_Frame().setCreativeTab(tabGlass));
-	blockRef.put("Wooden_Down_Single_Frame",new Wooden_Down_Single_Frame().setCreativeTab(tabGlass));
-	blockRef.put("Wooden_Full_Frame",new Wooden_Full_Frame().setCreativeTab(tabGlass));
-	blockRef.put("Wooden_Left_Down_Corner_Frame",new Wooden_Left_Down_Corner_Frame().setCreativeTab(tabGlass));
-	blockRef.put("Wooden_Left_Frame",new Wooden_Left_Frame().setCreativeTab(tabGlass));
-	blockRef.put("Wooden_Left_Top_Corner_Frame",new Wooden_Left_Top_Corner_Frame().setCreativeTab(tabGlass));
-	blockRef.put("Wooden_Middle_Single_Frame",new Wooden_Middle_Single_Frame().setCreativeTab(tabGlass));
-	blockRef.put("Wooden_Right_Down_Corner_Frame",new Wooden_Right_Down_Corner_Frame().setCreativeTab(tabGlass));
-	blockRef.put("Wooden_Right_Frame",new Wooden_Right_Frame().setCreativeTab(tabGlass));
-	blockRef.put("Wooden_Right_Top_Corner_Frame",new Wooden_Right_Top_Corner_Frame().setCreativeTab(tabGlass));
-	blockRef.put("Wooden_Top_Frame",new Wooden_Top_Frame().setCreativeTab(tabGlass));
-	blockRef.put("Wooden_Top_Single_Frame",new Wooden_Top_Single_Frame().setCreativeTab(tabGlass));
+	blockRef.put("Down_Frame__Simple_Pane",new Down_Frame__Simple_Pane("Down_Frame__Simple_Pane").setCreativeTab(tabGlass));
 	
+blockRef.put("Down_Single_Frame__Simple_Pane",new Down_Single_Frame__Simple_Pane("Down_Single_Frame__Simple_Pane").setCreativeTab(tabGlass));
 	
+blockRef.put("Left_Down_Corner_Frame__Simple_Pane",new Left_Down_Corner_Frame__Simple_Pane("Left_Down_Corner_Frame__Simple_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Left_Frame__Simple_Pane",new Left_Frame__Simple_Pane("Left_Frame__Simple_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Left_Single_Frame__Simple_Pane",new Left_Single_Frame__Simple_Pane("Left_Single_Frame__Simple_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Left_Top_Corner_Frame__Simple_Pane",new Left_Top_Corner_Frame__Simple_Pane("Left_Top_Corner_Frame__Simple_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Middle_Single_Frame__Simple_Pane",new Middle_Single_Frame__Simple_Pane("Middle_Single_Frame__Simple_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Right_Down_Corner_Frame__Simple_Pane",new Right_Down_Corner_Frame__Simple_Pane("Right_Down_Corner_Frame__Simple_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Right_Frame__Simple_Pane",new Right_Frame__Simple_Pane("Right_Frame__Simple_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Right_Single_Frame__Simple_Pane",new Right_Single_Frame__Simple_Pane("Right_Single_Frame__Simple_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Right_Top_Corner_Frame__Simple_Pane",new Right_Top_Corner_Frame__Simple_Pane("Right_Top_Corner_Frame__Simple_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Full_Frame__Simple_Pane",new Simple_Full_Frame__Simple_Pane("Simple_Full_Frame__Simple_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Top_Frame__Simple_Pane",new Top_Frame__Simple_Pane("Top_Frame__Simple_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Top_Single_Frame__Simple_Pane",new Top_Single_Frame__Simple_Pane("Top_Single_Frame__Simple_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Wooden_Down_Frame_Pane",new Wooden_Down_Frame_Pane("Wooden_Down_Frame_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Wooden_Down_Single_Frame_Pane",new Wooden_Down_Single_Frame_Pane("Wooden_Down_Single_Frame_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Wooden_Full_Frame_Pane",new Wooden_Full_Frame_Pane("Wooden_Full_Frame_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Wooden_Left_Down_Corner_Frame_Pane",new Wooden_Left_Down_Corner_Frame_Pane("Wooden_Left_Down_Corner_Frame_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Wooden_Left_Frame_Pane",new Wooden_Left_Frame_Pane("Wooden_Left_Frame_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Wooden_Left_Top_Corner_Frame_Pane",new Wooden_Left_Top_Corner_Frame_Pane("Wooden_Left_Top_Corner_Frame_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Wooden_Middle_Single_Frame_Pane",new Wooden_Middle_Single_Frame_Pane("Wooden_Middle_Single_Frame_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Wooden_Right_Down_Corner_Frame_Pane",new Wooden_Right_Down_Corner_Frame_Pane("Wooden_Right_Down_Corner_Frame_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Wooden_Right_Frame_Pane",new Wooden_Right_Frame_Pane("Wooden_Right_Frame_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Wooden_Right_Top_Corner_Frame_Pane",new Wooden_Right_Top_Corner_Frame_Pane("Wooden_Right_Top_Corner_Frame_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Wooden_Top_Frame_Pane",new Wooden_Top_Frame_Pane("Wooden_Top_Frame_Pane").setCreativeTab(tabGlass));
+	
+blockRef.put("Wooden_Top_single_Frame_Pane",new Wooden_Top_single_Frame_Pane("Wooden_Top_single_Frame_Pane").setCreativeTab(tabGlass));
+	
+
+	#{GlassColorPanes}
+	#{SimpleGlassFullFrame}
+	#{SimpleFrameBlack}
+	#{SimpleFrameBlue}
+	#{SimpleFrameClear}
+	#{SimpleFrameCyan}
+	#{SimpleFrameDarkBlue}
+	#{SimpleFrameDarkPurple}
+	#{SimpleFrameGreen}
+	#{SimpleFrameMagenta}
+	#{SimpleFrameOrange}
+	#{SimpleFramePink}
+	#{SimpleFramePurple}
+	#{SimpleFrameRed}
+	#{SimpleFrameWhite}
+	#{SimpleFrameYellow}
 	}
 	
 	@EventHandler

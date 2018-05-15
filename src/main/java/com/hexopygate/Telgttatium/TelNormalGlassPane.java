@@ -27,7 +27,7 @@ public class TelNormalGlassPane extends BlockPane
 	 String name = this.getClass().getSimpleName();
 	public TelNormalGlassPane(String faceTexture , String rimTexture) {
 		
-		super(faceTexture, rimTexture, Material.glass,true);
+		super("tel:"+faceTexture, "tel:"+rimTexture, Material.glass,true);
 		// TODO Auto-generated constructor stub
 		 
 

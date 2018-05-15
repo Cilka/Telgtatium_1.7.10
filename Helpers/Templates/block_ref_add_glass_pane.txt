@@ -1,0 +1,2 @@
+blockRef.put("#{classname}",new #{classname}("#{classname}").setCreativeTab(tabGlass));
+	
