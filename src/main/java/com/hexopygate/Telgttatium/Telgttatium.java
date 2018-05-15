@@ -1,51 +1,15 @@
 package com.hexopygate.Telgttatium;
 
-import java.util.Dictionary;
 import java.util.HashMap;
-import java.util.Map;
 
 import com.hexopygate.Telgttatium.buildingblocks.bricks.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.framesborders.*;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Black_Glass;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Celtic_Glass_Another_World;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Celtic_Glass_Blue;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Celtic_Glass_Cream;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Celtic_Glass_Gold;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Celtic_Glass_Green;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Celtic_Glass_Grey;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Celtic_Glass_Light_Blue;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Celtic_Glass_Purple;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Celtic_Glass_Purple_Another_World;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Celtic_Glass_Red;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Celtic_Glass_Yellow;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Clear_Glass;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Cyan_Glass;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Dark_Blue_Glass;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Dark_Green_Glass;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Dark_Purple_Glass;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Green_Glass;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Magenta_Glass;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.NvE_Black;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.NvE_Blue;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.NvE_Cyan;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.NvE_Dark_Blue;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.NvE_Dark_Orange;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.NvE_Dark_Purple;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.NvE_Orange;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.NvE_Pink;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.NvE_Purple;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.NvE_Red;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.NvE_Yellow;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Orange_Glass;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Pink_Glass;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Purple_Glass;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Red_Glass;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Simple_Full_Frame__Simple;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.White_Glass;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Wooden_Full_Frame;
-import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Yellow_Glass;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.panes.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglasssideframes.*;
 import com.hexopygate.Telgttatium.buildingblocks.natrualblocks.*;
 import com.hexopygate.Telgttatium.buildingblocks.natrualblocks.Dirt.*;
 import com.hexopygate.Telgttatium.buildingblocks.natrualblocks.TreeLeaves.*;
@@ -481,7 +445,249 @@ blockRef.put("Red_Glass_Pane",new Red_Glass_Pane("Red_Glass").setCreativeTab(tab
 blockRef.put("White_Glass_Pane",new White_Glass_Pane("White_Glass").setCreativeTab(tabGlass));
 	
 blockRef.put("Yellow_Glass_Pane",new Yellow_Glass_Pane("Yellow_Glass").setCreativeTab(tabGlass));
+	blockRef.put("Simple_Glass_Black",new Simple_Glass_Black().setCreativeTab(tabGlass));
 	
+blockRef.put("Simple_Glass_Blue",new Simple_Glass_Blue().setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Clear",new Simple_Glass_Clear().setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Cyan",new Simple_Glass_Cyan().setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Dark_Blue",new Simple_Glass_Dark_Blue().setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Dark_Green",new Simple_Glass_Dark_Green().setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Dark_Purple",new Simple_Glass_Dark_Purple().setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Green",new Simple_Glass_Green().setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Magenta",new Simple_Glass_Magenta().setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Orange",new Simple_Glass_Orange().setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Pink",new Simple_Glass_Pink().setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Purple",new Simple_Glass_Purple().setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Red",new Simple_Glass_Red().setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_White",new Simple_Glass_White().setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Yellow",new Simple_Glass_Yellow().setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Black_Pane",new Simple_Glass_Black_Pane("Simple_Glass_Black").setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Blue_Pane",new Simple_Glass_Blue_Pane("Simple_Glass_Blue").setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Clear_Pane",new Simple_Glass_Clear_Pane("Simple_Glass_Clear").setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Cyan_Pane",new Simple_Glass_Cyan_Pane("Simple_Glass_Cyan").setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Dark_Blue_Pane",new Simple_Glass_Dark_Blue_Pane("Simple_Glass_Dark_Blue").setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Dark_Green_Pane",new Simple_Glass_Dark_Green_Pane("Simple_Glass_Dark_Green").setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Dark_Purple_Pane",new Simple_Glass_Dark_Purple_Pane("Simple_Glass_Dark_Purple").setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Green_Pane",new Simple_Glass_Green_Pane("Simple_Glass_Green").setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Magenta_Pane",new Simple_Glass_Magenta_Pane("Simple_Glass_Magenta").setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Orange_Pane",new Simple_Glass_Orange_Pane("Simple_Glass_Orange").setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Pink_Pane",new Simple_Glass_Pink_Pane("Simple_Glass_Pink").setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Purple_Pane",new Simple_Glass_Purple_Pane("Simple_Glass_Purple").setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Red_Pane",new Simple_Glass_Red_Pane("Simple_Glass_Red").setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_White_Pane",new Simple_Glass_White_Pane("Simple_Glass_White").setCreativeTab(tabGlass));
+	
+blockRef.put("Simple_Glass_Yellow_Pane",new Simple_Glass_Yellow_Pane("Simple_Glass_Yellow").setCreativeTab(tabGlass));
+	
+blockRef.put("Blue_Pane",new Blue_Pane("Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Dark_Green_Pane",new Dark_Green_Pane("Dark_Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Frame__Black_Pane",new Down_Frame__Black_Pane("Down_Frame__Black","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Frame__Blue_Pane",new Down_Frame__Blue_Pane("Down_Frame__Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Frame__Cyan_Pane",new Down_Frame__Cyan_Pane("Down_Frame__Cyan","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Frame__DarkGreen_Pane",new Down_Frame__DarkGreen_Pane("Down_Frame__DarkGreen","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Frame__Dark_Blue_Pane",new Down_Frame__Dark_Blue_Pane("Down_Frame__Dark_Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Frame__Dark_Purple_Pane",new Down_Frame__Dark_Purple_Pane("Down_Frame__Dark_Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Frame__Green_Pane",new Down_Frame__Green_Pane("Down_Frame__Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Frame__Magenta_Pane",new Down_Frame__Magenta_Pane("Down_Frame__Magenta","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Frame__Pink_Pane",new Down_Frame__Pink_Pane("Down_Frame__Pink","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Frame__Purple_Pane",new Down_Frame__Purple_Pane("Down_Frame__Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Frame__Red_Pane",new Down_Frame__Red_Pane("Down_Frame__Red","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Frame__White_Pane",new Down_Frame__White_Pane("Down_Frame__White","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Frame__Yellow_Pane",new Down_Frame__Yellow_Pane("Down_Frame__Yellow","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Frame___Orange_Pane",new Down_Frame___Orange_Pane("Down_Frame___Orange","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Singel_Frame_Pink_Pane",new Down_Singel_Frame_Pink_Pane("Down_Singel_Frame_Pink","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Singel_Frame__Black_Pane",new Down_Singel_Frame__Black_Pane("Down_Singel_Frame__Black","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Singel_Frame__Magenta_Pane",new Down_Singel_Frame__Magenta_Pane("Down_Singel_Frame__Magenta","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Singel_Frame__White_Pane",new Down_Singel_Frame__White_Pane("Down_Singel_Frame__White","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Single_Frame__Blue_Pane",new Down_Single_Frame__Blue_Pane("Down_Single_Frame__Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Single_Frame__Cyan_Pane",new Down_Single_Frame__Cyan_Pane("Down_Single_Frame__Cyan","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Single_Frame__Dark_Blue_Pane",new Down_Single_Frame__Dark_Blue_Pane("Down_Single_Frame__Dark_Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Single_Frame__Dark_Green_Pane",new Down_Single_Frame__Dark_Green_Pane("Down_Single_Frame__Dark_Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Single_Frame__Dark_Purple_Pane",new Down_Single_Frame__Dark_Purple_Pane("Down_Single_Frame__Dark_Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Single_Frame__Green_Pane",new Down_Single_Frame__Green_Pane("Down_Single_Frame__Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Single_Frame__Orange_Pane",new Down_Single_Frame__Orange_Pane("Down_Single_Frame__Orange","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Single_Frame__Purple_Pane",new Down_Single_Frame__Purple_Pane("Down_Single_Frame__Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Single_Frame__Red_Pane",new Down_Single_Frame__Red_Pane("Down_Single_Frame__Red","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Down_Single_Frame__Yellow_Pane",new Down_Single_Frame__Yellow_Pane("Down_Single_Frame__Yellow","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Down_Corner_Frame_Pink_Pane",new Left_Down_Corner_Frame_Pink_Pane("Left_Down_Corner_Frame_Pink","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Down_Corner_Frame__Black_Pane",new Left_Down_Corner_Frame__Black_Pane("Left_Down_Corner_Frame__Black","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Down_Corner_Frame__Blue_Pane",new Left_Down_Corner_Frame__Blue_Pane("Left_Down_Corner_Frame__Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Down_Corner_Frame__Cyan_Pane",new Left_Down_Corner_Frame__Cyan_Pane("Left_Down_Corner_Frame__Cyan","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Down_Corner_Frame__Dark_Blue_Pane",new Left_Down_Corner_Frame__Dark_Blue_Pane("Left_Down_Corner_Frame__Dark_Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Down_Corner_Frame__Dark_Green_Pane",new Left_Down_Corner_Frame__Dark_Green_Pane("Left_Down_Corner_Frame__Dark_Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Down_Corner_frame__Dark_Purple_Pane",new Left_Down_Corner_frame__Dark_Purple_Pane("Left_Down_Corner_frame__Dark_Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Down_Corner_Frame__Green_Pane",new Left_Down_Corner_Frame__Green_Pane("Left_Down_Corner_Frame__Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Down_Corner_Frame__Magenta_Pane",new Left_Down_Corner_Frame__Magenta_Pane("Left_Down_Corner_Frame__Magenta","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Down_Corner_Frame__Orange_Pane",new Left_Down_Corner_Frame__Orange_Pane("Left_Down_Corner_Frame__Orange","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Down_Corner_Frame__Purple_Pane",new Left_Down_Corner_Frame__Purple_Pane("Left_Down_Corner_Frame__Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Down_Corner_Frame__White_Pane",new Left_Down_Corner_Frame__White_Pane("Left_Down_Corner_Frame__White","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Down_Corner_frame__Yellow_Pane",new Left_Down_Corner_frame__Yellow_Pane("Left_Down_Corner_frame__Yellow","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Down_Corner_Frame___Red_Pane",new Left_Down_Corner_Frame___Red_Pane("Left_Down_Corner_Frame___Red","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Frames__Yellow_Pane",new Left_Frames__Yellow_Pane("Left_Frames__Yellow","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Frame__Black_Pane",new Left_Frame__Black_Pane("Left_Frame__Black","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Frame__Blue_Pane",new Left_Frame__Blue_Pane("Left_Frame__Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Frame__Cyan_Pane",new Left_Frame__Cyan_Pane("Left_Frame__Cyan","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Frame__DarkGreen_Pane",new Left_Frame__DarkGreen_Pane("Left_Frame__DarkGreen","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Frame__Dark_Blue_Pane",new Left_Frame__Dark_Blue_Pane("Left_Frame__Dark_Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Frame__Dark_Purple_Pane",new Left_Frame__Dark_Purple_Pane("Left_Frame__Dark_Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Frame__Green_Pane",new Left_Frame__Green_Pane("Left_Frame__Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Frame__Magenta_Pane",new Left_Frame__Magenta_Pane("Left_Frame__Magenta","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Frame__Pink_Pane",new Left_Frame__Pink_Pane("Left_Frame__Pink","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Frame__Purple_Pane",new Left_Frame__Purple_Pane("Left_Frame__Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Frame__Red_Pane",new Left_Frame__Red_Pane("Left_Frame__Red","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Frame__White_Pane",new Left_Frame__White_Pane("Left_Frame__White","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Frame___Orange_Pane",new Left_Frame___Orange_Pane("Left_Frame___Orange","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Top_Corner_Frame_Pink_Pane",new Left_Top_Corner_Frame_Pink_Pane("Left_Top_Corner_Frame_Pink","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Top_Corner_Frame__Black_Pane",new Left_Top_Corner_Frame__Black_Pane("Left_Top_Corner_Frame__Black","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Top_Corner_Frame__Blue_Pane",new Left_Top_Corner_Frame__Blue_Pane("Left_Top_Corner_Frame__Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Top_Corner_Frame__Cyan_Pane",new Left_Top_Corner_Frame__Cyan_Pane("Left_Top_Corner_Frame__Cyan","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Top_Corner_Frame__Dark_Blue_Pane",new Left_Top_Corner_Frame__Dark_Blue_Pane("Left_Top_Corner_Frame__Dark_Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Top_Corner_Frame__Dark_Green_Pane",new Left_Top_Corner_Frame__Dark_Green_Pane("Left_Top_Corner_Frame__Dark_Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Top_Corner_frame__Dark_Purple_Pane",new Left_Top_Corner_frame__Dark_Purple_Pane("Left_Top_Corner_frame__Dark_Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Top_Corner_Frame__Green_Pane",new Left_Top_Corner_Frame__Green_Pane("Left_Top_Corner_Frame__Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Top_Corner_Frame__Magenta_Pane",new Left_Top_Corner_Frame__Magenta_Pane("Left_Top_Corner_Frame__Magenta","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Top_Corner_Frame__Orange_Pane",new Left_Top_Corner_Frame__Orange_Pane("Left_Top_Corner_Frame__Orange","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Top_Corner_Frame__Purple_Pane",new Left_Top_Corner_Frame__Purple_Pane("Left_Top_Corner_Frame__Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Top_Corner_Frame__White_Pane",new Left_Top_Corner_Frame__White_Pane("Left_Top_Corner_Frame__White","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Top_Corner_Frame__Yellow_Pane",new Left_Top_Corner_Frame__Yellow_Pane("Left_Top_Corner_Frame__Yellow","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Left_Top_Corner_Frame___Red_Pane",new Left_Top_Corner_Frame___Red_Pane("Left_Top_Corner_Frame___Red","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Middel_Single_Frame__Yellow_Pane",new Middel_Single_Frame__Yellow_Pane("Middel_Single_Frame__Yellow","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Middle_Single_Frame_Pink_Pane",new Middle_Single_Frame_Pink_Pane("Middle_Single_Frame_Pink","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Middle_Single_Frame__Black_Pane",new Middle_Single_Frame__Black_Pane("Middle_Single_Frame__Black","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Middle_Single_Frame__Blue_Pane",new Middle_Single_Frame__Blue_Pane("Middle_Single_Frame__Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Middle_Single_Frame__Cyan_Pane",new Middle_Single_Frame__Cyan_Pane("Middle_Single_Frame__Cyan","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Middle_Single_Frame__Dark_Blue_Pane",new Middle_Single_Frame__Dark_Blue_Pane("Middle_Single_Frame__Dark_Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Middle_Single_Frame__Dark_Green_Pane",new Middle_Single_Frame__Dark_Green_Pane("Middle_Single_Frame__Dark_Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Middle_Single_Frame__Dark_Puple_Pane",new Middle_Single_Frame__Dark_Puple_Pane("Middle_Single_Frame__Dark_Puple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Middle_Single_Frame__Green_Pane",new Middle_Single_Frame__Green_Pane("Middle_Single_Frame__Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Middle_Single_Frame__Magenta_Pane",new Middle_Single_Frame__Magenta_Pane("Middle_Single_Frame__Magenta","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Middle_Single_Frame__Orange_Pane",new Middle_Single_Frame__Orange_Pane("Middle_Single_Frame__Orange","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Middle_Single_Frame__Purple_Pane",new Middle_Single_Frame__Purple_Pane("Middle_Single_Frame__Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Middle_Single_Frame__Red_Pane",new Middle_Single_Frame__Red_Pane("Middle_Single_Frame__Red","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Middle_Single_Frame__White_Pane",new Middle_Single_Frame__White_Pane("Middle_Single_Frame__White","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Down_Corner_Frame_Blue_Pane",new Right_Down_Corner_Frame_Blue_Pane("Right_Down_Corner_Frame_Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Down_Corner_Frame_Pink_Pane",new Right_Down_Corner_Frame_Pink_Pane("Right_Down_Corner_Frame_Pink","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Down_Corner_Frame__Black_Pane",new Right_Down_Corner_Frame__Black_Pane("Right_Down_Corner_Frame__Black","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Down_Corner_Frame__Cyan_Pane",new Right_Down_Corner_Frame__Cyan_Pane("Right_Down_Corner_Frame__Cyan","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Down_Corner_Frame__Dark_Blue_Pane",new Right_Down_Corner_Frame__Dark_Blue_Pane("Right_Down_Corner_Frame__Dark_Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Down_Corner_Frame__Dark_Green_Pane",new Right_Down_Corner_Frame__Dark_Green_Pane("Right_Down_Corner_Frame__Dark_Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Down_Corner_frame__Dark_Purple_Pane",new Right_Down_Corner_frame__Dark_Purple_Pane("Right_Down_Corner_frame__Dark_Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Down_Corner_Frame__Green_Pane",new Right_Down_Corner_Frame__Green_Pane("Right_Down_Corner_Frame__Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Down_Corner_Frame__Orange_Pane",new Right_Down_Corner_Frame__Orange_Pane("Right_Down_Corner_Frame__Orange","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Down_Corner_Frame__Purple_Pane",new Right_Down_Corner_Frame__Purple_Pane("Right_Down_Corner_Frame__Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Down_Corner_Frame__White_Pane",new Right_Down_Corner_Frame__White_Pane("Right_Down_Corner_Frame__White","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Down_Corner_Frame__Yellow_Pane",new Right_Down_Corner_Frame__Yellow_Pane("Right_Down_Corner_Frame__Yellow","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Down_Corner_Frame___Magenta_Pane",new Right_Down_Corner_Frame___Magenta_Pane("Right_Down_Corner_Frame___Magenta","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Down_Corner_Frame___Red_Pane",new Right_Down_Corner_Frame___Red_Pane("Right_Down_Corner_Frame___Red","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Frame_Pink_Pane",new Right_Frame_Pink_Pane("Right_Frame_Pink","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Frame__Black_Pane",new Right_Frame__Black_Pane("Right_Frame__Black","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Frame__Blue_Pane",new Right_Frame__Blue_Pane("Right_Frame__Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Frame__Cyan_Pane",new Right_Frame__Cyan_Pane("Right_Frame__Cyan","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Frame__DarkGreen_Pane",new Right_Frame__DarkGreen_Pane("Right_Frame__DarkGreen","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Frame__Dark_Blue_Pane",new Right_Frame__Dark_Blue_Pane("Right_Frame__Dark_Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Frame__Dark_Purple_Pane",new Right_Frame__Dark_Purple_Pane("Right_Frame__Dark_Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Frame__Green_Pane",new Right_Frame__Green_Pane("Right_Frame__Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Frame__Magenta_Pane",new Right_Frame__Magenta_Pane("Right_Frame__Magenta","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Frame__Orange_Pane",new Right_Frame__Orange_Pane("Right_Frame__Orange","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Frame__Purple_Pane",new Right_Frame__Purple_Pane("Right_Frame__Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Frame__Red_Pane",new Right_Frame__Red_Pane("Right_Frame__Red","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Frame__White_Pane",new Right_Frame__White_Pane("Right_Frame__White","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Frame___Yellow_Pane",new Right_Frame___Yellow_Pane("Right_Frame___Yellow","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Top_Corner_Frame_Blue_Pane",new Right_Top_Corner_Frame_Blue_Pane("Right_Top_Corner_Frame_Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Top_Corner_Frame_Pink_Pane",new Right_Top_Corner_Frame_Pink_Pane("Right_Top_Corner_Frame_Pink","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Top_Corner_Frame__Black_Pane",new Right_Top_Corner_Frame__Black_Pane("Right_Top_Corner_Frame__Black","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Top_Corner_Frame__Cyan_Pane",new Right_Top_Corner_Frame__Cyan_Pane("Right_Top_Corner_Frame__Cyan","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Top_Corner_Frame__Dark_Blue_Pane",new Right_Top_Corner_Frame__Dark_Blue_Pane("Right_Top_Corner_Frame__Dark_Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Top_Corner_Frame__Dark_Green_Pane",new Right_Top_Corner_Frame__Dark_Green_Pane("Right_Top_Corner_Frame__Dark_Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Top_Corner_frame__Dark_Purple_Pane",new Right_Top_Corner_frame__Dark_Purple_Pane("Right_Top_Corner_frame__Dark_Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Top_Corner_Frame__Green_Pane",new Right_Top_Corner_Frame__Green_Pane("Right_Top_Corner_Frame__Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Top_Corner_Frame__Magenta_Pane",new Right_Top_Corner_Frame__Magenta_Pane("Right_Top_Corner_Frame__Magenta","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Top_Corner_Frame__Orange_Pane",new Right_Top_Corner_Frame__Orange_Pane("Right_Top_Corner_Frame__Orange","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Top_Corner_Frame__Purple_Pane",new Right_Top_Corner_Frame__Purple_Pane("Right_Top_Corner_Frame__Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Top_Corner_Frame__Red_Pane",new Right_Top_Corner_Frame__Red_Pane("Right_Top_Corner_Frame__Red","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Top_Corner_Frame__White_Pane",new Right_Top_Corner_Frame__White_Pane("Right_Top_Corner_Frame__White","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Right_Top_Corner_Frame__Yellow_Pane",new Right_Top_Corner_Frame__Yellow_Pane("Right_Top_Corner_Frame__Yellow","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Left_Single_Frame__Black_Pane",new Simple_Left_Single_Frame__Black_Pane("Simple_Left_Single_Frame__Black","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Left_Single_Frame__Blue_Pane",new Simple_Left_Single_Frame__Blue_Pane("Simple_Left_Single_Frame__Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Left_Single_Frame__Cyan_Pane",new Simple_Left_Single_Frame__Cyan_Pane("Simple_Left_Single_Frame__Cyan","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Left_Single_Frame__Dark_Blue_Pane",new Simple_Left_Single_Frame__Dark_Blue_Pane("Simple_Left_Single_Frame__Dark_Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Left_Single_Frame__Dark_Green_Pane",new Simple_Left_Single_Frame__Dark_Green_Pane("Simple_Left_Single_Frame__Dark_Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Left_Single_Frame__Green_Pane",new Simple_Left_Single_Frame__Green_Pane("Simple_Left_Single_Frame__Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Left_Single_Frame__Magenta_Pane",new Simple_Left_Single_Frame__Magenta_Pane("Simple_Left_Single_Frame__Magenta","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Left_Single_Frame__Orange_Pane",new Simple_Left_Single_Frame__Orange_Pane("Simple_Left_Single_Frame__Orange","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Left_Single_Frame__Pink_Pane",new Simple_Left_Single_Frame__Pink_Pane("Simple_Left_Single_Frame__Pink","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Left_Single_Frame__Purple_Pane",new Simple_Left_Single_Frame__Purple_Pane("Simple_Left_Single_Frame__Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Left_Single_Frame__Red_Pane",new Simple_Left_Single_Frame__Red_Pane("Simple_Left_Single_Frame__Red","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Left_Single_Frame__White_Pane",new Simple_Left_Single_Frame__White_Pane("Simple_Left_Single_Frame__White","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Left_Single_Frame__Yellow_Pane",new Simple_Left_Single_Frame__Yellow_Pane("Simple_Left_Single_Frame__Yellow","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Left_Single_Frame___Dark_Purple_Pane",new Simple_Left_Single_Frame___Dark_Purple_Pane("Simple_Left_Single_Frame___Dark_Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Right_Single_Frame__Black_Pane",new Simple_Right_Single_Frame__Black_Pane("Simple_Right_Single_Frame__Black","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Right_Single_Frame__Cyan_Pane",new Simple_Right_Single_Frame__Cyan_Pane("Simple_Right_Single_Frame__Cyan","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Right_Single_Frame__Dark_Blue_Pane",new Simple_Right_Single_Frame__Dark_Blue_Pane("Simple_Right_Single_Frame__Dark_Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Right_Single_Frame__Dark_Purple_Pane",new Simple_Right_Single_Frame__Dark_Purple_Pane("Simple_Right_Single_Frame__Dark_Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Right_Single_Frame__Green_Pane",new Simple_Right_Single_Frame__Green_Pane("Simple_Right_Single_Frame__Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Right_Single_Frame__Magenta_Pane",new Simple_Right_Single_Frame__Magenta_Pane("Simple_Right_Single_Frame__Magenta","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Right_Single_Frame__Orange_Pane",new Simple_Right_Single_Frame__Orange_Pane("Simple_Right_Single_Frame__Orange","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Right_Single_Frame__Pink_Pane",new Simple_Right_Single_Frame__Pink_Pane("Simple_Right_Single_Frame__Pink","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Right_Single_Frame__Purple_Pane",new Simple_Right_Single_Frame__Purple_Pane("Simple_Right_Single_Frame__Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Right_Single_Frame__Red_Pane",new Simple_Right_Single_Frame__Red_Pane("Simple_Right_Single_Frame__Red","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Right_Single_Frame__White_Pane",new Simple_Right_Single_Frame__White_Pane("Simple_Right_Single_Frame__White","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Simple_Right_Single_Frame__Yellow_Pane",new Simple_Right_Single_Frame__Yellow_Pane("Simple_Right_Single_Frame__Yellow","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Frame_Pink_Pane",new Top_Frame_Pink_Pane("Top_Frame_Pink","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Frame__Black_Pane",new Top_Frame__Black_Pane("Top_Frame__Black","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Frame__Blue_Pane",new Top_Frame__Blue_Pane("Top_Frame__Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Frame__Cyan_Pane",new Top_Frame__Cyan_Pane("Top_Frame__Cyan","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Frame__Dark_Blue_Pane",new Top_Frame__Dark_Blue_Pane("Top_Frame__Dark_Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Frame__Dark_Green_Pane",new Top_Frame__Dark_Green_Pane("Top_Frame__Dark_Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Frame__Dark_Purple_Pane",new Top_Frame__Dark_Purple_Pane("Top_Frame__Dark_Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Frame__Green_Pane",new Top_Frame__Green_Pane("Top_Frame__Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Frame__Magenta_Pane",new Top_Frame__Magenta_Pane("Top_Frame__Magenta","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Frame__Orange_Pane",new Top_Frame__Orange_Pane("Top_Frame__Orange","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Frame__Purple_Pane",new Top_Frame__Purple_Pane("Top_Frame__Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Frame__Red_Pane",new Top_Frame__Red_Pane("Top_Frame__Red","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Frame__Yellow_Pane",new Top_Frame__Yellow_Pane("Top_Frame__Yellow","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Single_Frame_Pink_Pane",new Top_Single_Frame_Pink_Pane("Top_Single_Frame_Pink","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Single_Frame__Black_Pane",new Top_Single_Frame__Black_Pane("Top_Single_Frame__Black","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Single_Frame__Blue_Pane",new Top_Single_Frame__Blue_Pane("Top_Single_Frame__Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Single_Frame__Cyan_Pane",new Top_Single_Frame__Cyan_Pane("Top_Single_Frame__Cyan","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Single_Frame__Dark_Blue_Pane",new Top_Single_Frame__Dark_Blue_Pane("Top_Single_Frame__Dark_Blue","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Single_Frame__Dark_Green_Pane",new Top_Single_Frame__Dark_Green_Pane("Top_Single_Frame__Dark_Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Single_Frame__Dark_Purple_Pane",new Top_Single_Frame__Dark_Purple_Pane("Top_Single_Frame__Dark_Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Single_Frame__Green_Pane",new Top_Single_Frame__Green_Pane("Top_Single_Frame__Green","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Single_Frame__Magenta_Pane",new Top_Single_Frame__Magenta_Pane("Top_Single_Frame__Magenta","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Single_Frame__Purple_Pane",new Top_Single_Frame__Purple_Pane("Top_Single_Frame__Purple","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Single_Frame__White_Pane",new Top_Single_Frame__White_Pane("Top_Single_Frame__White","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Single_Frame__Yellow_Pane",new Top_Single_Frame__Yellow_Pane("Top_Single_Frame__Yellow","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("Top_Sinlge_Frame__Orange_Pane",new Top_Sinlge_Frame__Orange_Pane("Top_Sinlge_Frame__Orange","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("To_Single_Frame__Red_Pane",new To_Single_Frame__Red_Pane("To_Single_Frame__Red","Glass_Trim").setCreativeTab(tabGlass));
+
+
 
 	}
 	
