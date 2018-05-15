@@ -1,4 +1,4 @@
-package com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes;
+package com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes;
 
 import com.hexopygate.Telgttatium.TelGlass;
 import com.hexopygate.Telgttatium.TelNormalGlassPane;
