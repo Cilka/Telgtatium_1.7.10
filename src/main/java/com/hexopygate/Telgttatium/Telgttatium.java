@@ -1,7 +1,7 @@
 package com.hexopygate.Telgttatium;
 
 import java.util.HashMap;
-
+import com.hexopygate.Telgttatium.buildingblocks.runes.*;
 import com.hexopygate.Telgttatium.buildingblocks.bricks.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.framesborders.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.*;
@@ -21,6 +21,9 @@ import com.hexopygate.Telgttatium.buildingblocks.nevoevolution.nvestained.*;
 import com.hexopygate.Telgttatium.buildingblocks.nevoevolution.nvetchtiles.*;
 import com.hexopygate.Telgttatium.Biomes.Volcano.*;
 import com.hexopygate.Telgttatium.Biomes.Winter.*;
+import com.hexopygate.Telgttatium.Food.*;
+import com.hexopygate.Telgttatium.Food.Candy.*;
+import com.hexopygate.Telgttatium.Food.FastFood.*;
 import com.hexopygate.Telgttatium.buildingblocks.Ceramics.*;
 import com.hexopygate.Telgttatium.buildingblocks.Ceramics.BigBlock.*;
 import com.hexopygate.Telgttatium.buildingblocks.Ceramics.CheckeredFloor.*;
@@ -52,7 +55,7 @@ public class Telgttatium {
 	public static String Version = "1.0";
 	
 	public static HashMap<String,Block> blockRef =  new HashMap<String,Block>();
-	
+	public static HashMap<String,Item> itemRef = new HashMap<String,Item>();
 @EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		//Item/Block init and registering
@@ -1193,6 +1196,278 @@ blockRef.put("White_Floor_Wood",new White_Floor_Wood().setCreativeTab(tabNatrual
 	
 blockRef.put("Yellow_Floor_Wood",new Yellow_Floor_Wood().setCreativeTab(tabNatrualBlocks));
 	
+blockRef.put("Alpa_Chiseled",new Alpa_Chiseled().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Alpa_Chiseled_Neon_night",new Alpa_Chiseled_Neon_night().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Alpa_Chiseled_Stone",new Alpa_Chiseled_Stone().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Alpa_Chiseled_Sunset",new Alpa_Chiseled_Sunset().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Alpa_Decorative_Wall",new Alpa_Decorative_Wall().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Alpa_Decorative_Wall_Sunset",new Alpa_Decorative_Wall_Sunset().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Alpa_Decorative_Wall__Neon_night",new Alpa_Decorative_Wall__Neon_night().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Alpa_Decorative_Wall__Stone",new Alpa_Decorative_Wall__Stone().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Another_World_rune",new Another_World_rune().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Arka_Chiseled",new Arka_Chiseled().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Arka_Chiseled_Blue",new Arka_Chiseled_Blue().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Arka_Chiseled_Gold",new Arka_Chiseled_Gold().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Arka_Chiseled_Green",new Arka_Chiseled_Green().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Arka_Chiseled_Grey",new Arka_Chiseled_Grey().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Arka_Chiseled_Red",new Arka_Chiseled_Red().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Arka_Decorative_Wall",new Arka_Decorative_Wall().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Arka_Decorative_Wall_Blue",new Arka_Decorative_Wall_Blue().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Arka_Decorative_Wall__Gold",new Arka_Decorative_Wall__Gold().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Arka_Decorative_Wall__Green",new Arka_Decorative_Wall__Green().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Arka_Decorative_Wall__Grey",new Arka_Decorative_Wall__Grey().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Arka_Decorative_Wall__Red",new Arka_Decorative_Wall__Red().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Celtic_Rune_Tile",new Celtic_Rune_Tile().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Celtic_Tile_Another_World",new Celtic_Tile_Another_World().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Celtic_Tile_Blue",new Celtic_Tile_Blue().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Celtic_Tile_Cream",new Celtic_Tile_Cream().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Celtic_Tile_Gold",new Celtic_Tile_Gold().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Celtic_Tile_Green",new Celtic_Tile_Green().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Celtic_Tile_Grey",new Celtic_Tile_Grey().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Celtic_Tile_Lightblue",new Celtic_Tile_Lightblue().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Celtic_Tile_Magenta",new Celtic_Tile_Magenta().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Celtic_Tile_Purple",new Celtic_Tile_Purple().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Celtic_Tile_Purple_Another_World",new Celtic_Tile_Purple_Another_World().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Celtic_Tile_Red",new Celtic_Tile_Red().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Celtic_Tile_White",new Celtic_Tile_White().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Celtic_Tile_Yellow",new Celtic_Tile_Yellow().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Dark_Temple_Rune",new Dark_Temple_Rune().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Giant_Carnival_Plant_Rune",new Giant_Carnival_Plant_Rune().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Rabic_Chiseled",new Rabic_Chiseled().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Rabic_Chiseled_Cave_Aqua",new Rabic_Chiseled_Cave_Aqua().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Rabic_Chiseled_Grey",new Rabic_Chiseled_Grey().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Rabic_Chiseled_Pink_Pearl",new Rabic_Chiseled_Pink_Pearl().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Rabic_Chiseled_Wall",new Rabic_Chiseled_Wall().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Rabic_Chiseled_Wall__Grey",new Rabic_Chiseled_Wall__Grey().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Rabic_Chiseled_Wall__Yellow",new Rabic_Chiseled_Wall__Yellow().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Rabic_Chiseled_Wall___Cave_Aqua",new Rabic_Chiseled_Wall___Cave_Aqua().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Rabic_Chiseled_Wall___Pink_Pearl",new Rabic_Chiseled_Wall___Pink_Pearl().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Rabic_Chiseled_Yellow",new Rabic_Chiseled_Yellow().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Rabic_Rune",new Rabic_Rune().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Red_Eel_Rune",new Red_Eel_Rune().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Robot_Rune",new Robot_Rune().setCreativeTab(tabTelRunes));
+	
+blockRef.put("Squid_Rune",new Squid_Rune().setCreativeTab(tabTelRunes));
+	
+itemRef.put("Apple", new Apple(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Apple_Jam_Jar", new Apple_Jam_Jar(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Arika_Pumpkin", new Arika_Pumpkin(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Ashed_Bread", new Ashed_Bread(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Banana", new Banana(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Barley", new Barley(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Blackberry", new Blackberry(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Blackberry_Jam_Jar", new Blackberry_Jam_Jar(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Blueberry", new Blueberry(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Blueberry_Jam_Jar", new Blueberry_Jam_Jar(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Blue_Fish", new Blue_Fish(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Border_Bread", new Border_Bread(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Bread", new Bread(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Brocoli", new Brocoli(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Brown_Mushroom", new Brown_Mushroom(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Carrot", new Carrot(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Chicken", new Chicken(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Chicken_thigh", new Chicken_thigh(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Cooked_Beef_Meat", new Cooked_Beef_Meat(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Cooked_Chiken", new Cooked_Chiken(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Cooked_Turkey", new Cooked_Turkey(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Cooked_Turkey_copy", new Cooked_Turkey_copy(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Cow_Meat", new Cow_Meat(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Cow_Milk", new Cow_Milk(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Cutted_Apple", new Cutted_Apple(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Cutted_Banana", new Cutted_Banana(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Cutted_Carrot", new Cutted_Carrot(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Cutted_mushroom", new Cutted_mushroom(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Cutted_Onion", new Cutted_Onion(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Cutted_Pear", new Cutted_Pear(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Cutted_Pineapple", new Cutted_Pineapple(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Cutted_Pumpkin", new Cutted_Pumpkin(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Cutted_strawberry", new Cutted_strawberry(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Cutted_Turnip", new Cutted_Turnip(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Cutted_Watermelon", new Cutted_Watermelon(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Decomposed_Shana", new Decomposed_Shana(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Desert_Octopus_tentacle", new Desert_Octopus_tentacle(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Fish", new Fish(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Fish_Fillet", new Fish_Fillet(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Goldem_Turkey", new Goldem_Turkey(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Golden_Cooked_Turkey", new Golden_Cooked_Turkey(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Green_Fish", new Green_Fish(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Kakurna_Pumpkin", new Kakurna_Pumpkin(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Light_Octopus_Tentacle", new Light_Octopus_Tentacle(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Light_Teshia", new Light_Teshia(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Lima_Slides", new Lima_Slides(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Limon_Jam_Jar", new Limon_Jam_Jar(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Limon_Slides", new Limon_Slides(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Maicy_Mushroom", new Maicy_Mushroom(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Maicy_Posioned_Mushroom", new Maicy_Posioned_Mushroom(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Mango", new Mango(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Mango_Slides", new Mango_Slides(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Mysterious_Blue_bread", new Mysterious_Blue_bread(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Mysterious_Gold_bread", new Mysterious_Gold_bread(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Mysterious_Pumpkin_type_1", new Mysterious_Pumpkin_type_1(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Mysterious_Pumpkin_type_2", new Mysterious_Pumpkin_type_2(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Mysterious_Pumpkin_type_3", new Mysterious_Pumpkin_type_3(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Mysterious_Red_Bread", new Mysterious_Red_Bread(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Octopus_Tentacle", new Octopus_Tentacle(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Onion", new Onion(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Orange", new Orange(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Orange_Fish", new Orange_Fish(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Orange_Slides", new Orange_Slides(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Pear", new Pear(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Pineapple", new Pineapple(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Poisoned_Teshia", new Poisoned_Teshia(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Poisoning_Mushroom", new Poisoning_Mushroom(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Poison_Cow_Meat", new Poison_Cow_Meat(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Pre_HotDog", new Pre_HotDog(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Pumpkin", new Pumpkin(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Purple_Fish", new Purple_Fish(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Red_Fish", new Red_Fish(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Red_musroom", new Red_musroom(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Shana", new Shana(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Slide_of_bread", new Slide_of_bread(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Strawberry", new Strawberry(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Strawberry_Jam_Jar", new Strawberry_Jam_Jar(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Teshia", new Teshia(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Tupia", new Tupia(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Turnip", new Turnip(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Water_Melon", new Water_Melon(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Wheat", new Wheat(2,false).setCreativeTab(tabTelFood));
+itemRef.put("Yellow_Fish", new Yellow_Fish(2,false).setCreativeTab(tabTelFood));
+
+itemRef.put("Arkea_Drink_Big_size", new Arkea_Drink_Big_size(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Arkea_Drink_Regular_Size", new Arkea_Drink_Regular_Size(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("ArkTeshia_wine", new ArkTeshia_wine(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Ark_Orange_Wine", new Ark_Orange_Wine(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Ark_Shana_wine", new Ark_Shana_wine(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Ark_Wine", new Ark_Wine(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Blueberry_ice_cream_bowl", new Blueberry_ice_cream_bowl(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Blue_Jelly_Full_Pizza", new Blue_Jelly_Full_Pizza(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Blue_Jelly_Pizza", new Blue_Jelly_Pizza(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Blue_Strawberry_mix_ice_cream_bowl", new Blue_Strawberry_mix_ice_cream_bowl(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Brochettes", new Brochettes(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Burger", new Burger(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Chiken_tenders", new Chiken_tenders(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Chinesse_food", new Chinesse_food(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Coffee", new Coffee(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Cooked_patty", new Cooked_patty(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Cooked_Roll_patty", new Cooked_Roll_patty(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("DeepSeafood", new DeepSeafood(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("French_fries", new French_fries(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Full_Pizza", new Full_Pizza(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Grape_ice_cream_bowl", new Grape_ice_cream_bowl(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Hot_Dog", new Hot_Dog(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Jelly_Full_Pizza", new Jelly_Full_Pizza(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Jelly_Pizza", new Jelly_Pizza(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Lemon_ice_cream_bowl", new Lemon_ice_cream_bowl(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Mango_ice_cream_bowl", new Mango_ice_cream_bowl(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Mixed_Ramen", new Mixed_Ramen(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Orange_Blue_mix_ice_cream_bowl", new Orange_Blue_mix_ice_cream_bowl(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Orange_Drink", new Orange_Drink(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Orange_ice_cream_bowl", new Orange_ice_cream_bowl(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Patty", new Patty(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Pineapple_Drink_Big_size", new Pineapple_Drink_Big_size(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Pineapple_Drink_Regular_Size", new Pineapple_Drink_Regular_Size(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Pizza", new Pizza(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Popcorn", new Popcorn(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Ramen", new Ramen(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Random_food_Item_Gift", new Random_food_Item_Gift(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Random_Seed_Gift", new Random_Seed_Gift(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Random_Weapon_Gift", new Random_Weapon_Gift(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Rice", new Rice(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Riceball", new Riceball(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Rich_Rice", new Rich_Rice(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Roll_patty", new Roll_patty(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Seafood", new Seafood(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Shana_Drink", new Shana_Drink(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Soda_Drink_Big_Size", new Soda_Drink_Big_Size(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Soda_Drink_Regular_Size", new Soda_Drink_Regular_Size(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("SpringHeart_Drink_Big_size", new SpringHeart_Drink_Big_size(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("SpringHeart_Drink_Regular_Size", new SpringHeart_Drink_Regular_Size(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Strawberry_Green_mix_ice_cream_bowl", new Strawberry_Green_mix_ice_cream_bowl(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Strawberry_ice_cream_bowl", new Strawberry_ice_cream_bowl(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Tea", new Tea(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Teshia_Drink", new Teshia_Drink(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Vanilla_ice_cream_bowl", new Vanilla_ice_cream_bowl(7,false).setCreativeTab(tabTelFastFood));
+itemRef.put("Wine_Drink", new Wine_Drink(7,false).setCreativeTab(tabTelFastFood));
+
+itemRef.put("Ark_Diet_soda", new Ark_Diet_soda(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Ark_Light_Soda", new Ark_Light_Soda(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Ark_Soda", new Ark_Soda(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Banana_Bombon", new Banana_Bombon(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Blackberry_sweet", new Blackberry_sweet(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Blueberry_sweet", new Blueberry_sweet(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Blue_Lolipop", new Blue_Lolipop(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Candy_cane", new Candy_cane(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Cherry_sweet", new Cherry_sweet(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Chocolate_bar", new Chocolate_bar(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Chocolate_chip_Cookie", new Chocolate_chip_Cookie(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Chocolate_ice_cream", new Chocolate_ice_cream(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Cool_Blue_ice_cream", new Cool_Blue_ice_cream(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Cool_Green_ice_cream", new Cool_Green_ice_cream(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Cool_Orange_ice_cream", new Cool_Orange_ice_cream(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Cool_Purple_ice_cream", new Cool_Purple_ice_cream(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Cool_Red_ice_cream", new Cool_Red_ice_cream(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Fruits_Item", new Fruits_Item(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Gingerbreadman", new Gingerbreadman(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Green_Lolipop", new Green_Lolipop(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Lemon_sweet", new Lemon_sweet(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Orange_Lolipop", new Orange_Lolipop(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Pink_Lolipop", new Pink_Lolipop(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Purple_Lolipop", new Purple_Lolipop(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Rainbow_Lolipop", new Rainbow_Lolipop(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Random_Lolipop", new Random_Lolipop(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Strawberry_ice_cream", new Strawberry_ice_cream(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("White_chocolate_bar", new White_chocolate_bar(4,false).setCreativeTab(tabTelCandy));
+itemRef.put("Yellow_Lolipop", new Yellow_Lolipop(4,false).setCreativeTab(tabTelCandy));
+
 
 	}
 	
@@ -1232,5 +1507,29 @@ blockRef.put("Yellow_Floor_Wood",new Yellow_Floor_Wood().setCreativeTab(tabNatru
 			return new ItemStack(blockRef.get("Celtic_Glass_Cream")).getItem();
 		}
 	};
-
+	public static CreativeTabs tabTelRunes = new CreativeTabs("tabTelRunes") {
+		@Override
+		public Item getTabIconItem() {
+			return new ItemStack(blockRef.get("Alpa_Chiseled_Neon_night")).getItem();
+		}
+	};
+public static CreativeTabs tabTelFood = new CreativeTabs("tabTelFood") {
+	@Override
+	public Item getTabIconItem() {
+		return new ItemStack(itemRef.get("Arika_Pumpkin")).getItem();
+	}
+};
+public static CreativeTabs tabTelFastFood = new CreativeTabs("tabTelFastFood") {
+	@Override
+	public Item getTabIconItem() {
+		return new ItemStack(itemRef.get("Chiken_tenders")).getItem();
+	}
+	
+};
+public static CreativeTabs tabTelCandy = new CreativeTabs("tabTelCandy") {
+	@Override
+	public Item getTabIconItem() {
+		return new ItemStack(itemRef.get("Rainbow_Lolipop")).getItem();
+	}
+};
 }
