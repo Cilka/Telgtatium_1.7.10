@@ -3,13 +3,13 @@ package com.hexopygate.Telgttatium.buildingblocks.glass.elegantwooden.panes;
 import com.hexopygate.Telgttatium.TelGlass;
 import com.hexopygate.Telgttatium.TelNormalGlassPane;
 
-public class #{classname} extends TelNormalGlassPane {
+public class Black_Elegant_Wooden_Single_Top_Side_Frame_Pane extends TelNormalGlassPane {
 
-	public #{classname}(String texture) {
+	public Black_Elegant_Wooden_Single_Top_Side_Frame_Pane(String texture) {
 		super(texture);
 		// TODO Auto-generated constructor stub
 	}
-public #{classname}(String faceTex, String trimTex) {
+public Black_Elegant_Wooden_Single_Top_Side_Frame_Pane(String faceTex, String trimTex) {
 		super(faceTex,trimTex);
 		// TODO Auto-generated constructor stub
 	}
