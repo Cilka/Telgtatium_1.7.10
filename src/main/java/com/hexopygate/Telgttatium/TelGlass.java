@@ -44,5 +44,11 @@ public class TelGlass extends Block {
 	    {
 	        return 1;
 	    }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public boolean isOpaqueCube()
+	{
+		return false;
+	}
 }
 
