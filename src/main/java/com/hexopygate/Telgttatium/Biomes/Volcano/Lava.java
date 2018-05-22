@@ -2,9 +2,10 @@ package com.hexopygate.Telgttatium.Biomes.Volcano;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockLiquid;
 import net.minecraft.block.material.Material;
 
-public class Lava extends Block {
+public class Lava extends BlockLiquid {
 
 	protected Lava(Material p_i45394_1_) {
 		super(p_i45394_1_);
