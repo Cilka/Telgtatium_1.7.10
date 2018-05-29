@@ -13,7 +13,7 @@ public class TelWood extends Block {
 		 String name = this.getClass().getSimpleName();
 			
 		 this.setBlockName(name).setBlockTextureName("tel:"+name);
-		 
+		
 		    GameRegistry.registerBlock(this, this.getUnlocalizedName().substring(5));
 	}
 	public TelWood()

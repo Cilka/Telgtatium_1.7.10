@@ -5,11 +5,122 @@
  R4wk, ZeuX, IngisKahn, bspkrs
  MCP Data version : unknown
 ****************************
-:eclipseClasspath
-:eclipseJdt
-:eclipseProject
-:eclipse
+All projects evaluated.
+Selected primary task 'DefaultTaskParameter{taskName='build',projectPath='null'}'
+Tasks to be executed: [task ':compileApiJava', task ':processApiResources', task ':apiClasses', task ':sourceMainJava', task ':compileJava', task ':processResources', task ':classes', task ':jar', task ':compileTestJava', task ':processTestResources', task ':testClasses', task ':test', task ':extractMcpData', task ':getVersionJson', task ':extractUserDev', task ':genSrgs', task ':reobf', task ':assemble', task ':check', task ':build']
+:compileApiJava (Thread[main,5,main]) started.
+:compileApiJava
+Skipping task ':compileApiJava' as it has no source files.
+:compileApiJava UP-TO-DATE
+:compileApiJava (Thread[main,5,main]) completed. Took 0.045 secs.
+:processApiResources (Thread[main,5,main]) started.
+:processApiResources
+Skipping task ':processApiResources' as it has no source files.
+:processApiResources UP-TO-DATE
+:processApiResources (Thread[main,5,main]) completed. Took 0.011 secs.
+:apiClasses (Thread[main,5,main]) started.
+:apiClasses
+Skipping task ':apiClasses' as it has no actions.
+:apiClasses UP-TO-DATE
+:apiClasses (Thread[main,5,main]) completed. Took 0.012 secs.
+:sourceMainJava (Thread[main,5,main]) started.
+:sourceMainJava
+Executing task ':sourceMainJava' (up-to-date check took 0.964 secs) due to:
+  Input file C:\Users\Cilka\git\telgttatium\src\main\java\com\hexopygate\Telgttatium\buildingblocks\woolcarpet\DynamicWarmMountain_Carpet.java has been added.
+  Input file C:\Users\Cilka\git\telgttatium\src\main\java\com\hexopygate\Telgttatium\buildingblocks\woolcarpet\CelticWoolLightBlue_Carpet.java has been added.
+  Input file C:\Users\Cilka\git\telgttatium\src\main\java\com\hexopygate\Telgttatium\buildingblocks\woolcarpet\MedievalLeaWallWool_Carpet.java has been added.
+:sourceMainJava (Thread[main,5,main]) completed. Took 9.121 secs.
+:compileJava (Thread[main,5,main]) started.
+:compileJava
+file or directory 'C:\Users\Cilka\git\telgttatium\libs', not found
+Executing task ':compileJava' (up-to-date check took 0.948 secs) due to:
+  Input file C:\Users\Cilka\git\telgttatium\build\sources\java\com\hexopygate\Telgttatium\buildingblocks\woolcarpet\WinterMountainBlueWool_Carpet.java has been added.
+  Input file C:\Users\Cilka\git\telgttatium\build\sources\java\com\hexopygate\Telgttatium\buildingblocks\woolcarpet\CoolMountainSportRed_Carpet.java has been added.
+  Input file C:\Users\Cilka\git\telgttatium\build\sources\java\com\hexopygate\Telgttatium\buildingblocks\woolcarpet\ExoCyanWool_Carpet.java has been added.
+file or directory 'C:\Users\Cilka\git\telgttatium\libs', not found
+Compiling with JDK Java compiler API.
+warning: [options] bootstrap class path not set in conjunction with -source 1.6
+1 warning
+:compileJava (Thread[main,5,main]) completed. Took 11.791 secs.
+:processResources (Thread[main,5,main]) started.
+:processResources
+Executing task ':processResources' (up-to-date check took 0.81 secs) due to:
+  Input file C:\Users\Cilka\git\telgttatium\src\main\resources\assets\tel\lang\en_US.lang has changed.
+  Input file C:\Users\Cilka\git\telgttatium\src\main\resources\mcmod.info has changed.
+  Input file C:\Users\Cilka\git\telgttatium\src\main\resources\assets\tel\lang\en_US has been added.
+:processResources (Thread[main,5,main]) completed. Took 9.933 secs.
+:classes (Thread[main,5,main]) started.
+:classes
+Skipping task ':classes' as it has no actions.
+:classes (Thread[main,5,main]) completed. Took 0.01 secs.
+:jar (Thread[main,5,main]) started.
+:jar
+Executing task ':jar' (up-to-date check took 0.342 secs) due to:
+  Output file C:\Users\Cilka\git\telgttatium\build\libs\modid-1.0.jar has changed.
+  Output file C:\Users\Cilka\git\telgttatium\build\libs\modid-1.0.jar has been removed.
+:jar (Thread[main,5,main]) completed. Took 2.712 secs.
+:compileTestJava (Thread[main,5,main]) started.
+:compileTestJava
+Skipping task ':compileTestJava' as it has no source files.
+:compileTestJava UP-TO-DATE
+:compileTestJava (Thread[main,5,main]) completed. Took 0.014 secs.
+:processTestResources (Thread[main,5,main]) started.
+:processTestResources
+Skipping task ':processTestResources' as it has no source files.
+:processTestResources UP-TO-DATE
+:processTestResources (Thread[main,5,main]) completed. Took 0.012 secs.
+:testClasses (Thread[main,5,main]) started.
+:testClasses
+Skipping task ':testClasses' as it has no actions.
+:testClasses UP-TO-DATE
+:testClasses (Thread[main,5,main]) completed. Took 0.013 secs.
+:test (Thread[main,5,main]) started.
+:test
+file or directory 'C:\Users\Cilka\git\telgttatium\build\classes\test', not found
+Skipping task ':test' as it has no source files.
+:test UP-TO-DATE
+:test (Thread[main,5,main]) completed. Took 0.028 secs.
+:extractMcpData (Thread[main,5,main]) started.
+:extractMcpData
+Skipping task ':extractMcpData' as it is up-to-date (took 0.006 secs).
+:extractMcpData UP-TO-DATE
+:extractMcpData (Thread[main,5,main]) completed. Took 0.019 secs.
+:getVersionJson (Thread[main,5,main]) started.
+:getVersionJson
+Executing task ':getVersionJson' (up-to-date check took 0.0 secs) due to:
+  Task has not declared any outputs.
+:getVersionJson (Thread[main,5,main]) completed. Took 0.17 secs.
+:extractUserDev (Thread[main,5,main]) started.
+:extractUserDev
+Skipping task ':extractUserDev' as it is up-to-date (took 0.251 secs).
+:extractUserDev UP-TO-DATE
+:extractUserDev (Thread[main,5,main]) completed. Took 0.266 secs.
+:genSrgs (Thread[main,5,main]) started.
+:genSrgs
+Skipping task ':genSrgs' as task onlyIf is false.
+:genSrgs SKIPPED
+:genSrgs (Thread[main,5,main]) completed. Took 0.509 secs.
+:reobf (Thread[main,5,main]) started.
+:reobf
+Executing task ':reobf' (up-to-date check took 0.005 secs) due to:
+  Output file C:\Users\Cilka\git\telgttatium\build\libs\modid-1.0.jar has changed.
+  Output file C:\Users\Cilka\git\telgttatium\build\libs\modid-1.0.jar has changed.
+file or directory 'C:\Users\Cilka\git\telgttatium\libs', not found
+:reobf (Thread[main,5,main]) completed. Took 3.395 secs.
+:assemble (Thread[main,5,main]) started.
+:assemble
+Skipping task ':assemble' as it has no actions.
+:assemble (Thread[main,5,main]) completed. Took 0.003 secs.
+:check (Thread[main,5,main]) started.
+:check
+Skipping task ':check' as it has no actions.
+:check UP-TO-DATE
+:check (Thread[main,5,main]) completed. Took 0.006 secs.
+:build (Thread[main,5,main]) started.
+:build
+Skipping task ':build' as it has no actions.
+:build (Thread[main,5,main]) completed. Took 0.003 secs.
 
 BUILD SUCCESSFUL
 
-Total time: 6.118 secs
+Total time: 53.49 secs

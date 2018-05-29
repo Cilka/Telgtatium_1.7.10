@@ -1,2 +1,2 @@
-blockRef.put("#{classname}",new #{classname}("#{classname}","Glass_Trim").setCreativeTab(tabGlass));
+blockRef.put("#{classname}",new #{classname}("#{classname}","Glass_Trim"));
 	

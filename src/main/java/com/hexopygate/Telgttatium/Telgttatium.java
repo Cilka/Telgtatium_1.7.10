@@ -1,8 +1,10 @@
 package com.hexopygate.Telgttatium;
 
 import java.util.HashMap;
+import com.hexopygate.Telgttatium.buildingblocks.fences.*;
 import com.hexopygate.Telgttatium.buildingblocks.runes.*;
 import com.hexopygate.Telgttatium.buildingblocks.bricks.*;
+import com.hexopygate.Telgttatium.buildingblocks.city.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.framesborders.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.*;
@@ -23,6 +25,7 @@ import com.hexopygate.Telgttatium.buildingblocks.nevoevolution.nvestained.*;
 import com.hexopygate.Telgttatium.buildingblocks.nevoevolution.nvetchtiles.*;
 import com.hexopygate.Telgttatium.Biomes.Volcano.*;
 import com.hexopygate.Telgttatium.Biomes.Winter.*;
+import com.hexopygate.Telgttatium.Biomes.types.WorldTypeTelgttatium;
 import com.hexopygate.Telgttatium.Food.*;
 import com.hexopygate.Telgttatium.Food.Candy.*;
 import com.hexopygate.Telgttatium.Food.FastFood.*;
@@ -30,6 +33,7 @@ import com.hexopygate.Telgttatium.buildingblocks.Ceramics.*;
 import com.hexopygate.Telgttatium.buildingblocks.Ceramics.BigBlock.*;
 import com.hexopygate.Telgttatium.buildingblocks.Ceramics.CheckeredFloor.*;
 import com.hexopygate.Telgttatium.buildingblocks.Empire.*;
+import com.hexopygate.Telgttatium.buildingblocks.Sridintaria.*;
 import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.elegantwooden.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.elegantwooden.panes.*;
@@ -48,6 +52,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.WorldType;
 
 @Mod(modid="tel", name="Telgttatium", version = "1.0")
 public class Telgttatium {
@@ -173,6 +178,10 @@ blockRef.put("WinterMountainRedWool_Carpet",new WinterMountainRedWool_Carpet().s
 	blockRef.put("pinredGrass",new Pink_Red_Grass().setCreativeTab(tabNatrualBlocks));
 	blockRef.put("purredGrass",new Purple_Red_Grass().setCreativeTab(tabNatrualBlocks));
 	blockRef.put("stone",new Stone().setCreativeTab(tabNatrualBlocks));
+	blockRef.put("blood_stone",new Blood_Stone().setCreativeTab(tabNatrualBlocks));
+	blockRef.put("orange_stone",new Orange_Stone().setCreativeTab(tabNatrualBlocks));
+	blockRef.put("white_stone",new White_Stone().setCreativeTab(tabNatrualBlocks));
+	blockRef.put("lavender_stone",new Lavender_Stone().setCreativeTab(tabNatrualBlocks));
 	blockRef.put("underwaterStone",new Underwater_Stone().setCreativeTab(tabNatrualBlocks));
 	blockRef.put("undergroundStone",new Underground_Stone().setCreativeTab(tabNatrualBlocks));
 	blockRef.put("desertStone",new Desert_Sand_Stone().setCreativeTab(tabNatrualBlocks));
@@ -424,58 +433,7 @@ blockRef.put("WinterMountainRedWool_Carpet",new WinterMountainRedWool_Carpet().s
 	blockRef.put("White_Glass",new White_Glass().setCreativeTab(tabGlass));
 	blockRef.put("Yellow_Glass",new Yellow_Glass().setCreativeTab(tabGlass));
 	
-	blockRef.put("Down_Frame__Simple_Pane",new Down_Frame__Simple_Pane("Down_Frame__Simple","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Down_Single_Frame__Simple_Pane",new Down_Single_Frame__Simple_Pane("Down_Single_Frame__Simple","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Left_Down_Corner_Frame__Simple_Pane",new Left_Down_Corner_Frame__Simple_Pane("Left_Down_Corner_Frame__Simple","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Left_Frame__Simple_Pane",new Left_Frame__Simple_Pane("Left_Frame__Simple","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Left_Single_Frame__Simple_Pane",new Left_Single_Frame__Simple_Pane("Left_Single_Frame__Simple","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Left_Top_Corner_Frame__Simple_Pane",new Left_Top_Corner_Frame__Simple_Pane("Left_Top_Corner_Frame__Simple","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Middle_Single_Frame__Simple_Pane",new Middle_Single_Frame__Simple_Pane("Middle_Single_Frame__Simple","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Right_Down_Corner_Frame__Simple_Pane",new Right_Down_Corner_Frame__Simple_Pane("Right_Down_Corner_Frame__Simple","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Right_Frame__Simple_Pane",new Right_Frame__Simple_Pane("Right_Frame__Simple","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Right_Single_Frame__Simple_Pane",new Right_Single_Frame__Simple_Pane("Right_Single_Frame__Simple","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Right_Top_Corner_Frame__Simple_Pane",new Right_Top_Corner_Frame__Simple_Pane("Right_Top_Corner_Frame__Simple","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Simple_Full_Frame__Simple_Pane",new Simple_Full_Frame__Simple_Pane("Simple_Full_Frame__Simple","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Top_Frame__Simple_Pane",new Top_Frame__Simple_Pane("Top_Frame__Simple","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Top_Single_Frame__Simple_Pane",new Top_Single_Frame__Simple_Pane("Top_Single_Frame__Simple","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Wooden_Down_Frame_Pane",new Wooden_Down_Frame_Pane("Wooden_Down_Frame","Glass_Trim").setCreativeTab(tabGlass));
-	
-blockRef.put("Wooden_Down_Single_Frame_Pane",new Wooden_Down_Single_Frame_Pane("Wooden_Down_Single_Frame","Glass_Trim").setCreativeTab(tabGlass));
-	
-blockRef.put("Wooden_Full_Frame_Pane",new Wooden_Full_Frame_Pane("Wooden_Full_Frame","Glass_Trim").setCreativeTab(tabGlass));
-	
-blockRef.put("Wooden_Left_Down_Corner_Frame_Pane",new Wooden_Left_Down_Corner_Frame_Pane("Wooden_Left_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabGlass));
-	
-blockRef.put("Wooden_Left_Frame_Pane",new Wooden_Left_Frame_Pane("Wooden_Left_Frame","Glass_Trim").setCreativeTab(tabGlass));
-	
-blockRef.put("Wooden_Left_Top_Corner_Frame_Pane",new Wooden_Left_Top_Corner_Frame_Pane("Wooden_Left_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabGlass));
-	
-blockRef.put("Wooden_Middle_Single_Frame_Pane",new Wooden_Middle_Single_Frame_Pane("Wooden_Middle_Single_Frame","Glass_Trim").setCreativeTab(tabGlass));
-	
-blockRef.put("Wooden_Right_Down_Corner_Frame_Pane",new Wooden_Right_Down_Corner_Frame_Pane("Wooden_Right_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabGlass));
-	
-blockRef.put("Wooden_Right_Frame_Pane",new Wooden_Right_Frame_Pane("Wooden_Right_Frame","Glass_Trim").setCreativeTab(tabGlass));
-	
-blockRef.put("Wooden_Right_Top_Corner_Frame_Pane",new Wooden_Right_Top_Corner_Frame_Pane("Wooden_Right_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabGlass));
-	
-blockRef.put("Wooden_Top_Frame_Pane",new Wooden_Top_Frame_Pane("Wooden_Top_Frame","Glass_Trim").setCreativeTab(tabGlass));
-	
-blockRef.put("Wooden_Top_single_Frame_Pane",new Wooden_Top_Single_Frame_Pane("Wooden_Top_Single_Frame","Glass_Trim").setCreativeTab(tabGlass));
-	
+
 blockRef.put("Simple_Full_Frame__Simple",new Simple_Full_Frame__Simple().setCreativeTab(tabSimpleLife));
 blockRef.put("Wooden_Full_Frame",new Wooden_Full_Frame().setCreativeTab(tabGlass));
 
@@ -566,555 +524,45 @@ blockRef.put("Simple_Glass_White_Pane",new Simple_Glass_White_Pane("Simple_Glass
 	
 blockRef.put("Simple_Glass_Yellow_Pane",new Simple_Glass_Yellow_Pane("Simple_Glass_Yellow").setCreativeTab(tabSimpleLife));
 
-blockRef.put("Black_Simple_Down_Frame_Pane",new Black_Simple_Down_Frame_Pane("Black_Simple_Down_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Black_Simple_Down_Single_Frame_Pane",new Black_Simple_Down_Single_Frame_Pane("Black_Simple_Down_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Black_Simple_Left_Down_Corner_Frame_Pane",new Black_Simple_Left_Down_Corner_Frame_Pane("Black_Simple_Left_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Black_Simple_Left_Frame_Pane",new Black_Simple_Left_Frame_Pane("Black_Simple_Left_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Black_Simple_Left_Top_Corner_Frame_Pane",new Black_Simple_Left_Top_Corner_Frame_Pane("Black_Simple_Left_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Black_Simple_Middle_Single_Frame_Pane",new Black_Simple_Middle_Single_Frame_Pane("Black_Simple_Middle_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Black_Simple_Right_Down_Corner_Frame_Pane",new Black_Simple_Right_Down_Corner_Frame_Pane("Black_Simple_Right_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Black_Simple_Right_Frame_Pane",new Black_Simple_Right_Frame_Pane("Black_Simple_Right_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Black_Simple_Right_Single_Frame_Pane",new Black_Simple_Right_Single_Frame_Pane("Black_Simple_Right_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Black_Simple_Right_Top_Corner_Frame_Pane",new Black_Simple_Right_Top_Corner_Frame_Pane("Black_Simple_Right_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Black_Simple_Simple_Left_Single_Frame_Pane",new Black_Simple_Simple_Left_Single_Frame_Pane("Black_Simple_Simple_Left_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Black_Simple_Top_Frame_Pane",new Black_Simple_Top_Frame_Pane("Black_Simple_Top_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Black_Simple_Top_Single_Frame_Pane",new Black_Simple_Top_Single_Frame_Pane("Black_Simple_Top_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Blue_Simple_Down_Frame_Pane",new Blue_Simple_Down_Frame_Pane("Blue_Simple_Down_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Blue_Simple_Down_Single_Frame_Pane",new Blue_Simple_Down_Single_Frame_Pane("Blue_Simple_Down_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Blue_Simple_Left_Down_Corner_Frame_Pane",new Blue_Simple_Left_Down_Corner_Frame_Pane("Blue_Simple_Left_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Blue_Simple_Left_Frame_Pane",new Blue_Simple_Left_Frame_Pane("Blue_Simple_Left_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Blue_Simple_Left_Single_Frame_Pane",new Blue_Simple_Left_Single_Frame_Pane("Blue_Simple_Left_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Blue_Simple_Left_Top_Corner_Frame_Pane",new Blue_Simple_Left_Top_Corner_Frame_Pane("Blue_Simple_Left_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Blue_Simple_Middle_Single_Frame_Pane",new Blue_Simple_Middle_Single_Frame_Pane("Blue_Simple_Middle_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Blue_Simple_Right_Down_Corner_Frame_Pane",new Blue_Simple_Right_Down_Corner_Frame_Pane("Blue_Simple_Right_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Blue_Simple_Right_Frame_Pane",new Blue_Simple_Right_Frame_Pane("Blue_Simple_Right_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Blue_Simple_Right_Single_Frame_Pane",new Blue_Simple_Right_Single_Frame_Pane("Blue_Simple_Right_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Blue_Simple_Right_Top_Corner_Frame_Pane",new Blue_Simple_Right_Top_Corner_Frame_Pane("Blue_Simple_Right_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Blue_Simple_Top_Frame_Pane",new Blue_Simple_Top_Frame_Pane("Blue_Simple_Top_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Blue_Simple_Top_Single_Frame_Pane",new Blue_Simple_Top_Single_Frame_Pane("Blue_Simple_Top_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Clear_Simple_Down_Frame_Pane",new Clear_Simple_Down_Frame_Pane("Clear_Simple_Down_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Clear_Simple_Down_Single_Frame_Pane",new Clear_Simple_Down_Single_Frame_Pane("Clear_Simple_Down_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Clear_Simple_Left_Down_Corner_Frame_Pane",new Clear_Simple_Left_Down_Corner_Frame_Pane("Clear_Simple_Left_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Clear_Simple_Left_Frame_Pane",new Clear_Simple_Left_Frame_Pane("Clear_Simple_Left_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Clear_Simple_Left_Single_Frame_Pane",new Clear_Simple_Left_Single_Frame_Pane("Clear_Simple_Left_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Clear_Simple_Left_Top_Corner_Frame_Pane",new Clear_Simple_Left_Top_Corner_Frame_Pane("Clear_Simple_Left_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Clear_Simple_Middle_Single_Frame_Pane",new Clear_Simple_Middle_Single_Frame_Pane("Clear_Simple_Middle_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Clear_Simple_Right_Down_Corner_Frame_Pane",new Clear_Simple_Right_Down_Corner_Frame_Pane("Clear_Simple_Right_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Clear_Simple_Right_Frame_Pane",new Clear_Simple_Right_Frame_Pane("Clear_Simple_Right_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Clear_Simple_Right_Single_Frame_Pane",new Clear_Simple_Right_Single_Frame_Pane("Clear_Simple_Right_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Clear_Simple_Right_Top_Corner_Frame_Pane",new Clear_Simple_Right_Top_Corner_Frame_Pane("Clear_Simple_Right_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Clear_Simple_Top_Frame_Pane",new Clear_Simple_Top_Frame_Pane("Clear_Simple_Top_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Clear_Simple_Top_Single_Frame_Pane",new Clear_Simple_Top_Single_Frame_Pane("Clear_Simple_Top_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Cyan_Simple_Down_Frame_Pane",new Cyan_Simple_Down_Frame_Pane("Cyan_Simple_Down_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Cyan_Simple_Down_Single_Frame_Pane",new Cyan_Simple_Down_Single_Frame_Pane("Cyan_Simple_Down_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Cyan_Simple_Left_Down_Corner_Frame_Pane",new Cyan_Simple_Left_Down_Corner_Frame_Pane("Cyan_Simple_Left_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Cyan_Simple_Left_Frame_Pane",new Cyan_Simple_Left_Frame_Pane("Cyan_Simple_Left_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Cyan_Simple_Left_Top_Corner_Frame_Pane",new Cyan_Simple_Left_Top_Corner_Frame_Pane("Cyan_Simple_Left_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Cyan_Simple_Middle_Single_Frame_Pane",new Cyan_Simple_Middle_Single_Frame_Pane("Cyan_Simple_Middle_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Cyan_Simple_Right_Down_Corner_Frame_Pane",new Cyan_Simple_Right_Down_Corner_Frame_Pane("Cyan_Simple_Right_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Cyan_Simple_Right_Frame_Pane",new Cyan_Simple_Right_Frame_Pane("Cyan_Simple_Right_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Cyan_Simple_Right_Single_Frame_Pane",new Cyan_Simple_Right_Single_Frame_Pane("Cyan_Simple_Right_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Cyan_Simple_Right_Top_Corner_Frame_Pane",new Cyan_Simple_Right_Top_Corner_Frame_Pane("Cyan_Simple_Right_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Cyan_Simple_Simple_Left_Single_Frame_Pane",new Cyan_Simple_Simple_Left_Single_Frame_Pane("Cyan_Simple_Simple_Left_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Cyan_Simple_Top_Frame_Pane",new Cyan_Simple_Top_Frame_Pane("Cyan_Simple_Top_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Cyan_Simple_Top_Single_Frame_Pane",new Cyan_Simple_Top_Single_Frame_Pane("Cyan_Simple_Top_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Blue_Simple_Down_Frame_Pane",new Dark_Blue_Simple_Down_Frame_Pane("Dark_Blue_Simple_Down_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Blue_Simple_Down_Single_Frame_Pane",new Dark_Blue_Simple_Down_Single_Frame_Pane("Dark_Blue_Simple_Down_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Blue_Simple_Left_Down_Corner_Frame_Pane",new Dark_Blue_Simple_Left_Down_Corner_Frame_Pane("Dark_Blue_Simple_Left_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Blue_Simple_Left_Frame_Pane",new Dark_Blue_Simple_Left_Frame_Pane("Dark_Blue_Simple_Left_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Blue_Simple_Left_Single_Frame_Pane",new Dark_Blue_Simple_Left_Single_Frame_Pane("Dark_Blue_Simple_Left_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Blue_Simple_Left_Top_Corner_Frame_Pane",new Dark_Blue_Simple_Left_Top_Corner_Frame_Pane("Dark_Blue_Simple_Left_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Blue_Simple_Middle_Single_Frame_Pane",new Dark_Blue_Simple_Middle_Single_Frame_Pane("Dark_Blue_Simple_Middle_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Blue_Simple_Right_Down_Corner_Frame_Pane",new Dark_Blue_Simple_Right_Down_Corner_Frame_Pane("Dark_Blue_Simple_Right_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Blue_Simple_Right_Frame_Pane",new Dark_Blue_Simple_Right_Frame_Pane("Dark_Blue_Simple_Right_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Blue_Simple_Right_Single_Frame_Pane",new Dark_Blue_Simple_Right_Single_Frame_Pane("Dark_Blue_Simple_Right_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Blue_Simple_Right_Top_Corner_Frame_Pane",new Dark_Blue_Simple_Right_Top_Corner_Frame_Pane("Dark_Blue_Simple_Right_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Blue_Simple_Top_Frame_Pane",new Dark_Blue_Simple_Top_Frame_Pane("Dark_Blue_Simple_Top_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Blue_Simple_Top_Single_Frame_Pane",new Dark_Blue_Simple_Top_Single_Frame_Pane("Dark_Blue_Simple_Top_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Green_Simple_Down_Frame_Pane",new Dark_Green_Simple_Down_Frame_Pane("Dark_Green_Simple_Down_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Green_Simple_Down_Single_Frame_Pane",new Dark_Green_Simple_Down_Single_Frame_Pane("Dark_Green_Simple_Down_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Green_Simple_Left_Down_Corner_Frame_Pane",new Dark_Green_Simple_Left_Down_Corner_Frame_Pane("Dark_Green_Simple_Left_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Green_Simple_Left_Frame_Pane",new Dark_Green_Simple_Left_Frame_Pane("Dark_Green_Simple_Left_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Green_Simple_Left_Single_Frame_Pane",new Dark_Green_Simple_Left_Single_Frame_Pane("Dark_Green_Simple_Left_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Green_Simple_Left_Top_Corner_Frame_Pane",new Dark_Green_Simple_Left_Top_Corner_Frame_Pane("Dark_Green_Simple_Left_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Green_Simple_Middle_Single_Frame_Pane",new Dark_Green_Simple_Middle_Single_Frame_Pane("Dark_Green_Simple_Middle_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Green_Simple_Right_Down_Corner_Frame_Pane",new Dark_Green_Simple_Right_Down_Corner_Frame_Pane("Dark_Green_Simple_Right_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Green_Simple_Right_Frame_Pane",new Dark_Green_Simple_Right_Frame_Pane("Dark_Green_Simple_Right_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Green_Simple_Right_Single_Frame_Pane",new Dark_Green_Simple_Right_Single_Frame_Pane("Dark_Green_Simple_Right_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Green_Simple_Right_Top_Corner_Frame_Pane",new Dark_Green_Simple_Right_Top_Corner_Frame_Pane("Dark_Green_Simple_Right_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Green_Simple_Top_Frame_Pane",new Dark_Green_Simple_Top_Frame_Pane("Dark_Green_Simple_Top_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Green_Simple_Top_Single_Frame_Pane",new Dark_Green_Simple_Top_Single_Frame_Pane("Dark_Green_Simple_Top_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Purple_Simple_Down_Frame_Pane",new Dark_Purple_Simple_Down_Frame_Pane("Dark_Purple_Simple_Down_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Purple_Simple_Down_Single_Frame_Pane",new Dark_Purple_Simple_Down_Single_Frame_Pane("Dark_Purple_Simple_Down_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Purple_Simple_Left_Down_Corner_Frame_Pane",new Dark_Purple_Simple_Left_Down_Corner_Frame_Pane("Dark_Purple_Simple_Left_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Purple_Simple_Left_Frame_Pane",new Dark_Purple_Simple_Left_Frame_Pane("Dark_Purple_Simple_Left_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Purple_Simple_Left_Single_Frame_Pane",new Dark_Purple_Simple_Left_Single_Frame_Pane("Dark_Purple_Simple_Left_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Purple_Simple_Left_Top_Corner_Frame_Pane",new Dark_Purple_Simple_Left_Top_Corner_Frame_Pane("Dark_Purple_Simple_Left_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Purple_Simple_Middle_Single_Frame_Pane",new Dark_Purple_Simple_Middle_Single_Frame_Pane("Dark_Purple_Simple_Middle_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Purple_Simple_Right_Down_Corner_Frame_Pane",new Dark_Purple_Simple_Right_Down_Corner_Frame_Pane("Dark_Purple_Simple_Right_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Purple_Simple_Right_Frame_Pane",new Dark_Purple_Simple_Right_Frame_Pane("Dark_Purple_Simple_Right_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Purple_Simple_Right_Single_Frame_Pane",new Dark_Purple_Simple_Right_Single_Frame_Pane("Dark_Purple_Simple_Right_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Purple_Simple_Right_Top_Corner_Frame_Pane",new Dark_Purple_Simple_Right_Top_Corner_Frame_Pane("Dark_Purple_Simple_Right_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Purple_Simple_Top_Frame_Pane",new Dark_Purple_Simple_Top_Frame_Pane("Dark_Purple_Simple_Top_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Dark_Purple_Simple_Top_Single_Frame_Pane",new Dark_Purple_Simple_Top_Single_Frame_Pane("Dark_Purple_Simple_Top_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Green_Simple_Down_Frame__Green_Pane",new Green_Simple_Down_Frame__Green_Pane("Green_Simple_Down_Frame__Green","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Green_Simple_Down_Single_Frame_Pane",new Green_Simple_Down_Single_Frame_Pane("Green_Simple_Down_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Green_Simple_Left_Down_Corner_Frame_Pane",new Green_Simple_Left_Down_Corner_Frame_Pane("Green_Simple_Left_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Green_Simple_Left_Frame_Pane",new Green_Simple_Left_Frame_Pane("Green_Simple_Left_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Green_Simple_Left_Single_Frame_Pane",new Green_Simple_Left_Single_Frame_Pane("Green_Simple_Left_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Green_Simple_Left_Top_Corner_Frame_Pane",new Green_Simple_Left_Top_Corner_Frame_Pane("Green_Simple_Left_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Green_Simple_Middle_Single_Frame_Pane",new Green_Simple_Middle_Single_Frame_Pane("Green_Simple_Middle_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Green_Simple_Right_Down_Corner_Frame_Pane",new Green_Simple_Right_Down_Corner_Frame_Pane("Green_Simple_Right_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Green_Simple_Right_Frame_Pane",new Green_Simple_Right_Frame_Pane("Green_Simple_Right_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Green_Simple_Right_Single_Frame_Pane",new Green_Simple_Right_Single_Frame_Pane("Green_Simple_Right_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Green_Simple_Right_Top_Corner_Frame_Pane",new Green_Simple_Right_Top_Corner_Frame_Pane("Green_Simple_Right_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Green_Simple_Top_Frame_Pane",new Green_Simple_Top_Frame_Pane("Green_Simple_Top_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Green_Simple_Top_Single_Frame_Pane",new Green_Simple_Top_Single_Frame_Pane("Green_Simple_Top_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Magenta_Simple_Down_Frame_Pane",new Magenta_Simple_Down_Frame_Pane("Magenta_Simple_Down_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Magenta_Simple_Down_Single_Frame_Pane",new Magenta_Simple_Down_Single_Frame_Pane("Magenta_Simple_Down_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Magenta_Simple_Left_Down_Corner_Frame_Pane",new Magenta_Simple_Left_Down_Corner_Frame_Pane("Magenta_Simple_Left_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Magenta_Simple_Left_Frame_Pane",new Magenta_Simple_Left_Frame_Pane("Magenta_Simple_Left_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Magenta_Simple_Left_Single_Frame_Pane",new Magenta_Simple_Left_Single_Frame_Pane("Magenta_Simple_Left_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Magenta_Simple_Left_Top_Corner_Frame_Pane",new Magenta_Simple_Left_Top_Corner_Frame_Pane("Magenta_Simple_Left_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Magenta_Simple_Middle_Single_Frame_Pane",new Magenta_Simple_Middle_Single_Frame_Pane("Magenta_Simple_Middle_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Magenta_Simple_Right_Down_Corner_Frame_Pane",new Magenta_Simple_Right_Down_Corner_Frame_Pane("Magenta_Simple_Right_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Magenta_Simple_Right_Frame_Pane",new Magenta_Simple_Right_Frame_Pane("Magenta_Simple_Right_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Magenta_Simple_Right_Single_Frame_Pane",new Magenta_Simple_Right_Single_Frame_Pane("Magenta_Simple_Right_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Magenta_Simple_Right_Top_Corner_Frame_Pane",new Magenta_Simple_Right_Top_Corner_Frame_Pane("Magenta_Simple_Right_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Magenta_Simple_Top_Frame_Pane",new Magenta_Simple_Top_Frame_Pane("Magenta_Simple_Top_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Magenta_Simple_Top_Single_Frame_Pane",new Magenta_Simple_Top_Single_Frame_Pane("Magenta_Simple_Top_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Orange_Simple_Down_Frame_Pane",new Orange_Simple_Down_Frame_Pane("Orange_Simple_Down_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Orange_Simple_Down_Single_Frame_Pane",new Orange_Simple_Down_Single_Frame_Pane("Orange_Simple_Down_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Orange_Simple_Left_Down_Corner_Frame_Pane",new Orange_Simple_Left_Down_Corner_Frame_Pane("Orange_Simple_Left_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Orange_Simple_Left_Frame_Pane",new Orange_Simple_Left_Frame_Pane("Orange_Simple_Left_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Orange_Simple_Left_Single_Frame_Pane",new Orange_Simple_Left_Single_Frame_Pane("Orange_Simple_Left_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Orange_Simple_Left_Top_Corner_Frame_Pane",new Orange_Simple_Left_Top_Corner_Frame_Pane("Orange_Simple_Left_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Orange_Simple_Middle_Single_Frame_Pane",new Orange_Simple_Middle_Single_Frame_Pane("Orange_Simple_Middle_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Orange_Simple_Right_Down_Corner_Frame_Pane",new Orange_Simple_Right_Down_Corner_Frame_Pane("Orange_Simple_Right_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Orange_Simple_Right_Frame_Pane",new Orange_Simple_Right_Frame_Pane("Orange_Simple_Right_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Orange_Simple_Right_Single_Frame_Pane",new Orange_Simple_Right_Single_Frame_Pane("Orange_Simple_Right_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Orange_Simple_Right_Top_Corner_Frame_Pane",new Orange_Simple_Right_Top_Corner_Frame_Pane("Orange_Simple_Right_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Orange_Simple_Top_Frame_Pane",new Orange_Simple_Top_Frame_Pane("Orange_Simple_Top_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Orange_Simple_Top_Single_Frame_Pane",new Orange_Simple_Top_Single_Frame_Pane("Orange_Simple_Top_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Pink_Simple_Down_Frame_Pane",new Pink_Simple_Down_Frame_Pane("Pink_Simple_Down_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Pink_Simple_Down_Single_Frame_Pane",new Pink_Simple_Down_Single_Frame_Pane("Pink_Simple_Down_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Pink_Simple_Left_Down_Corner_Frame_Pane",new Pink_Simple_Left_Down_Corner_Frame_Pane("Pink_Simple_Left_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Pink_Simple_Left_Frame_Pane",new Pink_Simple_Left_Frame_Pane("Pink_Simple_Left_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Pink_Simple_Left_Single_Frame_Pane",new Pink_Simple_Left_Single_Frame_Pane("Pink_Simple_Left_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Pink_Simple_Left_Top_Corner_Frame_Pane",new Pink_Simple_Left_Top_Corner_Frame_Pane("Pink_Simple_Left_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Pink_Simple_Middle_Single_Frame_Pane",new Pink_Simple_Middle_Single_Frame_Pane("Pink_Simple_Middle_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Pink_Simple_Right_Down_Corner_Frame_Pane",new Pink_Simple_Right_Down_Corner_Frame_Pane("Pink_Simple_Right_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Pink_Simple_Right_Frame_Pane",new Pink_Simple_Right_Frame_Pane("Pink_Simple_Right_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Pink_Simple_Right_Single_Frame_Pane",new Pink_Simple_Right_Single_Frame_Pane("Pink_Simple_Right_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Pink_Simple_Right_Top_Corner_Frame_Pane",new Pink_Simple_Right_Top_Corner_Frame_Pane("Pink_Simple_Right_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Pink_Simple_Top_Frame_Pane",new Pink_Simple_Top_Frame_Pane("Pink_Simple_Top_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Pink_Simple_Top_Single_Frame_Pane",new Pink_Simple_Top_Single_Frame_Pane("Pink_Simple_Top_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Purple_Simple_Down_Frame_Pane",new Purple_Simple_Down_Frame_Pane("Purple_Simple_Down_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Purple_Simple_Down_Single_Frame_Pane",new Purple_Simple_Down_Single_Frame_Pane("Purple_Simple_Down_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Purple_Simple_Left_Down_Corner_Frame_Pane",new Purple_Simple_Left_Down_Corner_Frame_Pane("Purple_Simple_Left_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Purple_Simple_Left_Frame_Pane",new Purple_Simple_Left_Frame_Pane("Purple_Simple_Left_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Purple_Simple_Left_Single_Frame_Pane",new Purple_Simple_Left_Single_Frame_Pane("Purple_Simple_Left_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Purple_Simple_Left_Top_Corner_Frame_Pane",new Purple_Simple_Left_Top_Corner_Frame_Pane("Purple_Simple_Left_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Purple_Simple_Middle_Single_Frame_Pane",new Purple_Simple_Middle_Single_Frame_Pane("Purple_Simple_Middle_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Purple_Simple_Right_Down_Corner_Frame_Pane",new Purple_Simple_Right_Down_Corner_Frame_Pane("Purple_Simple_Right_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Purple_Simple_Right_Frame_Pane",new Purple_Simple_Right_Frame_Pane("Purple_Simple_Right_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Purple_Simple_Right_Single_Frame_Pane",new Purple_Simple_Right_Single_Frame_Pane("Purple_Simple_Right_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Purple_Simple_Right_Top_Corner_Frame_Pane",new Purple_Simple_Right_Top_Corner_Frame_Pane("Purple_Simple_Right_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Purple_Simple_Top_Frame_Pane",new Purple_Simple_Top_Frame_Pane("Purple_Simple_Top_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Purple_Simple_Top_Single_Frame_Pane",new Purple_Simple_Top_Single_Frame_Pane("Purple_Simple_Top_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Red_Simple_Down_Frame_Pane",new Red_Simple_Down_Frame_Pane("Red_Simple_Down_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Red_Simple_Down_Single_Frame_Pane",new Red_Simple_Down_Single_Frame_Pane("Red_Simple_Down_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Red_Simple_Left_Down_Corner_Frame_Pane",new Red_Simple_Left_Down_Corner_Frame_Pane("Red_Simple_Left_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Red_Simple_Left_Frame_Pane",new Red_Simple_Left_Frame_Pane("Red_Simple_Left_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Red_Simple_Left_Single_Frame_Pane",new Red_Simple_Left_Single_Frame_Pane("Red_Simple_Left_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Red_Simple_Left_Top_Corner_Frame_Pane",new Red_Simple_Left_Top_Corner_Frame_Pane("Red_Simple_Left_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Red_Simple_Middle_Single_Frame_Pane",new Red_Simple_Middle_Single_Frame_Pane("Red_Simple_Middle_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Red_Simple_Right_Down_Corner_Frame_Pane",new Red_Simple_Right_Down_Corner_Frame_Pane("Red_Simple_Right_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Red_Simple_Right_Frame__Red_Pane",new Red_Simple_Right_Frame__Red_Pane("Red_Simple_Right_Frame__Red","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Red_Simple_Right_Single_Frame_Pane",new Red_Simple_Right_Single_Frame_Pane("Red_Simple_Right_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Red_Simple_Right_Top_Corner_Frame_Pane",new Red_Simple_Right_Top_Corner_Frame_Pane("Red_Simple_Right_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Red_Simple_Top_Frame_Pane",new Red_Simple_Top_Frame_Pane("Red_Simple_Top_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Red_Simple_Top_Single_Frame_Pane",new Red_Simple_Top_Single_Frame_Pane("Red_Simple_Top_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("White_Simple_Down_Frame_Pane",new White_Simple_Down_Frame_Pane("White_Simple_Down_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("White_Simple_Down_Single_Frame_Pane",new White_Simple_Down_Single_Frame_Pane("White_Simple_Down_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("White_Simple_Left_Down_Corner_Frame_Pane",new White_Simple_Left_Down_Corner_Frame_Pane("White_Simple_Left_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("White_Simple_Left_Frame_Pane",new White_Simple_Left_Frame_Pane("White_Simple_Left_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("White_Simple_Left_Single_Frame_Pane",new White_Simple_Left_Single_Frame_Pane("White_Simple_Left_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("White_Simple_Left_Top_Corner_Frame_Pane",new White_Simple_Left_Top_Corner_Frame_Pane("White_Simple_Left_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("White_Simple_Middle_Single_Frame_Pane",new White_Simple_Middle_Single_Frame_Pane("White_Simple_Middle_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("White_Simple_Right_Down_Corner_Frame_Pane",new White_Simple_Right_Down_Corner_Frame_Pane("White_Simple_Right_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("White_Simple_Right_Frame_Pane",new White_Simple_Right_Frame_Pane("White_Simple_Right_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("White_Simple_Right_Single_Frame_Pane",new White_Simple_Right_Single_Frame_Pane("White_Simple_Right_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("White_Simple_Right_Top_Corner_Frame_Pane",new White_Simple_Right_Top_Corner_Frame_Pane("White_Simple_Right_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("White_Simple_Top_Single_Frame_Pane",new White_Simple_Top_Single_Frame_Pane("White_Simple_Top_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Yellow_Simple_Down_Frame_Pane",new Yellow_Simple_Down_Frame_Pane("Yellow_Simple_Down_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Yellow_Simple_Down_Single_Frame_Pane",new Yellow_Simple_Down_Single_Frame_Pane("Yellow_Simple_Down_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Yellow_Simple_Left_Down_Corner_frame_Pane",new Yellow_Simple_Left_Down_Corner_frame_Pane("Yellow_Simple_Left_Down_Corner_frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Yellow_Simple_Left_Frame_Pane",new Yellow_Simple_Left_Frame_Pane("Yellow_Simple_Left_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Yellow_Simple_Left_Single_Frame_Pane",new Yellow_Simple_Left_Single_Frame_Pane("Yellow_Simple_Left_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Yellow_Simple_Left_Top_Corner_Frame_Pane",new Yellow_Simple_Left_Top_Corner_Frame_Pane("Yellow_Simple_Left_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Yellow_Simple_Middle_Single_Frame_Pane",new Yellow_Simple_Middle_Single_Frame_Pane("Yellow_Simple_Middle_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Yellow_Simple_Right_Down_Corner_Frame_Pane",new Yellow_Simple_Right_Down_Corner_Frame_Pane("Yellow_Simple_Right_Down_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Yellow_Simple_Right_Frame_Pane",new Yellow_Simple_Right_Frame_Pane("Yellow_Simple_Right_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Yellow_Simple_Right_Single_Frame_Pane",new Yellow_Simple_Right_Single_Frame_Pane("Yellow_Simple_Right_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Yellow_Simple_Right_Top_Corner_Frame_Pane",new Yellow_Simple_Right_Top_Corner_Frame_Pane("Yellow_Simple_Right_Top_Corner_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Yellow_Simple_Top_Frame_Pane",new Yellow_Simple_Top_Frame_Pane("Yellow_Simple_Top_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Yellow_Simple_Top_Single_Frame_Pane",new Yellow_Simple_Top_Single_Frame_Pane("Yellow_Simple_Top_Single_Frame","Glass_Trim").setCreativeTab(tabSimpleLife));
-	
-
-
-blockRef.put("Black_Elegant_Wooden_Bottom_Frame_Pane",new Black_Elegant_Wooden_Bottom_Frame_Pane("Black_Elegant_Wooden_Bottom_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Black_Elegant_Wooden_Bottom_Left_Frame_Pane",new Black_Elegant_Wooden_Bottom_Left_Frame_Pane("Black_Elegant_Wooden_Bottom_Left_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Black_Elegant_Wooden_Bottom_Right_Frame_Pane",new Black_Elegant_Wooden_Bottom_Right_Frame_Pane("Black_Elegant_Wooden_Bottom_Right_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Black_Elegant_Wooden_Full_Frame_Pane",new Black_Elegant_Wooden_Full_Frame_Pane("Black_Elegant_Wooden_Full_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Black_Elegant_Wooden_Left_Frame_Pane",new Black_Elegant_Wooden_Left_Frame_Pane("Black_Elegant_Wooden_Left_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Black_Elegant_Wooden_Middle_Glass_Pane",new Black_Elegant_Wooden_Middle_Glass_Pane("Black_Elegant_Wooden_Middle_Glass","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Black_Elegant_Wooden_Right_Frame_Pane",new Black_Elegant_Wooden_Right_Frame_Pane("Black_Elegant_Wooden_Right_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Black_Elegant_Wooden_Single_Bottom_Side_Frame_Pane",new Black_Elegant_Wooden_Single_Bottom_Side_Frame_Pane("Black_Elegant_Wooden_Single_Bottom_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Black_Elegant_Wooden_Single_Left_Side_Frame_Pane",new Black_Elegant_Wooden_Single_Left_Side_Frame_Pane("Black_Elegant_Wooden_Single_Left_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Black_Elegant_Wooden_Single_Middle_Right_Left_Side_Frame_Pane",new Black_Elegant_Wooden_Single_Middle_Right_Left_Side_Frame_Pane("Black_Elegant_Wooden_Single_Middle_Right_Left_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Black_Elegant_Wooden_Single_Middle_Top_Bottom_Side_Frame_Pane",new Black_Elegant_Wooden_Single_Middle_Top_Bottom_Side_Frame_Pane("Black_Elegant_Wooden_Single_Middle_Top_Bottom_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Black_Elegant_Wooden_Single_Right_Side_Frame_Pane",new Black_Elegant_Wooden_Single_Right_Side_Frame_Pane("Black_Elegant_Wooden_Single_Right_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Black_Elegant_Wooden_Single_Top_Side_Frame_Pane",new Black_Elegant_Wooden_Single_Top_Side_Frame_Pane("Black_Elegant_Wooden_Single_Top_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Black_Elegant_Wooden_Top_Frame_Pane",new Black_Elegant_Wooden_Top_Frame_Pane("Black_Elegant_Wooden_Top_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Black_Elegant_Wooden_Top_Left_Frame_Pane",new Black_Elegant_Wooden_Top_Left_Frame_Pane("Black_Elegant_Wooden_Top_Left_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Black_Elegant_Wooden_Top_Right_Frame_Pane",new Black_Elegant_Wooden_Top_Right_Frame_Pane("Black_Elegant_Wooden_Top_Right_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Clear_Elegant_WoodenBottom_Left_Frame_Pane",new Clear_Elegant_WoodenBottom_Left_Frame_Pane("Clear_Elegant_WoodenBottom_Left_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Clear_Elegant_Wooden_Bottom_Frame_Pane",new Clear_Elegant_Wooden_Bottom_Frame_Pane("Clear_Elegant_Wooden_Bottom_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Clear_Elegant_Wooden_Bottom_Right_Frame_Pane",new Clear_Elegant_Wooden_Bottom_Right_Frame_Pane("Clear_Elegant_Wooden_Bottom_Right_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Clear_Elegant_Wooden_Full_Frame_Pane",new Clear_Elegant_Wooden_Full_Frame_Pane("Clear_Elegant_Wooden_Full_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Clear_Elegant_Wooden_Left_Frame_Pane",new Clear_Elegant_Wooden_Left_Frame_Pane("Clear_Elegant_Wooden_Left_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Clear_Elegant_Wooden_Right_Frame_Pane",new Clear_Elegant_Wooden_Right_Frame_Pane("Clear_Elegant_Wooden_Right_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Clear_Elegant_Wooden_Single_Bottom_Side_Frame_Pane",new Clear_Elegant_Wooden_Single_Bottom_Side_Frame_Pane("Clear_Elegant_Wooden_Single_Bottom_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Clear_Elegant_Wooden_Single_Left_Side_Frame_Pane",new Clear_Elegant_Wooden_Single_Left_Side_Frame_Pane("Clear_Elegant_Wooden_Single_Left_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Clear_Elegant_Wooden_Single_Middle_Right_Left_Side_Frames_Pane",new Clear_Elegant_Wooden_Single_Middle_Right_Left_Side_Frames_Pane("Clear_Elegant_Wooden_Single_Middle_Right_Left_Side_Frames","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Clear_Elegant_Wooden_Single_Middle_Top_Bottom_Side_Frames_Pane",new Clear_Elegant_Wooden_Single_Middle_Top_Bottom_Side_Frames_Pane("Clear_Elegant_Wooden_Single_Middle_Top_Bottom_Side_Frames","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Clear_Elegant_Wooden_Single_Right_Side_Frame_Pane",new Clear_Elegant_Wooden_Single_Right_Side_Frame_Pane("Clear_Elegant_Wooden_Single_Right_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Clear_Elegant_Wooden_Single_Top_Side_Frame_Pane",new Clear_Elegant_Wooden_Single_Top_Side_Frame_Pane("Clear_Elegant_Wooden_Single_Top_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Clear_Elegant_Wooden_Top_Frame_Pane",new Clear_Elegant_Wooden_Top_Frame_Pane("Clear_Elegant_Wooden_Top_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Clear_Elegant_Wooden_Top_Left_Frame_Pane",new Clear_Elegant_Wooden_Top_Left_Frame_Pane("Clear_Elegant_Wooden_Top_Left_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Clear_Elegant_Wooden_Top_Right_Frame_Pane",new Clear_Elegant_Wooden_Top_Right_Frame_Pane("Clear_Elegant_Wooden_Top_Right_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Clear_Elegant_Wooden__Middle_Glass_Pane",new Clear_Elegant_Wooden__Middle_Glass_Pane("Clear_Elegant_Wooden__Middle_Glass","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Dark_Green_Elegant_Wooden_Bottom_Frame_Pane",new Dark_Green_Elegant_Wooden_Bottom_Frame_Pane("Dark_Green_Elegant_Wooden_Bottom_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Dark_Green_Elegant_Wooden_Bottom_Left_Frame_Pane",new Dark_Green_Elegant_Wooden_Bottom_Left_Frame_Pane("Dark_Green_Elegant_Wooden_Bottom_Left_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Dark_Green_Elegant_Wooden_Bottom_Right_Frame_Pane",new Dark_Green_Elegant_Wooden_Bottom_Right_Frame_Pane("Dark_Green_Elegant_Wooden_Bottom_Right_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Dark_Green_Elegant_Wooden_Full_Frame_Pane",new Dark_Green_Elegant_Wooden_Full_Frame_Pane("Dark_Green_Elegant_Wooden_Full_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Dark_Green_Elegant_Wooden_Left_Frame_Pane",new Dark_Green_Elegant_Wooden_Left_Frame_Pane("Dark_Green_Elegant_Wooden_Left_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Dark_Green_Elegant_Wooden_Right_Frame_Pane",new Dark_Green_Elegant_Wooden_Right_Frame_Pane("Dark_Green_Elegant_Wooden_Right_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Dark_Green_Elegant_Wooden_Single_Bottom_Side_Frame_Pane",new Dark_Green_Elegant_Wooden_Single_Bottom_Side_Frame_Pane("Dark_Green_Elegant_Wooden_Single_Bottom_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Dark_Green_Elegant_Wooden_Single_Left_Side_Frame_Pane",new Dark_Green_Elegant_Wooden_Single_Left_Side_Frame_Pane("Dark_Green_Elegant_Wooden_Single_Left_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Dark_Green_Elegant_Wooden_Single_Middle_Right_Left_Side_Frame_Pane",new Dark_Green_Elegant_Wooden_Single_Middle_Right_Left_Side_Frame_Pane("Dark_Green_Elegant_Wooden_Single_Middle_Right_Left_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Dark_Green_Elegant_Wooden_Single_Middle_Top_Bottom_Side_Frames_Pane",new Dark_Green_Elegant_Wooden_Single_Middle_Top_Bottom_Side_Frames_Pane("Dark_Green_Elegant_Wooden_Single_Middle_Top_Bottom_Side_Frames","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Dark_Green_Elegant_Wooden_Single_Right_Side_Frame_Pane",new Dark_Green_Elegant_Wooden_Single_Right_Side_Frame_Pane("Dark_Green_Elegant_Wooden_Single_Right_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Dark_Green_Elegant_Wooden_Single_Top_Side_Frame_Pane",new Dark_Green_Elegant_Wooden_Single_Top_Side_Frame_Pane("Dark_Green_Elegant_Wooden_Single_Top_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Dark_Green_Elegant_Wooden_Top_Frame_Pane",new Dark_Green_Elegant_Wooden_Top_Frame_Pane("Dark_Green_Elegant_Wooden_Top_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Dark_Green_Elegant_Wooden_Top_Left_Frame_Pane",new Dark_Green_Elegant_Wooden_Top_Left_Frame_Pane("Dark_Green_Elegant_Wooden_Top_Left_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Dark_Green_Elegant_Wooden_Top_Right_Frame_Pane",new Dark_Green_Elegant_Wooden_Top_Right_Frame_Pane("Dark_Green_Elegant_Wooden_Top_Right_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Dark_Green_Middle_Glass_Pane",new Dark_Green_Middle_Glass_Pane("Dark_Green_Middle_Glass","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Elegant_Wooden_Bottom_Frame_Pane",new Elegant_Wooden_Bottom_Frame_Pane("Elegant_Wooden_Bottom_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Elegant_Wooden_Bottom_Left_Frame_Pane",new Elegant_Wooden_Bottom_Left_Frame_Pane("Elegant_Wooden_Bottom_Left_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Elegant_Wooden_Bottom_Right_Frame_Pane",new Elegant_Wooden_Bottom_Right_Frame_Pane("Elegant_Wooden_Bottom_Right_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Elegant_Wooden_Full_Frame_Pane",new Elegant_Wooden_Full_Frame_Pane("Elegant_Wooden_Full_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Elegant_Wooden_Left_Frame_Pane",new Elegant_Wooden_Left_Frame_Pane("Elegant_Wooden_Left_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Elegant_Wooden_Middle_Glass_Pane",new Elegant_Wooden_Middle_Glass_Pane("Elegant_Wooden_Middle_Glass","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Elegant_Wooden_Right_Frame_Pane",new Elegant_Wooden_Right_Frame_Pane("Elegant_Wooden_Right_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Elegant_Wooden_Single_Bottom_Side_Frame_Pane",new Elegant_Wooden_Single_Bottom_Side_Frame_Pane("Elegant_Wooden_Single_Bottom_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Elegant_Wooden_Single_Left_Side_Frame_Pane",new Elegant_Wooden_Single_Left_Side_Frame_Pane("Elegant_Wooden_Single_Left_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Elegant_Wooden_Single_Middle_Right_Left_Side_Frames_Pane",new Elegant_Wooden_Single_Middle_Right_Left_Side_Frames_Pane("Elegant_Wooden_Single_Middle_Right_Left_Side_Frames","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Elegant_Wooden_Single_Middle_Top_Bottom_Side_Frames_Pane",new Elegant_Wooden_Single_Middle_Top_Bottom_Side_Frames_Pane("Elegant_Wooden_Single_Middle_Top_Bottom_Side_Frames","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Elegant_Wooden_Single_Right_Side_Frame_Pane",new Elegant_Wooden_Single_Right_Side_Frame_Pane("Elegant_Wooden_Single_Right_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Elegant_Wooden_Single_Top_Side_Frame_Pane",new Elegant_Wooden_Single_Top_Side_Frame_Pane("Elegant_Wooden_Single_Top_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Elegant_Wooden_Top_Frame_Pane",new Elegant_Wooden_Top_Frame_Pane("Elegant_Wooden_Top_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Elegant_Wooden_Top_Left_Frame_Pane",new Elegant_Wooden_Top_Left_Frame_Pane("Elegant_Wooden_Top_Left_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Elegant_Wooden_Top_Right_Frame_Pane",new Elegant_Wooden_Top_Right_Frame_Pane("Elegant_Wooden_Top_Right_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Light_Blue_Elegant_Wooden_Bottom_Frame_Pane",new Light_Blue_Elegant_Wooden_Bottom_Frame_Pane("Light_Blue_Elegant_Wooden_Bottom_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Light_Blue_Elegant_Wooden_Bottom_Left_Frame_Pane",new Light_Blue_Elegant_Wooden_Bottom_Left_Frame_Pane("Light_Blue_Elegant_Wooden_Bottom_Left_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Light_Blue_Elegant_Wooden_Bottom_Right_Frame_Pane",new Light_Blue_Elegant_Wooden_Bottom_Right_Frame_Pane("Light_Blue_Elegant_Wooden_Bottom_Right_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Light_Blue_Elegant_Wooden_Full_Frame_Pane",new Light_Blue_Elegant_Wooden_Full_Frame_Pane("Light_Blue_Elegant_Wooden_Full_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Light_Blue_Elegant_Wooden_Left_Frame_Pane",new Light_Blue_Elegant_Wooden_Left_Frame_Pane("Light_Blue_Elegant_Wooden_Left_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Light_Blue_Elegant_Wooden_Middle_Glass_Pane",new Light_Blue_Elegant_Wooden_Middle_Glass_Pane("Light_Blue_Elegant_Wooden_Middle_Glass","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Light_Blue_Elegant_Wooden_Right_Frame_Pane",new Light_Blue_Elegant_Wooden_Right_Frame_Pane("Light_Blue_Elegant_Wooden_Right_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Light_Blue_Elegant_Wooden_Single_Bottom_Side_Frame_Pane",new Light_Blue_Elegant_Wooden_Single_Bottom_Side_Frame_Pane("Light_Blue_Elegant_Wooden_Single_Bottom_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Light_Blue_Elegant_Wooden_Single_Middle_Right_Left_Side_Frame_Pane",new Light_Blue_Elegant_Wooden_Single_Middle_Right_Left_Side_Frame_Pane("Light_Blue_Elegant_Wooden_Single_Middle_Right_Left_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Light_Blue_Elegant_Wooden_Single_Middle_Top_Bottom_Side_Frame_Pane",new Light_Blue_Elegant_Wooden_Single_Middle_Top_Bottom_Side_Frame_Pane("Light_Blue_Elegant_Wooden_Single_Middle_Top_Bottom_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Light_Blue_Elegant_Wooden_Single_Right_Side_Frame_Pane",new Light_Blue_Elegant_Wooden_Single_Right_Side_Frame_Pane("Light_Blue_Elegant_Wooden_Single_Right_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Light_Blue_Elegant_Wooden_Single_Top_Side_Frame_Pane",new Light_Blue_Elegant_Wooden_Single_Top_Side_Frame_Pane("Light_Blue_Elegant_Wooden_Single_Top_Side_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Light_Blue_Elegant_Wooden_Top_Frame_Pane",new Light_Blue_Elegant_Wooden_Top_Frame_Pane("Light_Blue_Elegant_Wooden_Top_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Light_Blue_Elegant_Wooden_Top_Left_Frame_Pane",new Light_Blue_Elegant_Wooden_Top_Left_Frame_Pane("Light_Blue_Elegant_Wooden_Top_Left_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
-	
-blockRef.put("Light_Blue_Elegant_Wooden_Top_Right_Frame_Pane",new Light_Blue_Elegant_Wooden_Top_Right_Frame_Pane("Light_Blue_Elegant_Wooden_Top_Right_Frame","Glass_Trim").setCreativeTab(tabElegantLife));
 	
 blockRef.put("Elegant_Wooden_Full_Frame", new Elegant_Wooden_Full_Frame().setCreativeTab(tabElegantLife));
+
+
+blockRef.put("ElegantWooden_Pane", new ElegantWooden_Pane("ElegantWooden").setCreativeTab(tabElegantLife));
+blockRef.put("ElegantWooden_Bottom_Frame",new ElegantWooden_Down_Frame("ElegantWooden_Bottom_Frame","Glass_Trim"));
+	
+blockRef.put("ElegantWooden_Bottom_Left_Frame",new ElegantWooden_Down_Left_Frame("ElegantWooden_Bottom_Left_Frame","Glass_Trim"));
+	
+blockRef.put("ElegantWooden_Down_Single_Frame",new ElegantWooden_Down_Single_Frame("ElegantWooden_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("ElegantWooden_Full_Frame",new ElegantWooden_Full_Frame("ElegantWooden_Full_Frame","Glass_Trim"));
+	
+blockRef.put("ElegantWooden_Horizontal_Middle_Single_Frame",new ElegantWooden_Horizontal_Middle_Single_Frame("ElegantWooden_Horizontal_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("ElegantWooden_Left_Frame",new ElegantWooden_Left_Frame("ElegantWooden_Left_Frame","Glass_Trim"));
+	
+blockRef.put("ElegantWooden_Left_Single_Frame",new ElegantWooden_Left_Single_Frame("ElegantWooden_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("ElegantWooden_Left_Top_Frame",new ElegantWooden_Top_Left_Frame("ElegantWooden_Left_Top_Frame","Glass_Trim"));
+	
+blockRef.put("ElegantWooden_Middle_Frame",new ElegantWooden_Middle_Frame("ElegantWooden_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("ElegantWooden_Right_Down_Corner_Frame",new ElegantWooden_Down_Right_Frame("ElegantWooden_Right_Down_Corner_Frame","Glass_Trim"));
+	
+blockRef.put("ElegantWooden_Right_Frame",new ElegantWooden_Right_Frame("ElegantWooden_Right_Frame","Glass_Trim"));
+	
+blockRef.put("ElegantWooden_Top_Frame",new ElegantWooden_Top_Frame("ElegantWooden_Top_Frame","Glass_Trim"));
+	
+blockRef.put("ElegantWooden_Top_Single_Frame",new ElegantWooden_Top_Single_Frame("ElegantWooden_Top_Single_Frame","Glass_Trim"));
+	
+blockRef.put("ElegantWooden_Vertial_Middle_Single_Frame",new ElegantWooden_Vertical_Middle_Single_Frame("ElegantWooden_Vertial_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("Elegant_Wooden_Right_Single_Frame",new ElegantWooden_Right_Single_Frame("Elegant_Wooden_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("Elegant_Wooden_Top_Right_Frame",new ElegantWooden_Top_Right_Frame("Elegant_Wooden_Top_Right_Frame","Glass_Trim"));
+	
+
+
 blockRef.put("Clear_Elegant_Wooden_Full_Frame", new Clear_Elegant_Wooden_Full_Frame().setCreativeTab(tabElegantLife));
 blockRef.put("Dark_Green_Elegant_Wooden_Full_Frame", new Dark_Green_Elegant_Wooden_Full_Frame().setCreativeTab(tabElegantLife));
 blockRef.put("Black_Elegant_Wooden_Full_Frame", new Black_Elegant_Wooden_Full_Frame().setCreativeTab(tabElegantLife));
@@ -1248,6 +696,8 @@ blockRef.put("Solea_Floor_Wood",new Solea_Floor_Wood().setCreativeTab(tabTelgtta
 blockRef.put("White_Floor_Wood",new White_Floor_Wood().setCreativeTab(tabTelgttatium));
 	
 blockRef.put("Yellow_Floor_Wood",new Yellow_Floor_Wood().setCreativeTab(tabTelgttatium));
+
+
 	
 blockRef.put("Alpa_Chiseled",new Alpa_Chiseled().setCreativeTab(tabTelRunes));
 	
@@ -1541,25 +991,232 @@ blockRef.put("Red_Tree_Wood",new Red_Tree_Wood().setCreativeTab(tabNatrualBlocks
 blockRef.put("Solea_Palm__1",new Solea_Palm__1().setCreativeTab(tabNatrualBlocks));
 	
 blockRef.put("Solea_Palm__2",new Solea_Palm__2().setCreativeTab(tabNatrualBlocks));
-blockRef.put("Autum_yellow_Grass",new Autum_yellow_Grass().setCreativeTab(tabNatrualBlocks));
-blockRef.put("Black_Ashes_Grass",new Black_Ashes_Grass().setCreativeTab(tabNatrualBlocks));
-blockRef.put("Blue_Grass",new Ocean_Blue_Grass().setCreativeTab(tabNatrualBlocks));
-blockRef.put("Cyan_Aquarium_Grass",new Cyan_Aquarium_Grass().setCreativeTab(tabNatrualBlocks));
-blockRef.put("Dark_poison_grass",new Dark_poison_grass().setCreativeTab(tabNatrualBlocks));
-blockRef.put("Deep_Blue_cave_Grass",new Deep_Blue_cave_Grass().setCreativeTab(tabNatrualBlocks));
-blockRef.put("Forest_Green_Grass",new Forest_Green_Grass().setCreativeTab(tabNatrualBlocks));
-blockRef.put("Light_Icey_Grass",new Light_Icey_Grass().setCreativeTab(tabNatrualBlocks));
-blockRef.put("Normal_Grass",new Normal_Grass().setCreativeTab(tabNatrualBlocks));
-blockRef.put("Orange_Warm_Grass",new Orange_Warm_Grass().setCreativeTab(tabNatrualBlocks));
-blockRef.put("Purple_Lunatic_Grass",new Purple_Lunatic_Grass().setCreativeTab(tabNatrualBlocks));
-blockRef.put("Purple_Snow_Grass",new Purple_Snow_Grass().setCreativeTab(tabNatrualBlocks));
-blockRef.put("Red_Sweet_Grass",new Red_Sweet_Grass().setCreativeTab(tabNatrualBlocks));
-blockRef.put("Red_Wood_Grass",new Red_Wood_Grass().setCreativeTab(tabNatrualBlocks));
-blockRef.put("Weird_Grass_1",new Weird_Grass_1().setCreativeTab(tabNatrualBlocks));
-blockRef.put("Weird_Grass_2",new Weird_Grass_2().setCreativeTab(tabNatrualBlocks));
-blockRef.put("Weird_Grass_3",new Weird_Grass_3().setCreativeTab(tabNatrualBlocks));
-blockRef.put("White_Grass",new White_Grass().setCreativeTab(tabNatrualBlocks));
 
+
+blockRef.put("Autum_yellow_Ashed_Grass",new Autum_yellow_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Autum_yellow_Blue_Grass",new Autum_yellow_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Autum_yellow_Dark_Grass",new Autum_yellow_Dark_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Autum_yellow_Green_Grass",new Autum_yellow_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Autum_yellow_Pink_Grass",new Autum_yellow_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Autum_yellow_Purple_Grass",new Autum_yellow_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Autum_yellow_Valley_Grass",new Autum_yellow_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Black_Ashes_Ashed_Grass",new Black_Ashes_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Black_Ashes_Blue_Grass",new Black_Ashes_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Black_Ashes_Dark_Grass",new Black_Ashes_Dark_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Black_Ashes_Green_Grass",new Black_Ashes_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Black_Ashes_Pink_Grass",new Black_Ashes_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Black_Ashes_Purple_Grass",new Black_Ashes_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Black_Ashes_Valley_Grass",new Black_Ashes_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Cyan_Aquarium_Ashed_Grass",new Cyan_Aquarium_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Cyan_Aquarium_Blue_Grass",new Cyan_Aquarium_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Cyan_Aquarium_Dark_Grass",new Cyan_Aquarium_Dark_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Cyan_Aquarium_Green_Grass",new Cyan_Aquarium_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Cyan_Aquarium_Pink_Grass",new Cyan_Aquarium_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Cyan_Aquarium_Purple_Grass",new Cyan_Aquarium_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Cyan_Aquarium_Valley_Grass",new Cyan_Aquarium_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Dark_Poison_Ashed_Grass",new Dark_Poison_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Dark_Poison_Blue_Grass",new Dark_Poison_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Dark_Poison_Dark_Grass",new Dark_Poison_Dark_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Dark_Poison_Green_Grass",new Dark_Poison_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Dark_Poison_Pink_Grass",new Dark_Poison_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Dark_Poison_Purple_Grass",new Dark_Poison_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Dark_Poison_Valley_Grass",new Dark_Poison_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Deep_Blue_Ashed_Grass",new Deep_Blue_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Deep_Blue_Blue_Grass",new Deep_Blue_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Deep_Blue_Dark_Grass",new Deep_Blue_Dark_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Deep_Blue_Green_Grass",new Deep_Blue_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Deep_Blue_Pink_Grass",new Deep_Blue_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Deep_Blue_Purple_Grass",new Deep_Blue_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Deep_Blue_Valley_Grass",new Deep_Blue_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Forest_Green_Ashed_Grass",new Forest_Green_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Forest_Green_Blue_Grass",new Forest_Green_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Forest_Green_Dark_Grass",new Forest_Green_Dark_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Forest_Green_Green_Grass",new Forest_Green_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Forest_Green_Pink_Grass",new Forest_Green_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Forest_Green_Purple_Grass",new Forest_Green_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Forest_Green_Valley_Grass",new Forest_Green_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Light_Icey_Ashed_Grass",new Light_Icey_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Light_Icey_Blue_Grass",new Light_Icey_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Light_Icey_Dark_Grass",new Light_Icey_Dark_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Light_Icey_Green_Grass",new Light_Icey_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Light_Icey_Pink_Grass",new Light_Icey_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Light_Icey_Purple_Grass",new Light_Icey_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Light_Icey_Valley_Grass",new Light_Icey_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Normal_Ashed_Grass",new Normal_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Normal_Blue_Grass",new Normal_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Normal_Dark_Grass",new Normal_Dark_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Normal_Grass",new Normal_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Normal_Green_Grass",new Normal_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Normal_Pink_Grass",new Normal_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Normal_Purple_Grass",new Normal_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Normal_Valley_Grass",new Normal_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Ocean_Blue_Ashed_Grass",new Ocean_Blue_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Ocean_Blue_Blue_Grass",new Ocean_Blue_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Ocean_Blue_Dark_Grass",new Ocean_Blue_Dark_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Ocean_Blue_Green_Grass",new Ocean_Blue_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Ocean_Blue_Pink_Grass",new Ocean_Blue_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Ocean_Blue_Purple_Grass",new Ocean_Blue_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Ocean_Blue_Valley_Grass",new Ocean_Blue_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Orange_Warm_Ashed_Grass",new Orange_Warm_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Orange_Warm_Blue_Grass",new Orange_Warm_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Orange_Warm_Dark_Grass",new Orange_Warm_Dark_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Orange_Warm_Green_Grass",new Orange_Warm_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Orange_Warm_Pink_Grass",new Orange_Warm_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Orange_Warm_Purple_Grass",new Orange_Warm_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Orange_Warm_Valley_Grass",new Orange_Warm_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Purple_Lunatic_Ashed_Grass",new Purple_Lunatic_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Purple_Lunatic_Blue_Grass",new Purple_Lunatic_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Purple_Lunatic_Dark_Grass",new Purple_Lunatic_Dark_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Purple_Lunatic_Green_Grass",new Purple_Lunatic_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Purple_Lunatic_Pink_Grass",new Purple_Lunatic_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Purple_Lunatic_Purple_Grass",new Purple_Lunatic_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Purple_Lunatic_Valley_Grass",new Purple_Lunatic_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Purple_Snow_Ashed_Grass",new Purple_Snow_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Purple_Snow_Blue_Grass",new Purple_Snow_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Purple_Snow_Dark_Grass",new Purple_Snow_Dark_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Purple_Snow_Green_Grass",new Purple_Snow_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Purple_Snow_Pink_Grass",new Purple_Snow_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Purple_Snow_Purple_Grass",new Purple_Snow_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Purple_Snow_Valley_Grass",new Purple_Snow_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Red_Sweet_Ashed_Grass",new Red_Sweet_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Red_Sweet_Blue_Grass",new Red_Sweet_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Red_Sweet_Dark_Grass",new Red_Sweet_Dark_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Red_Sweet_Green_Grass",new Red_Sweet_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Red_Sweet_Pink_Grass",new Red_Sweet_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Red_Sweet_Purple_Grass",new Red_Sweet_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Red_Sweet_Valley_Grass",new Red_Sweet_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Red_Wood_Ashed_Grass",new Red_Wood_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Red_Wood_Blue_Grass",new Red_Wood_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Red_Wood_Dark_Grass",new Red_Wood_Dark_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Red_Wood_Green_Grass",new Red_Wood_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Red_Wood_Pink_Grass",new Red_Wood_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Red_Wood_Purple_Grass",new Red_Wood_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Red_Wood_Valley_Grass",new Red_Wood_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_1_Ashed_Grass",new Weird_Grass_1_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_1_Blue_Grass",new Weird_Grass_1_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_1_Dark_Grass",new Weird_Grass_1_Dark_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_1_Green_Grass",new Weird_Grass_1_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_1_Pink_Grass",new Weird_Grass_1_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_1_Purple_Grass",new Weird_Grass_1_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_1_Valley_Grass",new Weird_Grass_1_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_2_Ashed_Grass",new Weird_Grass_2_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_2_Blue_Grass",new Weird_Grass_2_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_2_Dark_Grass",new Weird_Grass_2_Dark_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_2_Green_Grass",new Weird_Grass_2_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_2_Pink_Grass",new Weird_Grass_2_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_2_Purple_Grass",new Weird_Grass_2_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_2_Valley_Grass",new Weird_Grass_2_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_3_Ashed_Grass",new Weird_Grass_3_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_3_Blue_Grass",new Weird_Grass_3_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_3_Dark_Grass",new Weird_Grass_3_Dark_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_3_Green_Grass",new Weird_Grass_3_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_3_Pink_Grass",new Weird_Grass_3_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_3_Purple_Grass",new Weird_Grass_3_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("Weird_Grass_3_Valley_Grass",new Weird_Grass_3_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("White_Ashed_Grass",new White_Ashed_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("White_Blue_Grass",new White_Blue_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("White_Green_Grass",new White_Green_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("White_Pink_Grass",new White_Pink_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("White_Purple_Grass",new White_Purple_Grass().setCreativeTab(tabNatrualBlocks));
+blockRef.put("White_Valley_Grass",new White_Valley_Grass().setCreativeTab(tabNatrualBlocks));
+
+
+blockRef.put("Cut_lines_x1",new Cut_lines_x1().setCreativeTab(tabCityBlocks));
+blockRef.put("Cut_lines_y1",new Cut_lines_y1().setCreativeTab(tabCityBlocks));
+blockRef.put("Cut_lines_z1",new Cut_lines_z1().setCreativeTab(tabCityBlocks));
+blockRef.put("Middle_Line",new Middle_Line().setCreativeTab(tabCityBlocks));
+blockRef.put("x1_yellow_ray",new x1_yellow_ray().setCreativeTab(tabCityBlocks));
+blockRef.put("y1_yellow_ray",new y1_yellow_ray().setCreativeTab(tabCityBlocks));
+
+blockRef.put("Srindintaria_Rune",new Srindintaria_Rune().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Rune_2",new Srindintaria_Rune_2().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Rune_2_Blue",new Srindintaria_Rune_2_Blue().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Rune_2_Bluestone",new Srindintaria_Rune_2_Bluestone().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Rune_2_Green",new Srindintaria_Rune_2_Green().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Rune_2_Orange",new Srindintaria_Rune_2_Orange().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Rune_2_Purple",new Srindintaria_Rune_2_Purple().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Rune_2_Red",new Srindintaria_Rune_2_Red().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Rune_2_Sandstone",new Srindintaria_Rune_2_Sandstone().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Rune_2_Solea_Coral",new Srindintaria_Rune_2_Solea_Coral().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Rune_Blue_Moon_Gem",new Srindintaria_Rune_Blue_Moon_Gem().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Rune_Red_Moon_Gem",new Srindintaria_Rune_Red_Moon_Gem().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Rune__Green_Gem",new Srindintaria_Rune__Green_Gem().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Rune__Orange_Moon_Gem",new Srindintaria_Rune__Orange_Moon_Gem().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Rune__Purple_Moon_Gem",new Srindintaria_Rune__Purple_Moon_Gem().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Rune__Purpula_Gem",new Srindintaria_Rune__Purpula_Gem().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Wall_Deep_Dessert_Stone",new Srindintaria_Wall_Deep_Dessert_Stone().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Wall_Deep_Snow_Cavestone",new Srindintaria_Wall_Deep_Snow_Cavestone().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Wall_Deep_Solea_Stone",new Srindintaria_Wall_Deep_Solea_Stone().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Wall_Forest_stone",new Srindintaria_Wall_Forest_stone().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Wall_Redstone",new Srindintaria_Wall_Redstone().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Wall_Sandstone",new Srindintaria_Wall_Sandstone().setCreativeTab(tabSridintaria));
+blockRef.put("Srindintaria_Wall_Stone",new Srindintaria_Wall_Stone().setCreativeTab(tabSridintaria));
+
+blockRef.put("Bamboo_fence",new Bamboo_fence().setCreativeTab(tabFences));
+blockRef.put("Bamboo_fence_Green",new Bamboo_fence_Green().setCreativeTab(tabFences));
+blockRef.put("Black_Deco_Fence",new Black_Deco_Fence().setCreativeTab(tabFences));
+blockRef.put("Gold_Deco_Fence",new Gold_Deco_Fence().setCreativeTab(tabFences));
+blockRef.put("Hutyve_Blue_Glass_fence",new Hutyve_Blue_Glass_fence().setCreativeTab(tabFences));
+blockRef.put("Hutyve_Cyan_Glass_fence",new Hutyve_Cyan_Glass_fence().setCreativeTab(tabFences));
+blockRef.put("Hutyve_Dark_Blue_Glass_fence",new Hutyve_Dark_Blue_Glass_fence().setCreativeTab(tabFences));
+blockRef.put("Hutyve_fence",new Hutyve_fence().setCreativeTab(tabFences));
+blockRef.put("Hutyve_Green_Glass_fence",new Hutyve_Green_Glass_fence().setCreativeTab(tabFences));
+blockRef.put("Hutyve_Magenta_Glass_fence",new Hutyve_Magenta_Glass_fence().setCreativeTab(tabFences));
+blockRef.put("Hutyve_Orange_Glass_fence",new Hutyve_Orange_Glass_fence().setCreativeTab(tabFences));
+blockRef.put("Hutyve_Pink_Glass_fence",new Hutyve_Pink_Glass_fence().setCreativeTab(tabFences));
+blockRef.put("Hutyve_Purple_Glass_fence",new Hutyve_Purple_Glass_fence().setCreativeTab(tabFences));
+blockRef.put("Hutyve_Red_Glass_fence",new Hutyve_Red_Glass_fence().setCreativeTab(tabFences));
+blockRef.put("Hutyve_Yellow_Glass_fence",new Hutyve_Yellow_Glass_fence().setCreativeTab(tabFences));
+blockRef.put("Iron_Deco_Fence",new Iron_Deco_Fence().setCreativeTab(tabFences));
+blockRef.put("Iron_Fences_x1",new Iron_Fences_x1().setCreativeTab(tabFences));
+blockRef.put("Iron_Fences_xy1",new Iron_Fences_xy1().setCreativeTab(tabFences));
+blockRef.put("Iron_Fences_y2",new Iron_Fences_y2().setCreativeTab(tabFences));
+blockRef.put("Oxided_fence_x1",new Oxided_fence_x1().setCreativeTab(tabFences));
+blockRef.put("Oxided_fence_xy1",new Oxided_fence_xy1().setCreativeTab(tabFences));
+blockRef.put("Oxided_fence_y2",new Oxided_fence_y2().setCreativeTab(tabFences));
+blockRef.put("Sindrintaria_Athemyst_gem_fence",new Sindrintaria_Athemyst_gem_fence().setCreativeTab(tabFences));
+blockRef.put("Sindrintaria_Diamon_gem_fence",new Sindrintaria_Diamon_gem_fence().setCreativeTab(tabFences));
+blockRef.put("Sindrintaria_Emerald_gem_fence",new Sindrintaria_Emerald_gem_fence().setCreativeTab(tabFences));
+blockRef.put("Sindrintaria_Orange_gem_fence",new Sindrintaria_Orange_gem_fence().setCreativeTab(tabFences));
+blockRef.put("Sindrintaria_Saphirre_gem_fence",new Sindrintaria_Saphirre_gem_fence().setCreativeTab(tabFences));
+blockRef.put("TDive_Green_Deco_Fence",new TDive_Green_Deco_Fence().setCreativeTab(tabFences));
+blockRef.put("Turquoise_plaza_Deco_Fence",new Turquoise_plaza_Deco_Fence().setCreativeTab(tabFences));
+blockRef.put("Valley_Romance_Deco_Fence",new Valley_Romance_Deco_Fence().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_planks",new Wood_fence_planks().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_planks_Birch_wood",new Wood_fence_planks_Birch_wood().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_planks_Black_wood",new Wood_fence_planks_Black_wood().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_planks_Dark_Oak_wood",new Wood_fence_planks_Dark_Oak_wood().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_planks_Green",new Wood_fence_planks_Green().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_planks_Orange_wood",new Wood_fence_planks_Orange_wood().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_planks_Red",new Wood_fence_planks_Red().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_planks_Yevollo",new Wood_fence_planks_Yevollo().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2",new Wood_fence_type_2().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Carpentry_Yellow",new Wood_fence_type_2_Carpentry_Yellow().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Coral",new Wood_fence_type_2_Coral().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Dark_blue",new Wood_fence_type_2_Dark_blue().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Doula_Blue",new Wood_fence_type_2_Doula_Blue().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Doula_Coral",new Wood_fence_type_2_Doula_Coral().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Doula_Lime_Green",new Wood_fence_type_2_Doula_Lime_Green().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Doula_Pastel_Orange",new Wood_fence_type_2_Doula_Pastel_Orange().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Doula_Pastel_Yellow",new Wood_fence_type_2_Doula_Pastel_Yellow().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Doula_Pink",new Wood_fence_type_2_Doula_Pink().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Doula_Purple",new Wood_fence_type_2_Doula_Purple().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Floral_Blue",new Wood_fence_type_2_Floral_Blue().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Floral_Dark_Blue",new Wood_fence_type_2_Floral_Dark_Blue().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Floral_Orange",new Wood_fence_type_2_Floral_Orange().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Floral_Purple",new Wood_fence_type_2_Floral_Purple().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Floral_Red",new Wood_fence_type_2_Floral_Red().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Floral_Rose",new Wood_fence_type_2_Floral_Rose().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Floral_Soft_Yellow",new Wood_fence_type_2_Floral_Soft_Yellow().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Floral_Sweet_Green",new Wood_fence_type_2_Floral_Sweet_Green().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_LimeGreen",new Wood_fence_type_2_LimeGreen().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_old",new Wood_fence_type_2_old().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Purple",new Wood_fence_type_2_Purple().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Solea",new Wood_fence_type_2_Solea().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Vines",new Wood_fence_type_2_Vines().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Vines_Solea",new Wood_fence_type_2_Vines_Solea().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Vines_white",new Wood_fence_type_2_Vines_white().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_white",new Wood_fence_type_2_white().setCreativeTab(tabFences));
 
 
 	}
@@ -1574,6 +1231,7 @@ blockRef.put("White_Grass",new White_Grass().setCreativeTab(tabNatrualBlocks));
 	}
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
+		WorldType TELGTTATIUM = new WorldTypeTelgttatium("Telgttatium");
 		
 	}
 	public static CreativeTabs tabTelgttatium = new CreativeTabs("tabTelBuildingBlocks") {
@@ -1643,4 +1301,23 @@ public static CreativeTabs tabElegantLife = new CreativeTabs("ElegantLife") {
 		return new ItemStack(blockRef.get("Elegant_Wooden_Full_Frame")).getItem();
 	}
 };
+public static CreativeTabs tabCityBlocks = new CreativeTabs("CityLife") {
+	@Override
+	public Item getTabIconItem() {
+		return new ItemStack(blockRef.get("Cut_lines_x1")).getItem();
+	}
+};
+public static CreativeTabs tabSridintaria = new CreativeTabs("Sridintaria") {
+	@Override
+	public Item getTabIconItem() {
+		return new ItemStack(blockRef.get("Srindintaria_Rune_Blue_Moon_Gem")).getItem();
+	}
+};
+public static CreativeTabs tabFences = new CreativeTabs("telFences") {
+	@Override
+	public Item getTabIconItem() {
+		return new ItemStack(blockRef.get("Bamboo_fence_Green")).getItem();
+	}
+};
+
 }

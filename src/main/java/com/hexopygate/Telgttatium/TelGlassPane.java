@@ -12,39 +12,28 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.common.util.ForgeDirection;
 
-public class TelGlassPane extends Block {
+public class TelGlassPane extends BlockPane {
 	 String name = this.getClass().getSimpleName();
-	 private IIcon icon;
-	protected TelGlassPane(Material mat) {
+	public TelGlassPane(String faceTexture , String rimTexture) {
 		
-		super(mat);
+		super("tel:"+faceTexture, "tel:"+rimTexture, Material.glass,true);
 		// TODO Auto-generated constructor stub
 		 
-         
+
 		this.setBlockName(name).setBlockTextureName("tel:"+name);
-		this.setBlockBounds(0, 0, 0, 1, 1, .05f);
-		 GameRegistry.registerBlock(this, this.getUnlocalizedName().substring(5));
+       GameRegistry.registerBlock(this, this.getUnlocalizedName().substring(5));
 		
 	}
 
-	public TelGlassPane()
+	public TelGlassPane(String texture)
 	{
-		
-	
-		 this(Material.glass);
-	
+		this(texture,texture);
 	}
 	@Override
-    public boolean isOpaqueCube()
-    {
-        return false;
-    }
-
-   @Override
-    public boolean renderAsNormalBlock()
-    {
-        return false;
-    }
-
+	  @SideOnly(Side.CLIENT)
+	    public int getRenderBlockPass()
+	    {
+	        return 1;
+	    }
 
 }
