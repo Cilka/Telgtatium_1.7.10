@@ -1,6 +1,6 @@
 package com.hexopygate.Telgttatium.buildingblocks.nevoevolution.nvetchtiles;
 
-import com.hexopygate.Telgttatium.TelStone;
+import com.hexopygate.Telgttatium.blockarchtype.TelStone;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;

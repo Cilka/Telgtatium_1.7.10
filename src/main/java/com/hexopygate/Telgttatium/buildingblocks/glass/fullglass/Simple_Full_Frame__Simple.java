@@ -1,7 +1,7 @@
 package com.hexopygate.Telgttatium.buildingblocks.glass.fullglass;
 
-import com.hexopygate.Telgttatium.TelGlass;
-import com.hexopygate.Telgttatium.TelNormalGlassPane;
+import com.hexopygate.Telgttatium.blockarchtype.TelGlass;
+import com.hexopygate.Telgttatium.blockarchtype.TelNormalGlassPane;
 
 import net.minecraft.block.material.Material;
 

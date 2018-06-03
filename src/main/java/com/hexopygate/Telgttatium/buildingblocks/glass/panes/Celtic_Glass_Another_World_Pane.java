@@ -1,7 +1,7 @@
 package com.hexopygate.Telgttatium.buildingblocks.glass.panes;
 
-import com.hexopygate.Telgttatium.TelGlass;
-import com.hexopygate.Telgttatium.TelNormalGlassPane;
+import com.hexopygate.Telgttatium.blockarchtype.TelGlass;
+import com.hexopygate.Telgttatium.blockarchtype.TelNormalGlassPane;
 
 public class Celtic_Glass_Another_World_Pane extends TelNormalGlassPane {
 

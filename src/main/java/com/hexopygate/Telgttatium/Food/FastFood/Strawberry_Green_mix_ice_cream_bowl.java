@@ -1,6 +1,7 @@
 package com.hexopygate.Telgttatium.Food.FastFood;
 
-import com.hexopygate.Telgttatium.TelFood;
+import com.hexopygate.Telgttatium.blockarchtype.TelFood;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class Strawberry_Green_mix_ice_cream_bowl extends TelFood{

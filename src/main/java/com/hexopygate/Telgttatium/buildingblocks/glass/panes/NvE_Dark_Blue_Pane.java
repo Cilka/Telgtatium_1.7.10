@@ -1,7 +1,7 @@
 package com.hexopygate.Telgttatium.buildingblocks.glass.panes;
 
-import com.hexopygate.Telgttatium.TelGlass;
-import com.hexopygate.Telgttatium.TelNormalGlassPane;
+import com.hexopygate.Telgttatium.blockarchtype.TelGlass;
+import com.hexopygate.Telgttatium.blockarchtype.TelNormalGlassPane;
 
 public class NvE_Dark_Blue_Pane extends TelNormalGlassPane {
 

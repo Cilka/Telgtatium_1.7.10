@@ -11,7 +11,23 @@ import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.panes.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes.*;
-import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglasssideframes.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.black.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.blue.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.clear.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.cyan.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.darkblue.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.darkgreen.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.darkpurple.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.green.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.magenta.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.normal.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.orange.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.pink.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.purple.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.red.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.white.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.wooden.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.yellow.*;
 import com.hexopygate.Telgttatium.buildingblocks.naturalblocks.*;
 import com.hexopygate.Telgttatium.buildingblocks.naturalblocks.grasshd.*;
 import com.hexopygate.Telgttatium.buildingblocks.naturalblocks.Wood.*;
@@ -29,17 +45,27 @@ import com.hexopygate.Telgttatium.Biomes.types.WorldTypeTelgttatium;
 import com.hexopygate.Telgttatium.Food.*;
 import com.hexopygate.Telgttatium.Food.Candy.*;
 import com.hexopygate.Telgttatium.Food.FastFood.*;
+import com.hexopygate.Telgttatium.TileEntities.TEFence;
 import com.hexopygate.Telgttatium.buildingblocks.Ceramics.*;
 import com.hexopygate.Telgttatium.buildingblocks.Ceramics.BigBlock.*;
 import com.hexopygate.Telgttatium.buildingblocks.Ceramics.CheckeredFloor.*;
 import com.hexopygate.Telgttatium.buildingblocks.Empire.*;
 import com.hexopygate.Telgttatium.buildingblocks.Sridintaria.*;
 import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.*;
+import com.hexopygate.Telgttatium.proxy.CommonProxy;
 import com.hexopygate.Telgttatium.buildingblocks.glass.elegantwooden.*;
 import com.hexopygate.Telgttatium.buildingblocks.glass.elegantwooden.panes.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.elegantwooden.panes.black.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.elegantwooden.panes.clear.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.elegantwooden.panes.darkgreen.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.elegantwooden.panes.lightblue.*;
+import com.hexopygate.Telgttatium.buildingblocks.glass.elegantwooden.panes.normal.*;
+
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.ModClassLoader;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -55,14 +81,19 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.WorldType;
 
 @Mod(modid="tel", name="Telgttatium", version = "1.0")
+
 public class Telgttatium {
 //public static Item itemTable;
+
 	public static String ModId = "tel";
 	public static String Name = "Telgttatium";
 	public static String Version = "1.0";
-	
+
 	public static HashMap<String,Block> blockRef =  new HashMap<String,Block>();
 	public static HashMap<String,Item> itemRef = new HashMap<String,Item>();
+	@SidedProxy( clientSide = "com.hexopygate.Telgttatium.proxy.ClientProxy",
+			serverSide = "com.hexopygate.Telgttatium.proxy.CommonProxy")
+	public static CommonProxy proxy;
 @EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		//Item/Block init and registering
@@ -433,8 +464,7 @@ blockRef.put("WinterMountainRedWool_Carpet",new WinterMountainRedWool_Carpet().s
 	blockRef.put("White_Glass",new White_Glass().setCreativeTab(tabGlass));
 	blockRef.put("Yellow_Glass",new Yellow_Glass().setCreativeTab(tabGlass));
 	
-
-blockRef.put("Simple_Full_Frame__Simple",new Simple_Full_Frame__Simple().setCreativeTab(tabSimpleLife));
+/*
 blockRef.put("Wooden_Full_Frame",new Wooden_Full_Frame().setCreativeTab(tabGlass));
 
 blockRef.put("Black_Glass_Pane",new Black_Glass_Pane("Black_Glass").setCreativeTab(tabGlass));
@@ -464,6 +494,7 @@ blockRef.put("Red_Glass_Pane",new Red_Glass_Pane("Red_Glass").setCreativeTab(tab
 blockRef.put("White_Glass_Pane",new White_Glass_Pane("White_Glass").setCreativeTab(tabGlass));
 	
 blockRef.put("Yellow_Glass_Pane",new Yellow_Glass_Pane("Yellow_Glass").setCreativeTab(tabGlass));
+	*/
 	blockRef.put("Simple_Glass_Black",new Simple_Glass_Black().setCreativeTab(tabSimpleLife));
 	
 blockRef.put("Simple_Glass_Blue",new Simple_Glass_Blue().setCreativeTab(tabSimpleLife));
@@ -529,7 +560,7 @@ blockRef.put("Elegant_Wooden_Full_Frame", new Elegant_Wooden_Full_Frame().setCre
 
 
 blockRef.put("ElegantWooden_Pane", new ElegantWooden_Pane("ElegantWooden").setCreativeTab(tabElegantLife));
-blockRef.put("ElegantWooden_Bottom_Frame",new ElegantWooden_Down_Frame("ElegantWooden_Bottom_Frame","Glass_Trim"));
+blockRef.put("ElegantWooden_Down_Frame",new ElegantWooden_Down_Frame("ElegantWooden_Down_Frame","Glass_Trim"));
 	
 blockRef.put("ElegantWooden_Bottom_Left_Frame",new ElegantWooden_Down_Left_Frame("ElegantWooden_Bottom_Left_Frame","Glass_Trim"));
 	
@@ -562,11 +593,732 @@ blockRef.put("Elegant_Wooden_Right_Single_Frame",new ElegantWooden_Right_Single_
 blockRef.put("Elegant_Wooden_Top_Right_Frame",new ElegantWooden_Top_Right_Frame("Elegant_Wooden_Top_Right_Frame","Glass_Trim"));
 	
 
+blockRef.put("BlackElegantWooden_Pane", new BlackElegantWooden_Pane("BlackElegantWooden").setCreativeTab(tabElegantLife));
+blockRef.put("BlackElegantWooden_Down_Frame",new BlackElegantWooden_Down_Frame("BlackElegantWooden_Down_Frame","Glass_Trim"));
+	
+blockRef.put("BlackElegantWooden_Down_Left_Frame",new BlackElegantWooden_Down_Left_Frame("BlackElegantWooden_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("BlackElegantWooden_Down_Right_Frame",new BlackElegantWooden_Down_Right_Frame("BlackElegantWooden_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("BlackElegantWooden_Down_Single_Frame",new BlackElegantWooden_Down_Single_Frame("BlackElegantWooden_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("BlackElegantWooden_Full_Frame",new BlackElegantWooden_Full_Frame("BlackElegantWooden_Full_Frame","Glass_Trim"));
+	
+blockRef.put("BlackElegantWooden_Horizontal_Middle_Single_Frame",new BlackElegantWooden_Horizontal_Middle_Single_Frame("BlackElegantWooden_Horizontal_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("BlackElegantWooden_Left_Frame",new BlackElegantWooden_Left_Frame("BlackElegantWooden_Left_Frame","Glass_Trim"));
+	
+blockRef.put("BlackElegantWooden_Left_Single_Frame",new BlackElegantWooden_Left_Single_Frame("BlackElegantWooden_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("BlackElegantWooden_Middle_Frame",new BlackElegantWooden_Middle_Frame("BlackElegantWooden_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("BlackElegantWooden_Right_Frame",new BlackElegantWooden_Right_Frame("BlackElegantWooden_Right_Frame","Glass_Trim"));
+	
+blockRef.put("BlackElegantWooden_Right_Single_Frame",new BlackElegantWooden_Right_Single_Frame("BlackElegantWooden_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("BlackElegantWooden_Top_Frame",new BlackElegantWooden_Top_Frame("BlackElegantWooden_Top_Frame","Glass_Trim"));
+	
+blockRef.put("BlackElegantWooden_Top_Left_Frame",new BlackElegantWooden_Top_Left_Frame("BlackElegantWooden_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("BlackElegantWooden_Top_Right_Frame",new BlackElegantWooden_Top_Right_Frame("BlackElegantWooden_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("BlackElegantWooden_Top_Single_Frame",new BlackElegantWooden_Top_Single_Frame("BlackElegantWooden_Top_Single_Frame","Glass_Trim"));
+	
+blockRef.put("BlackElegantWooden_Vertical_Middle_Single_Frame",new BlackElegantWooden_Vertical_Middle_Single_Frame("BlackElegantWooden_Vertical_Middle_Single_Frame","Glass_Trim"));
+	
+
+
+blockRef.put("ClearElegantWooden_Pane", new ClearElegantWooden_Pane("ClearElegantWooden").setCreativeTab(tabElegantLife));
+blockRef.put("ClearElegantWooden_Down_Frame",new ClearElegantWooden_Down_Frame("ClearElegantWooden_Down_Frame","Glass_Trim"));
+	
+blockRef.put("ClearElegantWooden_Down_Left_Frame",new ClearElegantWooden_Down_Left_Frame("ClearElegantWooden_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("ClearElegantWooden_Down_Right_Frame",new ClearElegantWooden_Down_Right_Frame("ClearElegantWooden_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("ClearElegantWooden_Down_Single_Frame",new ClearElegantWooden_Down_Single_Frame("ClearElegantWooden_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("ClearElegantWooden_Full_Frame",new ClearElegantWooden_Full_Frame("ClearElegantWooden_Full_Frame","Glass_Trim"));
+	
+blockRef.put("ClearElegantWooden_Horizontal_Middle_Single_Frame",new ClearElegantWooden_Horizontal_Middle_Single_Frame("ClearElegantWooden_Horizontal_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("ClearElegantWooden_Left_Frame",new ClearElegantWooden_Left_Frame("ClearElegantWooden_Left_Frame","Glass_Trim"));
+	
+blockRef.put("ClearElegantWooden_Left_Single_Frame",new ClearElegantWooden_Left_Single_Frame("ClearElegantWooden_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("ClearElegantWooden_Middle_Frame",new ClearElegantWooden_Middle_Frame("ClearElegantWooden_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("ClearElegantWooden_Right_Frame",new ClearElegantWooden_Right_Frame("ClearElegantWooden_Right_Frame","Glass_Trim"));
+	
+blockRef.put("ClearElegantWooden_Right_Single_Frame",new ClearElegantWooden_Right_Single_Frame("ClearElegantWooden_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("ClearElegantWooden_Top_Frame",new ClearElegantWooden_Top_Frame("ClearElegantWooden_Top_Frame","Glass_Trim"));
+	
+blockRef.put("ClearElegantWooden_Top_Left_Frame",new ClearElegantWooden_Top_Left_Frame("ClearElegantWooden_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("ClearElegantWooden_Top_Right_Frame",new ClearElegantWooden_Top_Right_Frame("ClearElegantWooden_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("ClearElegantWooden_Top_Single_Frame",new ClearElegantWooden_Top_Single_Frame("ClearElegantWooden_Top_Single_Frame","Glass_Trim"));
+	
+blockRef.put("ClearElegantWooden_Vertical_Middle_Single_Frame",new ClearElegantWooden_Vertical_Middle_Single_Frame("ClearElegantWooden_Vertical_Middle_Single_Frame","Glass_Trim"));
+	
+
+
+blockRef.put("DarkGreenElegantWooden_Pane", new DarkGreenElegantWooden_Pane("DarkGreenElegantWooden").setCreativeTab(tabElegantLife));
+blockRef.put("DarkGreenElegantWooden_Down_Frame",new DarkGreenElegantWooden_Down_Frame("DarkGreenElegantWooden_Down_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenElegantWooden_Down_Left_Frame",new DarkGreenElegantWooden_Down_Left_Frame("DarkGreenElegantWooden_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenElegantWooden_Down_Right_Frame",new DarkGreenElegantWooden_Down_Right_Frame("DarkGreenElegantWooden_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenElegantWooden_Down_Single_Frame",new DarkGreenElegantWooden_Down_Single_Frame("DarkGreenElegantWooden_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenElegantWooden_Full_Frame",new DarkGreenElegantWooden_Full_Frame("DarkGreenElegantWooden_Full_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenElegantWooden_Horizontal_Middle_Single_Frame",new DarkGreenElegantWooden_Horizontal_Middle_Single_Frame("DarkGreenElegantWooden_Horizontal_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenElegantWooden_Left_Frame",new DarkGreenElegantWooden_Left_Frame("DarkGreenElegantWooden_Left_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenElegantWooden_Left_Single_Frame",new DarkGreenElegantWooden_Left_Single_Frame("DarkGreenElegantWooden_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenElegantWooden_Middle_Frame",new DarkGreenElegantWooden_Middle_Frame("DarkGreenElegantWooden_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenElegantWooden_Right_Frame",new DarkGreenElegantWooden_Right_Frame("DarkGreenElegantWooden_Right_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenElegantWooden_Right_Single_Frame",new DarkGreenElegantWooden_Right_Single_Frame("DarkGreenElegantWooden_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenElegantWooden_Top_Frame",new DarkGreenElegantWooden_Top_Frame("DarkGreenElegantWooden_Top_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenElegantWooden_Top_Left_Frame",new DarkGreenElegantWooden_Top_Left_Frame("DarkGreenElegantWooden_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenElegantWooden_Top_Single_Frame",new DarkGreenElegantWooden_Top_Single_Frame("DarkGreenElegantWooden_Top_Single_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenElegantWooden_Vertical_Middle_Single_Frame",new DarkGreenElegantWooden_Vertical_Middle_Single_Frame("DarkGreenElegantWooden_Vertical_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenElegant_Wooden_Top_Right_Frame",new DarkGreenElegantWooden_Top_Right_Frame("DarkGreenElegant_Wooden_Top_Right_Frame","Glass_Trim"));
+	
+
+
+blockRef.put("LightBlueElegantWooden_Pane", new LightBlueElegantWooden_Pane("LightBlueElegantWooden").setCreativeTab(tabElegantLife));
+blockRef.put("LightBlueElegantWooden_Down_Frame",new LightBlueElegantWooden_Down_Frame("LightBlueElegantWooden_Down_Frame","Glass_Trim"));
+	
+blockRef.put("LightBlueElegantWooden_Down_Left_Frame",new LightBlueElegantWooden_Down_Left_Frame("LightBlueElegantWooden_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("LightBlueElegantWooden_Down_Right_Frame",new LightBlueElegantWooden_Down_Right_Frame("LightBlueElegantWooden_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("LightBlueElegantWooden_Down_Single_Frame",new LightBlueElegantWooden_Down_Single_Frame("LightBlueElegantWooden_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("LightBlueElegantWooden_Full_Frame",new LightBlueElegantWooden_Full_Frame("LightBlueElegantWooden_Full_Frame","Glass_Trim"));
+	
+blockRef.put("LightBlueElegantWooden_Horizontal_Middle_Single_Frame",new LightBlueElegantWooden_Horizontal_Middle_Single_Frame("LightBlueElegantWooden_Horizontal_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("LightBlueElegantWooden_Left_Frame",new LightBlueElegantWooden_Left_Frame("LightBlueElegantWooden_Left_Frame","Glass_Trim"));
+	
+blockRef.put("LightBlueElegantWooden_Middle_Frame",new LightBlueElegantWooden_Middle_Frame("LightBlueElegantWooden_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("LightBlueElegantWooden_Right_Frame",new LightBlueElegantWooden_Right_Frame("LightBlueElegantWooden_Right_Frame","Glass_Trim"));
+	
+blockRef.put("LightBlueElegantWooden_Right_Single_Frame",new LightBlueElegantWooden_Right_Single_Frame("LightBlueElegantWooden_Right_Single_Frame","Glass_Trim"));
+blockRef.put("LightBlueElegantWooden_Left_Single_Frame",new LightBlueElegantWooden_Left_Single_Frame("LightBlueElegantWooden_Left_Single_Frame","Glass_Trim"));
+
+blockRef.put("LightBlueElegantWooden_Top_Frame",new LightBlueElegantWooden_Top_Frame("LightBlueElegantWooden_Top_Frame","Glass_Trim"));
+	
+blockRef.put("LightBlueElegantWooden_Top_Left_Frame",new LightBlueElegantWooden_Top_Left_Frame("LightBlueElegantWooden_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("LightBlueElegantWooden_Top_Right_Frame",new LightBlueElegantWooden_Top_Right_Frame("LightBlueElegantWooden_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("LightBlueElegantWooden_Top_Single_Frame",new LightBlueElegantWooden_Top_Single_Frame("LightBlueElegantWooden_Top_Single_Frame","Glass_Trim"));
+	
+blockRef.put("LightBlueElegantWooden_Vertical_Middle_Single_Frame",new LightBlueElegantWooden_Vertical_Middle_Single_Frame("LightBlueElegantWooden_Vertical_Middle_Single_Frame","Glass_Trim"));
+	
+
 
 blockRef.put("Clear_Elegant_Wooden_Full_Frame", new Clear_Elegant_Wooden_Full_Frame().setCreativeTab(tabElegantLife));
 blockRef.put("Dark_Green_Elegant_Wooden_Full_Frame", new Dark_Green_Elegant_Wooden_Full_Frame().setCreativeTab(tabElegantLife));
 blockRef.put("Black_Elegant_Wooden_Full_Frame", new Black_Elegant_Wooden_Full_Frame().setCreativeTab(tabElegantLife));
 blockRef.put("Light_Blue_Elegant_Wooden_Full_Frame", new Light_Blue_Elegant_Wooden_Full_Frame().setCreativeTab(tabElegantLife));
+
+blockRef.put("BlackSimple_Pane", new BlackSimple_Pane("BlackSimple").setCreativeTab(tabSimpleLife));
+blockRef.put("BlackSimple_Down_Frame",new BlackSimple_Down_Frame("BlackSimple_Down_Frame","Glass_Trim"));
+	
+blockRef.put("BlackSimple_Down_Left_Frame",new BlackSimple_Down_Left_Frame("BlackSimple_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("BlackSimple_Down_Right_Frame",new BlackSimple_Down_Right_Frame("BlackSimple_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("BlackSimple_Down_Single_Frame",new BlackSimple_Down_Single_Frame("BlackSimple_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("BlackSimple_Full_Frame",new BlackSimple_Full_Frame("BlackSimple_Full_Frame","Glass_Trim"));
+	
+blockRef.put("BlackSimple_Horizontal_Middle_Single_Frame",new BlackSimple_Horizontal_Middle_Single_Frame("BlackSimple_Horizontal_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("BlackSimple_Left_Frame",new BlackSimple_Left_Frame("BlackSimple_Left_Frame","Glass_Trim"));
+	
+blockRef.put("BlackSimple_Left_Single_Frame",new BlackSimple_Left_Single_Frame("BlackSimple_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("BlackSimple_Right_Frame",new BlackSimple_Right_Frame("BlackSimple_Right_Frame","Glass_Trim"));
+	
+blockRef.put("BlackSimple_Right_Single_Frame",new BlackSimple_Right_Single_Frame("BlackSimple_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("BlackSimple_Top_Frame",new BlackSimple_Top_Frame("BlackSimple_Top_Frame","Glass_Trim"));
+	
+blockRef.put("BlackSimple_Top_Left_Frame",new BlackSimple_Top_Left_Frame("BlackSimple_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("BlackSimple_Top_Right_Frame",new BlackSimple_Top_Right_Frame("BlackSimple_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("BlackSimple_Top_Single_Frame",new BlackSimple_Top_Single_Frame("BlackSimple_Top_Single_Frame","Glass_Trim"));
+	
+blockRef.put("BlackSimple_Vertical_Middle_Single_Frame",new BlackSimple_Vertical_Middle_Single_Frame("BlackSimple_Vertical_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("BlackSimple_Middle_Frame",new BlackSimple_Middle_Frame("BlackSimple_Middle_Frame","Glass_Trim"));
+
+
+blockRef.put("BlueSimple_Pane", new BlueSimple_Pane("BlueSimple").setCreativeTab(tabSimpleLife));
+blockRef.put("BlueSimple_Down_Frame",new BlueSimple_Down_Frame("BlueSimple_Down_Frame","Glass_Trim"));
+	
+blockRef.put("BlueSimple_Down_Left_Frame",new BlueSimple_Down_Left_Frame("BlueSimple_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("BlueSimple_Down_Right_Frame",new BlueSimple_Down_Right_Frame("BlueSimple_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("BlueSimple_Down_Single_Frame",new BlueSimple_Down_Single_Frame("BlueSimple_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("BlueSimple_Full_Frame",new BlueSimple_Full_Frame("BlueSimple_Full_Frame","Glass_Trim"));
+	
+blockRef.put("BlueSimple_Horizontal_Middle_Single_Frame",new BlueSimple_Horizontal_Middle_Single_Frame("BlueSimple_Horizontal_Middle_Single_Frame","Glass_Trim"));
+blockRef.put("BlueSimple_Vertical_Middle_Single_Frame",new BlueSimple_Vertical_Middle_Single_Frame("BlueSimple_Vertical_Middle_Single_Frame","Glass_Trim"));
+
+blockRef.put("BlueSimple_Left_Frame",new BlueSimple_Left_Frame("BlueSimple_Left_Frame","Glass_Trim"));
+	
+blockRef.put("BlueSimple_Left_Single_Frame",new BlueSimple_Left_Single_Frame("BlueSimple_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("BlueSimple_Middle_Frame",new BlueSimple_Middle_Frame("BlueSimple_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("BlueSimple_Right_Frame",new BlueSimple_Right_Frame("BlueSimple_Right_Frame","Glass_Trim"));
+	
+blockRef.put("BlueSimple_Right_Single_Frame",new BlueSimple_Right_Single_Frame("BlueSimple_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("BlueSimple_Top_Frame",new BlueSimple_Top_Frame("BlueSimple_Top_Frame","Glass_Trim"));
+	
+blockRef.put("BlueSimple_Top_Left_Frame",new BlueSimple_Top_Left_Frame("BlueSimple_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("BlueSimple_Top_Right_Frame",new BlueSimple_Top_Right_Frame("BlueSimple_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("BlueSimple_Top_Single_Frame",new BlueSimple_Top_Single_Frame("BlueSimple_Top_Single_Frame","Glass_Trim"));
+	
+
+
+blockRef.put("ClearSimple_Pane", new ClearSimple_Pane("ClearSimple").setCreativeTab(tabSimpleLife));
+blockRef.put("ClearSimple_Down_Frame",new ClearSimple_Down_Frame("ClearSimple_Down_Frame","Glass_Trim"));
+	
+blockRef.put("ClearSimple_Down_Left_Frame",new ClearSimple_Down_Left_Frame("ClearSimple_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("ClearSimple_Down_Right_Frame",new ClearSimple_Down_Right_Frame("ClearSimple_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("ClearSimple_Down_Single_Frame",new ClearSimple_Down_Single_Frame("ClearSimple_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("ClearSimple_Full_Frame",new ClearSimple_Full_Frame("ClearSimple_Full_Frame","Glass_Trim"));
+	
+blockRef.put("ClearSimple_Horizontal_Middle_Single_Frame",new ClearSimple_Horizontal_Middle_Single_Frame("ClearSimple_Horizontal_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("ClearSimple_Left_Frame",new ClearSimple_Left_Frame("ClearSimple_Left_Frame","Glass_Trim"));
+	
+blockRef.put("ClearSimple_Left_Single_Frame",new ClearSimple_Left_Single_Frame("ClearSimple_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("ClearSimple_Middle_Frame",new ClearSimple_Middle_Frame("ClearSimple_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("ClearSimple_Right_Frame",new ClearSimple_Right_Frame("ClearSimple_Right_Frame","Glass_Trim"));
+	
+blockRef.put("ClearSimple_Right_Single_Frame",new ClearSimple_Right_Single_Frame("ClearSimple_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("ClearSimple_Top_Frame",new ClearSimple_Top_Frame("ClearSimple_Top_Frame","Glass_Trim"));
+	
+blockRef.put("ClearSimple_Top_Left_Frame",new ClearSimple_Top_Left_Frame("ClearSimple_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("ClearSimple_Top_Right_Frame",new ClearSimple_Top_Right_Frame("ClearSimple_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("ClearSimple_Top_Single_Frame",new ClearSimple_Top_Single_Frame("ClearSimple_Top_Single_Frame","Glass_Trim"));
+	
+blockRef.put("ClearSimple_Vertical_Middle_Single_Frame",new ClearSimple_Vertical_Middle_Single_Frame("ClearSimple_Vertical_Middle_Single_Frame","Glass_Trim"));
+	
+
+
+blockRef.put("CyanSimple_Pane", new CyanSimple_Pane("CyanSimple").setCreativeTab(tabSimpleLife));
+blockRef.put("CyanSimple_Down_Frame",new CyanSimple_Down_Frame("CyanSimple_Down_Frame","Glass_Trim"));
+	
+blockRef.put("CyanSimple_Down_Left_Frame",new CyanSimple_Down_Left_Frame("CyanSimple_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("CyanSimple_Down_Right_Frame",new CyanSimple_Down_Right_Frame("CyanSimple_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("CyanSimple_Down_Single_Frame",new CyanSimple_Down_Single_Frame("CyanSimple_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("CyanSimple_Full_Frame",new CyanSimple_Full_Frame("CyanSimple_Full_Frame","Glass_Trim"));
+	
+blockRef.put("CyanSimple_Horizontal_Middle_Single_Frame",new CyanSimple_Horizontal_Middle_Single_Frame("CyanSimple_Horizontal_Middle_Single_Frame","Glass_Trim"));
+blockRef.put("CyanSimple_Vertical_Middle_Single_Frame",new CyanSimple_Vertical_Middle_Single_Frame("CyanSimple_Vertical_Middle_Single_Frame","Glass_Trim"));
+
+blockRef.put("CyanSimple_Left_Frame",new CyanSimple_Left_Frame("CyanSimple_Left_Frame","Glass_Trim"));
+	
+blockRef.put("CyanSimple_Left_Single_Frame",new CyanSimple_Left_Single_Frame("CyanSimple_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("CyanSimple_Middle_Frame",new CyanSimple_Middle_Frame("CyanSimple_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("CyanSimple_Right_Frame",new CyanSimple_Right_Frame("CyanSimple_Right_Frame","Glass_Trim"));
+	
+blockRef.put("CyanSimple_Right_Single_Frame",new CyanSimple_Right_Single_Frame("CyanSimple_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("CyanSimple_Top_Frame",new CyanSimple_Top_Frame("CyanSimple_Top_Frame","Glass_Trim"));
+	
+blockRef.put("CyanSimple_Top_Left_Frame",new CyanSimple_Top_Left_Frame("CyanSimple_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("CyanSimple_Top_Right_Frame",new CyanSimple_Top_Right_Frame("CyanSimple_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("CyanSimple_Top_Single_Frame",new CyanSimple_Top_Single_Frame("CyanSimple_Top_Single_Frame","Glass_Trim"));
+	
+	
+
+
+blockRef.put("DarkBlueSimple_Pane", new DarkBlueSimple_Pane("DarkBlueSimple").setCreativeTab(tabSimpleLife));
+blockRef.put("DarkBlueSimple_Down_Frame",new DarkBlueSimple_Down_Frame("DarkBlueSimple_Down_Frame","Glass_Trim"));
+	
+blockRef.put("DarkBlueSimple_Down_Left_Frame",new DarkBlueSimple_Down_Left_Frame("DarkBlueSimple_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("DarkBlueSimple_Down_Right_Frame",new DarkBlueSimple_Down_Right_Frame("DarkBlueSimple_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("DarkBlueSimple_Down_Single_Frame",new DarkBlueSimple_Down_Single_Frame("DarkBlueSimple_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("DarkBlueSimple_Horizontal_Middle_Single_Frame",new DarkBlueSimple_Horizontal_Middle_Single_Frame("DarkBlueSimple_Horizontal_Middle_Single_Frame","Glass_Trim"));
+blockRef.put("DarkBlueSimple_Vertical_Middle_Single_Frame",new DarkBlueSimple_Vertical_Middle_Single_Frame("DarkBlueSimple_Vertical_Middle_Single_Frame","Glass_Trim"));
+
+blockRef.put("DarkBlueSimple_Left_Frame",new DarkBlueSimple_Left_Frame("DarkBlueSimple_Left_Frame","Glass_Trim"));
+	
+blockRef.put("DarkBlueSimple_Left_Single_Frame",new DarkBlueSimple_Left_Single_Frame("DarkBlueSimple_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("DarkBlueSimple_Middle_Frame",new DarkBlueSimple_Middle_Frame("DarkBlueSimple_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("DarkBlueSimple_Right_Frame",new DarkBlueSimple_Right_Frame("DarkBlueSimple_Right_Frame","Glass_Trim"));
+	
+blockRef.put("DarkBlueSimple_Right_Single_Frame",new DarkBlueSimple_Right_Single_Frame("DarkBlueSimple_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("DarkBlueSimple_Top_Frame",new DarkBlueSimple_Top_Frame("DarkBlueSimple_Top_Frame","Glass_Trim"));
+	
+blockRef.put("DarkBlueSimple_Top_Left_Frame",new DarkBlueSimple_Top_Left_Frame("DarkBlueSimple_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("DarkBlueSimple_Top_Right_Frame",new DarkBlueSimple_Top_Right_Frame("DarkBlueSimple_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("DarkBlueSimple_Full_Frame",new DarkBlueSimple_Full_Frame("DarkBlueSimple_Full_Frame","Glass_Trim"));
+	
+
+
+blockRef.put("DarkGreenSimple_Pane", new DarkGreenSimple_Pane("DarkGreenSimple").setCreativeTab(tabSimpleLife));
+blockRef.put("DarkGreenSimple_Down_Frame",new DarkGreenSimple_Down_Frame("DarkGreenSimple_Down_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenSimple_Down_Left_Frame",new DarkGreenSimple_Down_Left_Frame("DarkGreenSimple_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenSimple_Down_Right_Frame",new DarkGreenSimple_Down_Right_Frame("DarkGreenSimple_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenSimple_Down_Single_Frame",new DarkGreenSimple_Down_Single_Frame("DarkGreenSimple_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenSimple_Full_Frame",new DarkGreenSimple_Full_Frame("DarkGreenSimple_Full_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenSimple_Horizontal_Middle_Single_Frame",new DarkGreenSimple_Horizontal_Middle_Single_Frame("DarkGreenSimple_Horizontal_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenSimple_Left_Frame",new DarkGreenSimple_Left_Frame("DarkGreenSimple_Left_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenSimple_Left_Single_Frame",new DarkGreenSimple_Left_Single_Frame("DarkGreenSimple_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenSimple_Right_Frame",new DarkGreenSimple_Right_Frame("DarkGreenSimple_Right_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenSimple_Right_Single_Frame",new DarkGreenSimple_Right_Single_Frame("DarkGreenSimple_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenSimple_Top_Frame",new DarkGreenSimple_Top_Frame("DarkGreenSimple_Top_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenSimple_Top_Left_Frame",new DarkGreenSimple_Top_Left_Frame("DarkGreenSimple_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenSimple_Top_Right_Frame",new DarkGreenSimple_Top_Right_Frame("DarkGreenSimple_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenSimple_Top_Single_Frame",new DarkGreenSimple_Top_Single_Frame("DarkGreenSimple_Top_Single_Frame","Glass_Trim"));
+	
+blockRef.put("DarkGreenSimple_Vertical_Middle_Single_Frame",new DarkGreenSimple_Vertical_Middle_Single_Frame("DarkGreenSimple_Vertical_Middle_Single_Frame","Glass_Trim"));
+	
+
+
+blockRef.put("DarkPurpleSimple_Pane", new DarkPurpleSimple_Pane("DarkPurpleSimple").setCreativeTab(tabSimpleLife));
+blockRef.put("DarkPurpleSimple_Down_Frame",new DarkPurpleSimple_Down_Frame("DarkPurpleSimple_Down_Frame","Glass_Trim"));
+	
+blockRef.put("DarkPurpleSimple_Down_Left_Frame",new DarkPurpleSimple_Down_Left_Frame("DarkPurpleSimple_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("DarkPurpleSimple_Down_Right_Frame",new DarkPurpleSimple_Down_Right_Frame("DarkPurpleSimple_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("DarkPurpleSimple_Down_Single_Frame",new DarkPurpleSimple_Down_Single_Frame("DarkPurpleSimple_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("DarkPurpleSimple_Full_Frame",new DarkPurpleSimple_Full_Frame("DarkPurpleSimple_Full_Frame","Glass_Trim"));
+	
+blockRef.put("DarkPurpleSimple_Horizontal_Middle_Single_Frame",new DarkPurpleSimple_Horizontal_Middle_Single_Frame("DarkPurpleSimple_Horizontal_Middle_Single_Frame","Glass_Trim"));
+blockRef.put("DarkPurpleSimple_Vertical_Middle_Single_Frame",new DarkPurpleSimple_Vertical_Middle_Single_Frame("DarkPurpleSimple_Vertical_Middle_Single_Frame","Glass_Trim"));
+
+blockRef.put("DarkPurpleSimple_Left_Frame",new DarkPurpleSimple_Left_Frame("DarkPurpleSimple_Left_Frame","Glass_Trim"));
+	
+blockRef.put("DarkPurpleSimple_Left_Single_Frame",new DarkPurpleSimple_Left_Single_Frame("DarkPurpleSimple_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("DarkPurpleSimple_Middle_Frame",new DarkPurpleSimple_Middle_Frame("DarkPurpleSimple_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("DarkPurpleSimple_Right_Frame",new DarkPurpleSimple_Right_Frame("DarkPurpleSimple_Right_Frame","Glass_Trim"));
+	
+blockRef.put("DarkPurpleSimple_Right_Single_Frame",new DarkPurpleSimple_Right_Single_Frame("DarkPurpleSimple_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("DarkPurpleSimple_Top_Frame",new DarkPurpleSimple_Top_Frame("DarkPurpleSimple_Top_Frame","Glass_Trim"));
+	
+blockRef.put("DarkPurpleSimple_Top_Left_Frame",new DarkPurpleSimple_Top_Left_Frame("DarkPurpleSimple_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("DarkPurpleSimple_Top_Right_Frame",new DarkPurpleSimple_Top_Right_Frame("DarkPurpleSimple_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("DarkPurpleSimple_Top_Single_Frame",new DarkPurpleSimple_Top_Single_Frame("DarkPurpleSimple_Top_Single_Frame","Glass_Trim"));
+	
+
+
+blockRef.put("GreenSimple_Pane", new GreenSimple_Pane("GreenSimple").setCreativeTab(tabSimpleLife));
+blockRef.put("GreenSimple_Down_Frame",new GreenSimple_Down_Frame("GreenSimple_Down_Frame","Glass_Trim"));
+	
+blockRef.put("GreenSimple_Down_Left_Frame",new GreenSimple_Down_Left_Frame("GreenSimple_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("GreenSimple_Down_Right_Frame",new GreenSimple_Down_Right_Frame("GreenSimple_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("GreenSimple_Down_Single_Frame",new GreenSimple_Down_Single_Frame("GreenSimple_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("GreenSimple_Full_Frame",new GreenSimple_Full_Frame("GreenSimple_Full_Frame","Glass_Trim"));
+	
+blockRef.put("GreenSimple_Horizontal_Middle_Single_Frame",new GreenSimple_Horizontal_Middle_Single_Frame("GreenSimple_Horizontal_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("GreenSimple_Left_Frame",new GreenSimple_Left_Frame("GreenSimple_Left_Frame","Glass_Trim"));
+	
+blockRef.put("GreenSimple_Left_Single_Frame",new GreenSimple_Left_Single_Frame("GreenSimple_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("GreenSimple_Right_Frame",new GreenSimple_Right_Frame("GreenSimple_Right_Frame","Glass_Trim"));
+	
+blockRef.put("GreenSimple_Right_Single_Frame",new GreenSimple_Right_Single_Frame("GreenSimple_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("GreenSimple_Top_Frame",new GreenSimple_Top_Frame("GreenSimple_Top_Frame","Glass_Trim"));
+	
+blockRef.put("GreenSimple_Top_Left_Frame",new GreenSimple_Top_Left_Frame("GreenSimple_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("GreenSimple_Top_Right_Frame",new GreenSimple_Top_Right_Frame("GreenSimple_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("GreenSimple_Top_Single_Frame",new GreenSimple_Top_Single_Frame("GreenSimple_Top_Single_Frame","Glass_Trim"));
+blockRef.put("GreenSimple_Middle_Frame",new GreenSimple_Middle_Frame("GreenSimple_Middle_Frame","Glass_Trim"));
+
+blockRef.put("GreenSimple_Vertical_Middle_Single_Frame",new GreenSimple_Vertical_Middle_Single_Frame("GreenSimple_Vertical_Middle_Single_Frame","Glass_Trim"));
+	
+
+
+blockRef.put("MagentaSimple_Pane", new MagentaSimple_Pane("MagentaSimple").setCreativeTab(tabSimpleLife));
+blockRef.put("MagentaSimple_Down_Frame",new MagentaSimple_Down_Frame("MagentaSimple_Down_Frame","Glass_Trim"));
+	
+blockRef.put("MagentaSimple_Down_Left_Frame",new MagentaSimple_Down_Left_Frame("MagentaSimple_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("MagentaSimple_Down_Right_Frame",new MagentaSimple_Down_Right_Frame("MagentaSimple_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("MagentaSimple_Down_Single_Frame",new MagentaSimple_Down_Single_Frame("MagentaSimple_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("MagentaSimple_Full_Frame",new MagentaSimple_Full_Frame("MagentaSimple_Full_Frame","Glass_Trim"));
+	
+blockRef.put("MagentaSimple_Horizontal_Middle_Single_Frame",new MagentaSimple_Horizontal_Middle_Single_Frame("MagentaSimple_Horizontal_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("MagentaSimple_Left_Frame",new MagentaSimple_Left_Frame("MagentaSimple_Left_Frame","Glass_Trim"));
+	
+blockRef.put("MagentaSimple_Left_Single_Frame",new MagentaSimple_Left_Single_Frame("MagentaSimple_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("MagentaSimple_Middle_Frame",new MagentaSimple_Middle_Frame("MagentaSimple_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("MagentaSimple_Right_Frame",new MagentaSimple_Right_Frame("MagentaSimple_Right_Frame","Glass_Trim"));
+	
+blockRef.put("MagentaSimple_Right_Single_Frame",new MagentaSimple_Right_Single_Frame("MagentaSimple_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("MagentaSimple_Top_Frame",new MagentaSimple_Top_Frame("MagentaSimple_Top_Frame","Glass_Trim"));
+	
+blockRef.put("MagentaSimple_Top_Left_Frame",new MagentaSimple_Top_Left_Frame("MagentaSimple_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("MagentaSimple_Top_Right_Frame",new MagentaSimple_Top_Right_Frame("MagentaSimple_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("MagentaSimple_Top_Single_Frame",new MagentaSimple_Top_Single_Frame("MagentaSimple_Top_Single_Frame","Glass_Trim"));
+	
+blockRef.put("MagentaSimple_Vertical_Middle_Single_Frame",new MagentaSimple_Vertical_Middle_Single_Frame("MagentaSimple_Vertical_Middle_Single_Frame","Glass_Trim"));
+	
+
+
+blockRef.put("Simple_Pane", new Simple_Pane("Simple").setCreativeTab(tabSimpleLife));
+blockRef.put("Simple_Down_Frame",new Simple_Down_Frame("Simple_Down_Frame","Glass_Trim"));
+blockRef.put("Simple_Full_Frame",new Simple_Full_Frame("Simple_Full_Frame","Glass_Trim"));
+
+blockRef.put("Simple_Down_Left_Frame",new Simple_Down_Left_Frame("Simple_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("Simple_Down_Right_Frame",new Simple_Down_Right_Frame("Simple_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("Simple_Down_Single_Frame",new Simple_Down_Single_Frame("Simple_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("Simple_Horizontal_Middle_Single_Frame",new Simple_Horizontal_Middle_Single_Frame("Simple_Horizontal_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("Simple_Left_Frame",new Simple_Left_Frame("Simple_Left_Frame","Glass_Trim"));
+	
+blockRef.put("Simple_Left_Single_Frame",new Simple_Left_Single_Frame("Simple_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("Simple_Middle_Frame",new Simple_Middle_Frame("Simple_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("Simple_Right_Frame",new Simple_Right_Frame("Simple_Right_Frame","Glass_Trim"));
+	
+blockRef.put("Simple_Right_Single_Frame",new Simple_Right_Single_Frame("Simple_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("Simple_Top_Frame",new Simple_Top_Frame("Simple_Top_Frame","Glass_Trim"));
+	
+blockRef.put("Simple_Top_Left_Frame",new Simple_Top_Left_Frame("Simple_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("Simple_Top_Right_Frame",new Simple_Top_Right_Frame("Simple_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("Simple_Top_Single_Frame",new Simple_Top_Single_Frame("Simple_Top_Single_Frame","Glass_Trim"));
+	
+blockRef.put("Simple_Vertical_Middle_Single_Frame",new Simple_Vertical_Middle_Single_Frame("Simple_Vertical_Middle_Single_Frame","Glass_Trim"));
+	
+
+
+blockRef.put("OrangeSimple_Pane", new OrangeSimple_Pane("OrangeSimple").setCreativeTab(tabSimpleLife));
+blockRef.put("OrangeSimple_Down_Frame",new OrangeSimple_Down_Frame("OrangeSimple_Down_Frame","Glass_Trim"));
+	
+blockRef.put("OrangeSimple_Down_Left_Frame",new OrangeSimple_Down_Left_Frame("OrangeSimple_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("OrangeSimple_Down_Right_Frame",new OrangeSimple_Down_Right_Frame("OrangeSimple_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("OrangeSimple_Down_Single_Frame",new OrangeSimple_Down_Single_Frame("OrangeSimple_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("OrangeSimple_Full_Frame",new OrangeSimple_Full_Frame("OrangeSimple_Full_Frame","Glass_Trim"));
+	
+blockRef.put("OrangeSimple_Horizontal_Middle_Single_Frame",new OrangeSimple_Horizontal_Middle_Single_Frame("OrangeSimple_Horizontal_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("OrangeSimple_Left_Frame",new OrangeSimple_Left_Frame("OrangeSimple_Left_Frame","Glass_Trim"));
+	
+blockRef.put("OrangeSimple_Left_Single_Frame",new OrangeSimple_Left_Single_Frame("OrangeSimple_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("OrangeSimple_Middle_Frame",new OrangeSimple_Middle_Frame("OrangeSimple_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("OrangeSimple_Right_Frame",new OrangeSimple_Right_Frame("OrangeSimple_Right_Frame","Glass_Trim"));
+	
+blockRef.put("OrangeSimple_Right_Single_Frame",new OrangeSimple_Right_Single_Frame("OrangeSimple_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("OrangeSimple_Top_Frame",new OrangeSimple_Top_Frame("OrangeSimple_Top_Frame","Glass_Trim"));
+	
+blockRef.put("OrangeSimple_Top_Left_Frame",new OrangeSimple_Top_Left_Frame("OrangeSimple_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("OrangeSimple_Top_Right_Frame",new OrangeSimple_Top_Right_Frame("OrangeSimple_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("OrangeSimple_Top_Single_Frame",new OrangeSimple_Top_Single_Frame("OrangeSimple_Top_Single_Frame","Glass_Trim"));
+	
+blockRef.put("OrangeSimple_Vertical_Middle_Single_Frame",new OrangeSimple_Vertical_Middle_Single_Frame("OrangeSimple_Vertical_Middle_Single_Frame","Glass_Trim"));
+	
+
+
+blockRef.put("PinkSimple_Pane", new PinkSimple_Pane("PinkSimple").setCreativeTab(tabSimpleLife));
+blockRef.put("PinkSimple_Down_Frame",new PinkSimple_Down_Frame("PinkSimple_Down_Frame","Glass_Trim"));
+	
+blockRef.put("PinkSimple_Down_Left_Frame",new PinkSimple_Down_Left_Frame("PinkSimple_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("PinkSimple_Down_Right_Frame",new PinkSimple_Down_Right_Frame("PinkSimple_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("PinkSimple_Down_Single_Frame",new PinkSimple_Down_Single_Frame("PinkSimple_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("PinkSimple_Full_Frame",new PinkSimple_Full_Frame("PinkSimple_Full_Frame","Glass_Trim"));
+	
+blockRef.put("PinkSimple_Horizontal_Middle_Single_Frame",new PinkSimple_Horizontal_Middle_Single_Frame("PinkSimple_Horizontal_Middle_Single_Frame","Glass_Trim"));
+blockRef.put("PinkSimple_Vertical_Middle_Single_Frame",new PinkSimple_Vertical_Middle_Single_Frame("PinkSimple_Vertical_Middle_Single_Frame","Glass_Trim"));
+
+blockRef.put("PinkSimple_Left_Frame",new PinkSimple_Left_Frame("PinkSimple_Left_Frame","Glass_Trim"));
+	
+blockRef.put("PinkSimple_Left_Single_Frame",new PinkSimple_Left_Single_Frame("PinkSimple_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("PinkSimple_Middle_Frame",new PinkSimple_Middle_Frame("PinkSimple_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("PinkSimple_Right_Frame",new PinkSimple_Right_Frame("PinkSimple_Right_Frame","Glass_Trim"));
+	
+blockRef.put("PinkSimple_Right_Single_Frame",new PinkSimple_Right_Single_Frame("PinkSimple_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("PinkSimple_Top_Frame",new PinkSimple_Top_Frame("PinkSimple_Top_Frame","Glass_Trim"));
+	
+blockRef.put("PinkSimple_Top_Left_Frame",new PinkSimple_Top_Left_Frame("PinkSimple_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("PinkSimple_Top_Right_Frame",new PinkSimple_Top_Right_Frame("PinkSimple_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("PinkSimple_Top_Single_Frame",new PinkSimple_Top_Single_Frame("PinkSimple_Top_Single_Frame","Glass_Trim"));
+	
+
+
+blockRef.put("PurpleSimple_Pane", new PurpleSimple_Pane("PurpleSimple").setCreativeTab(tabSimpleLife));
+blockRef.put("PurpleSimple_Down_Frame",new PurpleSimple_Down_Frame("PurpleSimple_Down_Frame","Glass_Trim"));
+	
+blockRef.put("PurpleSimple_Down_Left_Frame",new PurpleSimple_Down_Left_Frame("PurpleSimple_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("PurpleSimple_Down_Right_Frame",new PurpleSimple_Down_Right_Frame("PurpleSimple_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("PurpleSimple_Down_Single_Frame",new PurpleSimple_Down_Single_Frame("PurpleSimple_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("PurpleSimple_Full_Frame",new PurpleSimple_Full_Frame("PurpleSimple_Full_Frame","Glass_Trim"));
+	
+blockRef.put("PurpleSimple_Horizontal_Middle_Single_Frame",new PurpleSimple_Horizontal_Middle_Single_Frame("PurpleSimple_Horizontal_Middle_Single_Frame","Glass_Trim"));
+blockRef.put("PurpleSimple_Vertical_Middle_Single_Frame",new PurpleSimple_Vertical_Middle_Single_Frame("PurpleSimple_Vertical_Middle_Single_Frame","Glass_Trim"));
+
+blockRef.put("PurpleSimple_Left_Frame",new PurpleSimple_Left_Frame("PurpleSimple_Left_Frame","Glass_Trim"));
+	
+blockRef.put("PurpleSimple_Left_Single_Frame",new PurpleSimple_Left_Single_Frame("PurpleSimple_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("PurpleSimple_Middle_Frame",new PurpleSimple_Middle_Frame("PurpleSimple_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("PurpleSimple_Right_Frame",new PurpleSimple_Right_Frame("PurpleSimple_Right_Frame","Glass_Trim"));
+	
+blockRef.put("PurpleSimple_Right_Single_Frame",new PurpleSimple_Right_Single_Frame("PurpleSimple_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("PurpleSimple_Top_Frame",new PurpleSimple_Top_Frame("PurpleSimple_Top_Frame","Glass_Trim"));
+	
+blockRef.put("PurpleSimple_Top_Left_Frame",new PurpleSimple_Top_Left_Frame("PurpleSimple_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("PurpleSimple_Top_Right_Frame",new PurpleSimple_Top_Right_Frame("PurpleSimple_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("PurpleSimple_Top_Single_Frame",new PurpleSimple_Top_Single_Frame("PurpleSimple_Top_Single_Frame","Glass_Trim"));
+	
+
+
+blockRef.put("RedSimple_Pane", new RedSimple_Pane("RedSimple").setCreativeTab(tabSimpleLife));
+blockRef.put("RedSimple_Down_Frame",new RedSimple_Down_Frame("RedSimple_Down_Frame","Glass_Trim"));
+	
+blockRef.put("RedSimple_Down_Left_Frame",new RedSimple_Down_Left_Frame("RedSimple_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("RedSimple_Down_Right_Frame",new RedSimple_Down_Right_Frame("RedSimple_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("RedSimple_Down_Single_Frame",new RedSimple_Down_Single_Frame("RedSimple_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("RedSimple_Full_Frame",new RedSimple_Full_Frame("RedSimple_Full_Frame","Glass_Trim"));
+	
+blockRef.put("RedSimple_Horizontal_Middle_Single_Frame",new RedSimple_Horizontal_Middle_Single_Frame("RedSimple_Horizontal_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("RedSimple_Left_Frame",new RedSimple_Left_Frame("RedSimple_Left_Frame","Glass_Trim"));
+	
+blockRef.put("RedSimple_Left_Single_Frame",new RedSimple_Left_Single_Frame("RedSimple_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("RedSimple_Middle_Frame",new RedSimple_Middle_Frame("RedSimple_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("RedSimple_Right_Frame",new RedSimple_Right_Frame("RedSimple_Right_Frame","Glass_Trim"));
+	
+blockRef.put("RedSimple_Right_Single_Frame",new RedSimple_Right_Single_Frame("RedSimple_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("RedSimple_Top_Frame",new RedSimple_Top_Frame("RedSimple_Top_Frame","Glass_Trim"));
+	
+blockRef.put("RedSimple_Top_Left_Frame",new RedSimple_Top_Left_Frame("RedSimple_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("RedSimple_Top_Right_Frame",new RedSimple_Top_Right_Frame("RedSimple_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("RedSimple_Top_Single_Frame",new RedSimple_Top_Single_Frame("RedSimple_Top_Single_Frame","Glass_Trim"));
+	
+blockRef.put("RedSimple_Vertical_Middle_Single_Frame",new RedSimple_Vertical_Middle_Single_Frame("RedSimple_Vertical_Middle_Single_Frame","Glass_Trim"));
+	
+
+
+blockRef.put("WhiteSimple_Pane", new WhiteSimple_Pane("WhiteSimple").setCreativeTab(tabSimpleLife));
+blockRef.put("WhiteSimple_Down_Frame",new WhiteSimple_Down_Frame("WhiteSimple_Down_Frame","Glass_Trim"));
+	
+blockRef.put("WhiteSimple_Down_Left_Frame",new WhiteSimple_Down_Left_Frame("WhiteSimple_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("WhiteSimple_Down_Right_Frame",new WhiteSimple_Down_Right_Frame("WhiteSimple_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("WhiteSimple_Down_Single_Frame",new WhiteSimple_Down_Single_Frame("WhiteSimple_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("WhiteSimple_Full_Frame",new WhiteSimple_Full_Frame("WhiteSimple_Full_Frame","Glass_Trim"));
+	
+blockRef.put("WhiteSimple_Horizontal_Middle_Single_Frame",new WhiteSimple_Horizontal_Middle_Single_Frame("WhiteSimple_Horizontal_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("WhiteSimple_Left_Frame",new WhiteSimple_Left_Frame("WhiteSimple_Left_Frame","Glass_Trim"));
+	
+blockRef.put("WhiteSimple_Left_Single_Frame",new WhiteSimple_Left_Single_Frame("WhiteSimple_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("WhiteSimple_Middle_Frame",new WhiteSimple_Middle_Frame("WhiteSimple_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("WhiteSimple_Right_Frame",new WhiteSimple_Right_Frame("WhiteSimple_Right_Frame","Glass_Trim"));
+	
+blockRef.put("WhiteSimple_Right_Single_Frame",new WhiteSimple_Right_Single_Frame("WhiteSimple_Right_Single_Frame","Glass_Trim"));
+blockRef.put("WhiteSimple_Top_Frame",new WhiteSimple_Top_Frame("WhiteSimple_Top_Frame","Glass_Trim"));
+
+blockRef.put("WhiteSimple_Top_Left_Frame",new WhiteSimple_Top_Left_Frame("WhiteSimple_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("WhiteSimple_Top_Right_Frame",new WhiteSimple_Top_Right_Frame("WhiteSimple_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("WhiteSimple_Top_Single_Frame",new WhiteSimple_Top_Single_Frame("WhiteSimple_Top_Single_Frame","Glass_Trim"));
+	
+blockRef.put("WhiteSimple_Vertical_Middle_Single_Frame",new WhiteSimple_Vertical_Middle_Single_Frame("WhiteSimple_Vertical_Middle_Single_Frame","Glass_Trim"));
+	
+
+
+blockRef.put("WoodenSimple_Pane", new WoodenSimple_Pane("WoodenSimple").setCreativeTab(tabSimpleLife));
+blockRef.put("WoodenSimple_Down_Frame",new WoodenSimple_Down_Frame("WoodenSimple_Down_Frame","Glass_Trim"));
+	
+blockRef.put("WoodenSimple_Down_Left_Frame",new WoodenSimple_Down_Left_Frame("WoodenSimple_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("WoodenSimple_Down_Right_Frame",new WoodenSimple_Down_Right_Frame("WoodenSimple_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("WoodenSimple_Down_Single_Frame",new WoodenSimple_Down_Single_Frame("WoodenSimple_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("WoodenSimple_Full_Frame",new WoodenSimple_Full_Frame("WoodenSimple_Full_Frame","Glass_Trim"));
+	
+blockRef.put("WoodenSimple_Horizontal_Middle_Single_Frame",new WoodenSimple_Horizontal_Middle_Single_Frame("WoodenSimple_Horizontal_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("WoodenSimple_Left_Frame",new WoodenSimple_Left_Frame("WoodenSimple_Left_Frame","Glass_Trim"));
+	
+blockRef.put("WoodenSimple_Left_Single_Frame",new WoodenSimple_Left_Single_Frame("WoodenSimple_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("WoodenSimple_Middle_Frame",new WoodenSimple_Middle_Frame("WoodenSimple_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("WoodenSimple_Right_Frame",new WoodenSimple_Right_Frame("WoodenSimple_Right_Frame","Glass_Trim"));
+	
+blockRef.put("WoodenSimple_Right_Single_Frame",new WoodenSimple_Right_Single_Frame("WoodenSimple_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("WoodenSimple_Top_Frame",new WoodenSimple_Top_Frame("WoodenSimple_Top_Frame","Glass_Trim"));
+	
+blockRef.put("WoodenSimple_Top_Left_Frame",new WoodenSimple_Top_Left_Frame("WoodenSimple_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("WoodenSimple_Top_Right_Frame",new WoodenSimple_Top_Right_Frame("WoodenSimple_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("WoodenSimple_Top_Single_Frame",new WoodenSimple_Top_Single_Frame("WoodenSimple_Top_Single_Frame","Glass_Trim"));
+	
+blockRef.put("WoodenSimple_Vertical_Middle_Single_Frame",new WoodenSimple_Vertical_Middle_Single_Frame("WoodenSimple_Vertical_Middle_Single_Frame","Glass_Trim"));
+	
+
+
+blockRef.put("YellowSimple_Pane", new YellowSimple_Pane("YellowSimple").setCreativeTab(tabSimpleLife));
+blockRef.put("YellowSimple_Down_Frame",new YellowSimple_Down_Frame("YellowSimple_Down_Frame","Glass_Trim"));
+	
+blockRef.put("YellowSimple_Down_Left_Frame",new YellowSimple_Down_Left_Frame("YellowSimple_Down_Left_Frame","Glass_Trim"));
+	
+blockRef.put("YellowSimple_Down_Right_Frame",new YellowSimple_Down_Right_Frame("YellowSimple_Down_Right_Frame","Glass_Trim"));
+	
+blockRef.put("YellowSimple_Down_Single_Frame",new YellowSimple_Down_Single_Frame("YellowSimple_Down_Single_Frame","Glass_Trim"));
+	
+blockRef.put("YellowSimple_Full_Frame",new YellowSimple_Full_Frame("YellowSimple_Full_Frame","Glass_Trim"));
+	
+blockRef.put("YellowSimple_Horizontal_Middle_Single_Frame",new YellowSimple_Horizontal_Middle_Single_Frame("YellowSimple_Horizontal_Middle_Single_Frame","Glass_Trim"));
+	
+blockRef.put("YellowSimple_Left_Frame",new YellowSimple_Left_Frame("YellowSimple_Left_Frame","Glass_Trim"));
+	
+blockRef.put("YellowSimple_Left_Single_Frame",new YellowSimple_Left_Single_Frame("YellowSimple_Left_Single_Frame","Glass_Trim"));
+	
+blockRef.put("YellowSimple_Middle_Frame",new YellowSimple_Middle_Frame("YellowSimple_Middle_Frame","Glass_Trim"));
+	
+blockRef.put("YellowSimple_Right_Frame",new YellowSimple_Right_Frame("YellowSimple_Right_Frame","Glass_Trim"));
+	
+blockRef.put("YellowSimple_Right_Single_Frame",new YellowSimple_Right_Single_Frame("YellowSimple_Right_Single_Frame","Glass_Trim"));
+	
+blockRef.put("YellowSimple_Top_Frame",new YellowSimple_Top_Frame("YellowSimple_Top_Frame","Glass_Trim"));
+	
+blockRef.put("YellowSimple_Top_Left_Frame",new YellowSimple_Top_Left_Frame("YellowSimple_Top_Left_Frame","Glass_Trim"));
+	
+blockRef.put("YellowSimple_Top_Right_Frame",new YellowSimple_Top_Right_Frame("YellowSimple_Top_Right_Frame","Glass_Trim"));
+	
+blockRef.put("YellowSimple_Top_Single_Frame",new YellowSimple_Top_Single_Frame("YellowSimple_Top_Single_Frame","Glass_Trim"));
+	
+blockRef.put("YellowSimple_Vertical_Middle_Single_Frame",new YellowSimple_Vertical_Middle_Single_Frame("YellowSimple_Vertical_Middle_Single_Frame","Glass_Trim"));
+	
+
+
 
 blockRef.put("Bamboo_Wall",new Bamboo_Wall().setCreativeTab(tabTelgttatium));
 	
@@ -1121,12 +1873,20 @@ blockRef.put("White_Purple_Grass",new White_Purple_Grass().setCreativeTab(tabNat
 blockRef.put("White_Valley_Grass",new White_Valley_Grass().setCreativeTab(tabNatrualBlocks));
 
 
-blockRef.put("Cut_lines_x1",new Cut_lines_x1().setCreativeTab(tabCityBlocks));
-blockRef.put("Cut_lines_y1",new Cut_lines_y1().setCreativeTab(tabCityBlocks));
-blockRef.put("Cut_lines_z1",new Cut_lines_z1().setCreativeTab(tabCityBlocks));
-blockRef.put("Middle_Line",new Middle_Line().setCreativeTab(tabCityBlocks));
-blockRef.put("x1_yellow_ray",new x1_yellow_ray().setCreativeTab(tabCityBlocks));
-blockRef.put("y1_yellow_ray",new y1_yellow_ray().setCreativeTab(tabCityBlocks));
+blockRef.put("Cut_lines_x1_0",new Cut_lines_x1_0().setCreativeTab(tabCityBlocks));
+blockRef.put("Cut_lines_x1_1",new Cut_lines_x1_1().setCreativeTab(tabCityBlocks));
+blockRef.put("Cut_lines_y1_0",new Cut_lines_y1_0().setCreativeTab(tabCityBlocks));
+blockRef.put("Cut_lines_y1_1",new Cut_lines_y1_1().setCreativeTab(tabCityBlocks));
+blockRef.put("Cut_lines_z1_0",new Cut_lines_z1_0().setCreativeTab(tabCityBlocks));
+blockRef.put("Cut_lines_z1_1",new Cut_lines_z1_1().setCreativeTab(tabCityBlocks));
+blockRef.put("Middle_Line_0",new Middle_Line_0().setCreativeTab(tabCityBlocks));
+blockRef.put("Middle_Line_1",new Middle_Line_1().setCreativeTab(tabCityBlocks));
+blockRef.put("x1_yellow_ray_0",new x1_yellow_ray_0().setCreativeTab(tabCityBlocks));
+blockRef.put("x1_yellow_ray_1",new x1_yellow_ray_1().setCreativeTab(tabCityBlocks));
+blockRef.put("y1_yellow_ray_0",new y1_yellow_ray_0().setCreativeTab(tabCityBlocks));
+blockRef.put("y1_yellow_ray_1",new y1_yellow_ray_1().setCreativeTab(tabCityBlocks));
+
+
 
 blockRef.put("Srindintaria_Rune",new Srindintaria_Rune().setCreativeTab(tabSridintaria));
 blockRef.put("Srindintaria_Rune_2",new Srindintaria_Rune_2().setCreativeTab(tabSridintaria));
@@ -1153,8 +1913,9 @@ blockRef.put("Srindintaria_Wall_Sandstone",new Srindintaria_Wall_Sandstone().set
 blockRef.put("Srindintaria_Wall_Stone",new Srindintaria_Wall_Stone().setCreativeTab(tabSridintaria));
 
 blockRef.put("Bamboo_fence",new Bamboo_fence().setCreativeTab(tabFences));
+
 blockRef.put("Bamboo_fence_Green",new Bamboo_fence_Green().setCreativeTab(tabFences));
-blockRef.put("Black_Deco_Fence",new Black_Deco_Fence().setCreativeTab(tabFences));
+/*blockRef.put("Black_Deco_Fence",new Black_Deco_Fence().setCreativeTab(tabFences));
 blockRef.put("Gold_Deco_Fence",new Gold_Deco_Fence().setCreativeTab(tabFences));
 blockRef.put("Hutyve_Blue_Glass_fence",new Hutyve_Blue_Glass_fence().setCreativeTab(tabFences));
 blockRef.put("Hutyve_Cyan_Glass_fence",new Hutyve_Cyan_Glass_fence().setCreativeTab(tabFences));
@@ -1217,8 +1978,9 @@ blockRef.put("Wood_fence_type_2_Vines",new Wood_fence_type_2_Vines().setCreative
 blockRef.put("Wood_fence_type_2_Vines_Solea",new Wood_fence_type_2_Vines_Solea().setCreativeTab(tabFences));
 blockRef.put("Wood_fence_type_2_Vines_white",new Wood_fence_type_2_Vines_white().setCreativeTab(tabFences));
 blockRef.put("Wood_fence_type_2_white",new Wood_fence_type_2_white().setCreativeTab(tabFences));
-
-
+*/
+proxy.registerRendering();
+GameRegistry.registerTileEntity(TEFence.class,"TEFence");
 	}
 	
 	@EventHandler
@@ -1227,7 +1989,7 @@ blockRef.put("Wood_fence_type_2_white",new Wood_fence_type_2_white().setCreative
 		//Proxy, TileEntitiy, entity, gui and packet registration
 		//GameRegistry.addRecipe(new ItemStack(itemTable), new Object [] {"WWW"," W "," W ",'W',Blocks.planks});
 	//	GameRegistry.addRecipe(new ItemStack(blockTable),new Object[] {"CRC","RRR","CRC",'C',Blocks.coal_block, 'R',Items.redstone});
-	
+
 	}
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
@@ -1304,7 +2066,7 @@ public static CreativeTabs tabElegantLife = new CreativeTabs("ElegantLife") {
 public static CreativeTabs tabCityBlocks = new CreativeTabs("CityLife") {
 	@Override
 	public Item getTabIconItem() {
-		return new ItemStack(blockRef.get("Cut_lines_x1")).getItem();
+		return new ItemStack(blockRef.get("Cut_lines_x1_0")).getItem();
 	}
 };
 public static CreativeTabs tabSridintaria = new CreativeTabs("Sridintaria") {
@@ -1313,10 +2075,11 @@ public static CreativeTabs tabSridintaria = new CreativeTabs("Sridintaria") {
 		return new ItemStack(blockRef.get("Srindintaria_Rune_Blue_Moon_Gem")).getItem();
 	}
 };
+
 public static CreativeTabs tabFences = new CreativeTabs("telFences") {
 	@Override
 	public Item getTabIconItem() {
-		return new ItemStack(blockRef.get("Bamboo_fence_Green")).getItem();
+		return new ItemStack(blockRef.get("Bamboo_fence")).getItem();
 	}
 };
 

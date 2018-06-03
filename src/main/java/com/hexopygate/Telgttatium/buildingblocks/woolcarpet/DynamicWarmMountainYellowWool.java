@@ -1,6 +1,6 @@
 package com.hexopygate.Telgttatium.buildingblocks.woolcarpet;
 
-import com.hexopygate.Telgttatium.TelWool;
+import com.hexopygate.Telgttatium.blockarchtype.TelWool;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

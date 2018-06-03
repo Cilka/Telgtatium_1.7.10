@@ -1,6 +1,7 @@
 package com.hexopygate.Telgttatium.Food.FastFood;
 
-import com.hexopygate.Telgttatium.TelFood;
+import com.hexopygate.Telgttatium.blockarchtype.TelFood;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class Arkea_Drink_Big_size extends TelFood{
