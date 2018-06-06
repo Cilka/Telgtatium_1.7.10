@@ -5,6 +5,7 @@ import static net.minecraftforge.common.util.ForgeDirection.SOUTH;
 
 import java.util.List;
 
+import com.hexopygate.Telgttatium.TileEntities.TEDecoFence;
 import com.hexopygate.Telgttatium.TileEntities.TEFence;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -80,6 +81,7 @@ public class TelFence extends BlockContainer{
 	@Override
 	public TileEntity createNewTileEntity(World world, int id) {
 		// TODO Auto-generated method stub
+	
 		return new TEFence();
 	}
 	   public boolean canConnectFenceTo(IBlockAccess p_149826_1_, int p_149826_2_, int p_149826_3_, int p_149826_4_)

@@ -1,8 +1,8 @@
 package com.hexopygate.Telgttatium.buildingblocks.fences;
 
-import com.hexopygate.Telgttatium.blockarchtype.TelFence;
+import com.hexopygate.Telgttatium.blockarchtype.TelDecoFence;
 
-public class Turquoise_plaza_Deco_Fence extends TelFence{
+public class Turquoise_plaza_Deco_Fence extends TelDecoFence{
 
 
 	
