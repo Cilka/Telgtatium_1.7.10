@@ -121,7 +121,7 @@ MinecraftForgeClient.registerItemRenderer(
 			new GenericBlockItemRenderer(new TEHutyveFence(Telgttatium.blockRef.get("Hutyve_Yellow_Glass_fence").getClass().getSimpleName(),1), new RenderHutyveFence()));
 
 
-/*
+
 MinecraftForgeClient.registerItemRenderer(
 			Item.getItemFromBlock(
 					Telgttatium.blockRef.get("Sindrintaria_Diamon_gem_fence")), 
@@ -142,12 +142,12 @@ MinecraftForgeClient.registerItemRenderer(
 					Telgttatium.blockRef.get("Sindrintaria_Orange_gem_fence")), 
 			new GenericBlockItemRenderer(new TESindrintariaFence(Telgttatium.blockRef.get("Sindrintaria_Orange_gem_fence").getClass().getSimpleName(),1), new RenderSindrintariaFence()));
 
+
 MinecraftForgeClient.registerItemRenderer(
 			Item.getItemFromBlock(
 					Telgttatium.blockRef.get("Sindrintaria_Saphirre_gem_fence")), 
 			new GenericBlockItemRenderer(new TESindrintariaFence(Telgttatium.blockRef.get("Sindrintaria_Saphirre_gem_fence").getClass().getSimpleName(),1), new RenderSindrintariaFence()));
 
-*/
 MinecraftForgeClient.registerItemRenderer(
 			Item.getItemFromBlock(
 					Telgttatium.blockRef.get("Wood_fence_planks")), 
@@ -308,8 +308,22 @@ MinecraftForgeClient.registerItemRenderer(
 
 MinecraftForgeClient.registerItemRenderer(
 			Item.getItemFromBlock(
-					Telgttatium.blockRef.get("s	")), 
+					Telgttatium.blockRef.get("Wood_fence_type_2_Vines")), 
 			new GenericBlockItemRenderer(new TEWoodVineFence(Telgttatium.blockRef.get("Wood_fence_type_2_Vines").getClass().getSimpleName(),1), new RenderWoodenVineFence()));
+
+MinecraftForgeClient.registerItemRenderer(
+		Item.getItemFromBlock(
+				Telgttatium.blockRef.get("Wood_fence_type_2_Vines_Solea")), 
+		new GenericBlockItemRenderer(new TEWoodVineFence(Telgttatium.blockRef.get("Wood_fence_type_2_Vines_Solea").getClass().getSimpleName(),1), new RenderWoodenVineFence()));
+MinecraftForgeClient.registerItemRenderer(
+		Item.getItemFromBlock(
+				Telgttatium.blockRef.get("Wood_fence_type_2_Vines_white")), 
+		new GenericBlockItemRenderer(new TEWoodVineFence(Telgttatium.blockRef.get("Wood_fence_type_2_Vines_white").getClass().getSimpleName(),1), new RenderWoodenVineFence()));
+
+MinecraftForgeClient.registerItemRenderer(
+		Item.getItemFromBlock(
+				Telgttatium.blockRef.get("Wood_fence_type_2_Solea")), 
+		new GenericBlockItemRenderer(new TEWoodVineFence(Telgttatium.blockRef.get("Wood_fence_type_2_Solea").getClass().getSimpleName(),1), new RenderWoodenType2Fence()));
 
 
 }

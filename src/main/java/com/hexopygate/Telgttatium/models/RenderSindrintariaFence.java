@@ -30,7 +30,7 @@ protected ResourceLocation texture;
 		if(fence.textureName != null)
 			texture = new ResourceLocation("tel:textures/blocks/"+fence.textureName+".png");
 		GL11.glPushMatrix();
-		 GL11.glEnable(GL11.GL_BLEND); 
+		
 			//To get in middle of rendering
 			GL11.glTranslated(x+.5, y+1.5, z+.5);
 			GL11.glRotated(180, 0, 0, 1);
@@ -42,9 +42,9 @@ protected ResourceLocation texture;
 			//Techne spefific transforms
 			this.fence.render((Entity)null, 0, -0.1f, 0, 0, 0, .0625f);
 			GL11.glPopMatrix();
-			GL11.glDisable(GL11.GL_BLEND);
+			
 	    GL11.glPopMatrix();
-	
+	  
 	}
 
 

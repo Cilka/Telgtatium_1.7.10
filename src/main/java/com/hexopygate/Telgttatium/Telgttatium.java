@@ -3019,13 +3019,14 @@ blockRef.put("Iron_Fences_y2",new Iron_Fences_y2().setCreativeTab(tabFences));
 blockRef.put("Oxided_fence_x1",new Oxided_fence_x1().setCreativeTab(tabFences));
 blockRef.put("Oxided_fence_xy1",new Oxided_fence_xy1().setCreativeTab(tabFences));
 blockRef.put("Oxided_fence_y2",new Oxided_fence_y2().setCreativeTab(tabFences));*/
-/*
+
 blockRef.put("Sindrintaria_Athemyst_gem_fence",new Sindrintaria_Athemyst_gem_fence().setCreativeTab(tabFences));
 blockRef.put("Sindrintaria_Diamon_gem_fence",new Sindrintaria_Diamon_gem_fence().setCreativeTab(tabFences));
 blockRef.put("Sindrintaria_Emerald_gem_fence",new Sindrintaria_Emerald_gem_fence().setCreativeTab(tabFences));
 blockRef.put("Sindrintaria_Orange_gem_fence",new Sindrintaria_Orange_gem_fence().setCreativeTab(tabFences));
+
 blockRef.put("Sindrintaria_Saphirre_gem_fence",new Sindrintaria_Saphirre_gem_fence().setCreativeTab(tabFences));
-*/
+
 blockRef.put("TDive_Green_Deco_Fence",new TDive_Green_Deco_Fence().setCreativeTab(tabFences));
 blockRef.put("Turquoise_plaza_Deco_Fence",new Turquoise_plaza_Deco_Fence().setCreativeTab(tabFences));
 blockRef.put("Valley_Romance_Deco_Fence",new Valley_Romance_Deco_Fence().setCreativeTab(tabFences));
@@ -3059,9 +3060,9 @@ blockRef.put("Wood_fence_type_2_Floral_Sweet_Green",new Wood_fence_type_2_Floral
 blockRef.put("Wood_fence_type_2_LimeGreen",new Wood_fence_type_2_LimeGreen().setCreativeTab(tabFences));
 blockRef.put("Wood_fence_type_2_old",new Wood_fence_type_2_old().setCreativeTab(tabFences));
 blockRef.put("Wood_fence_type_2_Purple",new Wood_fence_type_2_Purple().setCreativeTab(tabFences));
-//blockRef.put("Wood_fence_type_2_Solea",new Wood_fence_type_2_Solea().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Solea",new Wood_fence_type_2_Solea().setCreativeTab(tabFences));
 blockRef.put("Wood_fence_type_2_Vines",new Wood_fence_type_2_Vines().setCreativeTab(tabFences));
-//blockRef.put("Wood_fence_type_2_Vines_Solea",new Wood_fence_type_2_Vines_Solea().setCreativeTab(tabFences));
+blockRef.put("Wood_fence_type_2_Vines_Solea",new Wood_fence_type_2_Vines_Solea().setCreativeTab(tabFences));
 blockRef.put("Wood_fence_type_2_Vines_white",new Wood_fence_type_2_Vines_white().setCreativeTab(tabFences));
 blockRef.put("Wood_fence_type_2_white",new Wood_fence_type_2_white().setCreativeTab(tabFences));
 
