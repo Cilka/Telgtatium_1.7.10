@@ -1,10 +1,7 @@
 package com.hexopygate.Telgttatium.Biomes.types;
 
 import com.hexopygate.Telgttatium.Telgttatium;
-import com.hexopygate.Telgttatium.buildingblocks.naturalblocks.Dirty_Valley_Grass;
 
-import net.minecraft.entity.monster.EntitySlime;
-import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.BiomeGenBase;
 
 public class BiomeGenValley extends BiomeGenBase{

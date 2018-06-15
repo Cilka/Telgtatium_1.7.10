@@ -2,22 +2,12 @@ package com.hexopygate.Telgttatium.models;
 
 import org.lwjgl.opengl.GL11;
 
-import com.hexopygate.Telgttatium.TileEntities.TEFence;
 import com.hexopygate.Telgttatium.TileEntities.TESindrintariaFence;
 
-import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.RenderBlocks;
-import net.minecraft.client.renderer.entity.Render;
-import net.minecraft.client.renderer.entity.RenderEntity;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
 
 public class RenderSindrintariaFence extends TileEntitySpecialRenderer{
 protected ModelSindrintariaFence fence;

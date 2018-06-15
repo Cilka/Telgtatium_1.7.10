@@ -11,7 +11,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 
-public class BiomeGenForest extends BiomeGenBase{
+public class BiomeGenForest extends TelBiomeGenBase{
 
 	@SuppressWarnings("unchecked")
 	public BiomeGenForest(int id) {
@@ -37,12 +37,13 @@ public class BiomeGenForest extends BiomeGenBase{
 	@Override
 	public void decorate(World world, Random ran,int x, int z)
 	{
+		/*
 		if(ran.nextInt(8) == 0)
 			new TreeGenerator(Telgttatium.blockRef.get("Pine_Tree_Wood"),Telgttatium.blockRef.get("Forest_Leaves")).generate(world, ran, x, 58+ ran.nextInt(10), z);
 		if(ran.nextInt(30) == 0)
 		{
 			new TreeGenerator(Telgttatium.blockRef.get("Jungle_Rare_Tree_Wood"),Telgttatium.blockRef.get("Forest_Leaves")).generate(world, ran, x, 58+ ran.nextInt(10), z);
-		}
+		}*/
 	}
 	@Override
 	 public int getSkyColorByTemp(float p_76731_1_)

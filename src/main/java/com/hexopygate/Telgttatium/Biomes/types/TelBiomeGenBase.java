@@ -12,6 +12,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenTallGrass;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.BiomeDictionary.Type;
 
 public class TelBiomeGenBase extends BiomeGenBase{
 	  /** The biome height */
@@ -26,7 +27,7 @@ public class TelBiomeGenBase extends BiomeGenBase{
     }
 
     static {
-        forestLight = (new BiomeGenForest(BiomeIDs.LIGHT).setColor(5470985).setTemperatureRainfall(0.95F, 0.9F).setHeight(biomeHeight).setBiomeName("Forest Of Light"));
+        forestLight = (new BiomeGenForest(BiomeIDs.LIGHT).setColor(5470985).setTemperatureRainfall(0.95F, 0.9F).setHeight(biomeHeight).setBiomeName("Evergreen Forest"));
         //forestDark = (new BiomeDarkForest(BiomeIDs.DARK).setColor(34049320).setTemperatureRainfall(0.8F, 0.4F).setHeight(biomeHeight).setBiomeName("Darkness Forest"));
     }
 
@@ -40,7 +41,7 @@ public class TelBiomeGenBase extends BiomeGenBase{
 
     public static void registerWithBiomeDictionary()
     {
-        //BiomeDictionary.registerBiomeType(forestLight, Type.FOREST);
+        BiomeDictionary.registerBiomeType(forestLight, Type.FOREST);
       //  BiomeDictionary.registerBiomeType(forestDark, Type.SAVANNA);
         BiomeDictionary.registerAllBiomes();
     }

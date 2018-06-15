@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import com.hexopygate.Telgttatium.Biomes.types.TelGenLayerBiome;
+import com.hexopygate.Telgttatium.Biomes.types.TelGenLayer;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -41,7 +41,7 @@ public class WorldChunkManagerForest extends WorldChunkManager {
 	{
 		this();
 		// i changed this to my GenLayerTutorial
-		GenLayer[] agenlayer = TelGenLayerBiome.makeTheWorld(seed, worldType);
+		GenLayer[] agenlayer = TelGenLayer.makeTheWorld(seed, worldType);
 		agenlayer = getModdedBiomeGenerators(worldType, seed, agenlayer);
 		this.genBiomes = agenlayer[0];
 		this.biomeIndexLayer = agenlayer[1];

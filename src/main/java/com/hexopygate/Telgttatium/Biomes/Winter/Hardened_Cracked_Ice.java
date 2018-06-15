@@ -1,11 +1,8 @@
 package com.hexopygate.Telgttatium.Biomes.Winter;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
-import net.minecraft.block.BlockIce;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 
 public class Hardened_Cracked_Ice extends BlockBreakable {
 

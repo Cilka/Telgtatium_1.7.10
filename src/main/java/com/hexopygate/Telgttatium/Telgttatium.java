@@ -2,6 +2,7 @@ package com.hexopygate.Telgttatium;
 
 import java.util.HashMap;
 
+import com.hexopygate.Telgttatium.Biomes.EventManager;
 import com.hexopygate.Telgttatium.Biomes.Volcano.Lava;
 import com.hexopygate.Telgttatium.Biomes.Volcano.Lava_Rock;
 import com.hexopygate.Telgttatium.Biomes.Volcano.Magma_Cracked_Rock;
@@ -21,7 +22,9 @@ import com.hexopygate.Telgttatium.Biomes.Winter.Snowcapped_Green_Grass;
 import com.hexopygate.Telgttatium.Biomes.Winter.Snowcapped_Pink_Grass;
 import com.hexopygate.Telgttatium.Biomes.Winter.Snowcapped_Purple_Grass;
 import com.hexopygate.Telgttatium.Biomes.Winter.Snowcapped_Valley_Grass;
+import com.hexopygate.Telgttatium.Biomes.types.TelBiomeGenBase;
 import com.hexopygate.Telgttatium.Biomes.types.WorldTypeTelgttatium;
+import com.hexopygate.Telgttatium.Dimension.Dimension;
 import com.hexopygate.Telgttatium.Food.Apple;
 import com.hexopygate.Telgttatium.Food.Apple_Jam_Jar;
 import com.hexopygate.Telgttatium.Food.Arika_Pumpkin;
@@ -838,6 +841,68 @@ import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.yellow.
 import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.yellow.YellowSimple_Top_Right_Frame;
 import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.yellow.YellowSimple_Top_Single_Frame;
 import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.yellow.YellowSimple_Vertical_Middle_Single_Frame;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__Kojisin;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__Kojisin_Orange;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__Kojisin_Pink;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__Kojisin_Red;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__Kojisin_blue;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__Kojisin_purple;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__Kojisin_white;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__Kojisin_yellow;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__Koloji;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__Koloji_Pink;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__Koloji_blue;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__Koloji_orange;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__Koloji_purple;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__Koloji_white;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__Koloji_yellow;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__fusy_Kounlik_001;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__fusy_Kounlik_002;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Cleursardi__fusy_Kounlik_003;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Clonexysis_Tile_Green;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Clonexysis_Tile_Lila;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Clonexysis_Tile_Original;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Clonexysis_Tile_Yellow;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Fivhyna__Green;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Fivhyna__Puple;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Fivhyna__Red;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Fivhyna__yellow;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kuhuno_Blue;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kuhuno_Gold;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kuhuno_Neon_Pink;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kuhuno_Orange;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kuhuno_Pink;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kuhuno_Purple;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kuhuno_Red;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kuhuno_neon_cyan;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kuhuno_neon_green;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kunkasie_Summon_Rune;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kunkasie_Zuupa;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kunkasie_Zuupa_Green_Moon;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kunkasie_Zuupa_Moon_Blue;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kunkasie_Zuupa_Orange_Moon;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kunkasie_Zuupa_Red_Moon;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kunkasie_rune;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kunkasie_rune_2;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kunkasie_tile;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kunkasie_tile_2;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kunkasie_tile_Crimson_moon;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kunkasie_tile_Green_moon;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kunkasie_tile_Orange_moon;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kunkasie_tile_Purple_moon;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kunkasie_tile_moon;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kunkasie_wall_Simbol;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Kunkasie_wall_Simbol_decorated;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Senaanti_Rune_1;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Senaanti_Rune_2;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Senaanti_Rune_3;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Senaanti_Rune_3_Blue_Moon;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Senaanti_Rune_3_Green_Moon;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Senaanti_Rune_3_Orange_Moon;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Senaanti_Rune_3_Red_Moon;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Senaanti_tile_Koonkip_1;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Senaanti_tile_Koonkip_2;
+import com.hexopygate.Telgttatium.buildingblocks.lujillkanses.Senaanti_tile_Koonkip_3;
 import com.hexopygate.Telgttatium.buildingblocks.naturalblocks.Ashed_Ashed_Grass;
 import com.hexopygate.Telgttatium.buildingblocks.naturalblocks.Ashed_Red_Grass;
 import com.hexopygate.Telgttatium.buildingblocks.naturalblocks.Blood_Stone;
@@ -1148,6 +1213,7 @@ import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.WinterMountainBlueWo
 import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.WinterMountainBlueWool_Carpet;
 import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.WinterMountainRedWool;
 import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.WinterMountainRedWool_Carpet;
+import com.hexopygate.Telgttatium.events.EventHelper;
 import com.hexopygate.Telgttatium.proxy.CommonProxy;
 
 import cpw.mods.fml.common.Mod;
@@ -3066,7 +3132,74 @@ blockRef.put("Wood_fence_type_2_Vines_Solea",new Wood_fence_type_2_Vines_Solea()
 blockRef.put("Wood_fence_type_2_Vines_white",new Wood_fence_type_2_Vines_white().setCreativeTab(tabFences));
 blockRef.put("Wood_fence_type_2_white",new Wood_fence_type_2_white().setCreativeTab(tabFences));
 
-proxy.registerRendering();
+blockRef.put("Cleursardi__fusy_Kounlik_001",new Cleursardi__fusy_Kounlik_001().setCreativeTab(tabLujillKanses));
+blockRef.put("Cleursardi__fusy_Kounlik_002",new Cleursardi__fusy_Kounlik_002().setCreativeTab(tabLujillKanses));
+blockRef.put("Cleursardi__fusy_Kounlik_003",new Cleursardi__fusy_Kounlik_003().setCreativeTab(tabLujillKanses));
+blockRef.put("Cleursardi__Kojisin",new Cleursardi__Kojisin().setCreativeTab(tabLujillKanses));
+blockRef.put("Cleursardi__Kojisin_blue",new Cleursardi__Kojisin_blue().setCreativeTab(tabLujillKanses));
+blockRef.put("Cleursardi__Kojisin_Orange",new Cleursardi__Kojisin_Orange().setCreativeTab(tabLujillKanses));
+blockRef.put("Cleursardi__Kojisin_Pink",new Cleursardi__Kojisin_Pink().setCreativeTab(tabLujillKanses));
+blockRef.put("Cleursardi__Kojisin_purple",new Cleursardi__Kojisin_purple().setCreativeTab(tabLujillKanses));
+blockRef.put("Cleursardi__Kojisin_Red",new Cleursardi__Kojisin_Red().setCreativeTab(tabLujillKanses));
+blockRef.put("Cleursardi__Kojisin_white",new Cleursardi__Kojisin_white().setCreativeTab(tabLujillKanses));
+blockRef.put("Cleursardi__Kojisin_yellow",new Cleursardi__Kojisin_yellow().setCreativeTab(tabLujillKanses));
+blockRef.put("Cleursardi__Koloji",new Cleursardi__Koloji().setCreativeTab(tabLujillKanses));
+blockRef.put("Cleursardi__Koloji_blue",new Cleursardi__Koloji_blue().setCreativeTab(tabLujillKanses));
+blockRef.put("Cleursardi__Koloji_orange",new Cleursardi__Koloji_orange().setCreativeTab(tabLujillKanses));
+blockRef.put("Cleursardi__Koloji_Pink",new Cleursardi__Koloji_Pink().setCreativeTab(tabLujillKanses));
+blockRef.put("Cleursardi__Koloji_purple",new Cleursardi__Koloji_purple().setCreativeTab(tabLujillKanses));
+blockRef.put("Cleursardi__Koloji_white",new Cleursardi__Koloji_white().setCreativeTab(tabLujillKanses));
+blockRef.put("Cleursardi__Koloji_yellow",new Cleursardi__Koloji_yellow().setCreativeTab(tabLujillKanses));
+blockRef.put("Clonexysis_Tile_Green",new Clonexysis_Tile_Green().setCreativeTab(tabLujillKanses));
+blockRef.put("Clonexysis_Tile_Lila",new Clonexysis_Tile_Lila().setCreativeTab(tabLujillKanses));
+blockRef.put("Clonexysis_Tile_Original",new Clonexysis_Tile_Original().setCreativeTab(tabLujillKanses));
+blockRef.put("Clonexysis_Tile_Yellow",new Clonexysis_Tile_Yellow().setCreativeTab(tabLujillKanses));
+
+blockRef.put("Fivhyna__Green",new Fivhyna__Green().setCreativeTab(tabLujillKanses));
+blockRef.put("Fivhyna__Puple",new Fivhyna__Puple().setCreativeTab(tabLujillKanses));
+blockRef.put("Fivhyna__Red",new Fivhyna__Red().setCreativeTab(tabLujillKanses));
+blockRef.put("Fivhyna__yellow",new Fivhyna__yellow().setCreativeTab(tabLujillKanses));
+
+blockRef.put("Kuhuno_Blue",new Kuhuno_Blue().setCreativeTab(tabLujillKanses));
+blockRef.put("Kuhuno_Gold",new Kuhuno_Gold().setCreativeTab(tabLujillKanses));
+blockRef.put("Kuhuno_neon_cyan",new Kuhuno_neon_cyan().setCreativeTab(tabLujillKanses));
+blockRef.put("Kuhuno_neon_green",new Kuhuno_neon_green().setCreativeTab(tabLujillKanses));
+blockRef.put("Kuhuno_Neon_Pink",new Kuhuno_Neon_Pink().setCreativeTab(tabLujillKanses));
+blockRef.put("Kuhuno_Orange",new Kuhuno_Orange().setCreativeTab(tabLujillKanses));
+blockRef.put("Kuhuno_Pink",new Kuhuno_Pink().setCreativeTab(tabLujillKanses));
+blockRef.put("Kuhuno_Purple",new Kuhuno_Purple().setCreativeTab(tabLujillKanses));
+blockRef.put("Kuhuno_Red",new Kuhuno_Red().setCreativeTab(tabLujillKanses));
+
+blockRef.put("Senaanti_Rune_1",new Senaanti_Rune_1().setCreativeTab(tabLujillKanses));
+blockRef.put("Senaanti_Rune_2",new Senaanti_Rune_2().setCreativeTab(tabLujillKanses));
+blockRef.put("Senaanti_Rune_3",new Senaanti_Rune_3().setCreativeTab(tabLujillKanses));
+blockRef.put("Senaanti_Rune_3_Blue_Moon",new Senaanti_Rune_3_Blue_Moon().setCreativeTab(tabLujillKanses));
+blockRef.put("Senaanti_Rune_3_Green_Moon",new Senaanti_Rune_3_Green_Moon().setCreativeTab(tabLujillKanses));
+blockRef.put("Senaanti_Rune_3_Orange_Moon",new Senaanti_Rune_3_Orange_Moon().setCreativeTab(tabLujillKanses));
+blockRef.put("Senaanti_Rune_3_Red_Moon",new Senaanti_Rune_3_Red_Moon().setCreativeTab(tabLujillKanses));
+blockRef.put("Senaanti_tile_Koonkip_1",new Senaanti_tile_Koonkip_1().setCreativeTab(tabLujillKanses));
+blockRef.put("Senaanti_tile_Koonkip_2",new Senaanti_tile_Koonkip_2().setCreativeTab(tabLujillKanses));
+blockRef.put("Senaanti_tile_Koonkip_3",new Senaanti_tile_Koonkip_3().setCreativeTab(tabLujillKanses));
+
+blockRef.put("Kunkasie_rune",new Kunkasie_rune().setCreativeTab(tabLujillKanses));
+blockRef.put("Kunkasie_rune_2",new Kunkasie_rune_2().setCreativeTab(tabLujillKanses));
+blockRef.put("Kunkasie_Summon_Rune",new Kunkasie_Summon_Rune().setCreativeTab(tabLujillKanses));
+blockRef.put("Kunkasie_tile",new Kunkasie_tile().setCreativeTab(tabLujillKanses));
+blockRef.put("Kunkasie_tile_2",new Kunkasie_tile_2().setCreativeTab(tabLujillKanses));
+blockRef.put("Kunkasie_tile_Crimson_moon",new Kunkasie_tile_Crimson_moon().setCreativeTab(tabLujillKanses));
+blockRef.put("Kunkasie_tile_Green_moon",new Kunkasie_tile_Green_moon().setCreativeTab(tabLujillKanses));
+blockRef.put("Kunkasie_tile_moon",new Kunkasie_tile_moon().setCreativeTab(tabLujillKanses));
+blockRef.put("Kunkasie_tile_Orange_moon",new Kunkasie_tile_Orange_moon().setCreativeTab(tabLujillKanses));
+blockRef.put("Kunkasie_tile_Purple_moon",new Kunkasie_tile_Purple_moon().setCreativeTab(tabLujillKanses));
+blockRef.put("Kunkasie_wall_Simbol",new Kunkasie_wall_Simbol().setCreativeTab(tabLujillKanses));
+blockRef.put("Kunkasie_wall_Simbol_decorated",new Kunkasie_wall_Simbol_decorated().setCreativeTab(tabLujillKanses));
+blockRef.put("Kunkasie_Zuupa",new Kunkasie_Zuupa().setCreativeTab(tabLujillKanses));
+blockRef.put("Kunkasie_Zuupa_Green_Moon",new Kunkasie_Zuupa_Green_Moon().setCreativeTab(tabLujillKanses));
+blockRef.put("Kunkasie_Zuupa_Moon_Blue",new Kunkasie_Zuupa_Moon_Blue().setCreativeTab(tabLujillKanses));
+blockRef.put("Kunkasie_Zuupa_Orange_Moon",new Kunkasie_Zuupa_Orange_Moon().setCreativeTab(tabLujillKanses));
+blockRef.put("Kunkasie_Zuupa_Red_Moon",new Kunkasie_Zuupa_Red_Moon().setCreativeTab(tabLujillKanses));
+
+
 GameRegistry.registerTileEntity(TEFence.class,"TEFence");
 GameRegistry.registerTileEntity(TEDecoFence.class,"TEDecoFence");
 GameRegistry.registerTileEntity(TEHutyveFence.class,"TEHutyveFence");
@@ -3082,7 +3215,13 @@ GameRegistry.registerTileEntity(TEWoodVineFence.class,"TEWoodVineFence");
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-	
+		proxy.registerRendering();
+		TelBiomeGenBase.registerWithBiomeDictionary();
+
+		Dimension.registerWorldProvider();
+		Dimension.registerDimensions();
+		WorldTypeTelgttatium.addCustomWorldTypes();
+		EventHelper.registerEvents();
 		//Proxy, TileEntitiy, entity, gui and packet registration
 		//GameRegistry.addRecipe(new ItemStack(itemTable), new Object [] {"WWW"," W "," W ",'W',Blocks.planks});
 	//	GameRegistry.addRecipe(new ItemStack(blockTable),new Object[] {"CRC","RRR","CRC",'C',Blocks.coal_block, 'R',Items.redstone});
@@ -3090,8 +3229,7 @@ GameRegistry.registerTileEntity(TEWoodVineFence.class,"TEWoodVineFence");
 	}
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-		WorldType TELGTTATIUM = new WorldTypeTelgttatium("Telgttatium");
-		
+	
 	}
 	public static CreativeTabs tabTelgttatium = new CreativeTabs("tabTelBuildingBlocks") {
 		@Override
@@ -3170,6 +3308,13 @@ public static CreativeTabs tabSridintaria = new CreativeTabs("Sridintaria") {
 	@Override
 	public Item getTabIconItem() {
 		return new ItemStack(blockRef.get("Srindintaria_Rune_Blue_Moon_Gem")).getItem();
+	}
+};
+
+public static CreativeTabs tabLujillKanses = new CreativeTabs("Lujill_Kanses") {
+	@Override
+	public Item getTabIconItem() {
+		return new ItemStack(blockRef.get("Cleursardi__fusy_Kounlik_001")).getItem();
 	}
 };
 

@@ -2,8 +2,22 @@ package com.hexopygate.Telgttatium.proxy;
 
 import com.hexopygate.Telgttatium.Telgttatium;
 import com.hexopygate.Telgttatium.Items.GenericBlockItemRenderer;
-import com.hexopygate.Telgttatium.TileEntities.*;
-import com.hexopygate.Telgttatium.models.*;
+import com.hexopygate.Telgttatium.TileEntities.TEDecoFence;
+import com.hexopygate.Telgttatium.TileEntities.TEFence;
+import com.hexopygate.Telgttatium.TileEntities.TEHutyveFence;
+import com.hexopygate.Telgttatium.TileEntities.TESindrintariaFence;
+import com.hexopygate.Telgttatium.TileEntities.TEWoodFence;
+import com.hexopygate.Telgttatium.TileEntities.TEWoodFlowerFence;
+import com.hexopygate.Telgttatium.TileEntities.TEWoodType2Fence;
+import com.hexopygate.Telgttatium.TileEntities.TEWoodVineFence;
+import com.hexopygate.Telgttatium.models.RenderBambooFence;
+import com.hexopygate.Telgttatium.models.RenderDecoFence;
+import com.hexopygate.Telgttatium.models.RenderHutyveFence;
+import com.hexopygate.Telgttatium.models.RenderSindrintariaFence;
+import com.hexopygate.Telgttatium.models.RenderWoodenFence;
+import com.hexopygate.Telgttatium.models.RenderWoodenFlowerFence;
+import com.hexopygate.Telgttatium.models.RenderWoodenType2Fence;
+import com.hexopygate.Telgttatium.models.RenderWoodenVineFence;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import net.minecraft.item.Item;

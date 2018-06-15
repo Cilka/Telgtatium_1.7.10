@@ -1,5 +1,6 @@
 package com.hexopygate.Telgttatium.TileEntities;
 
+import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
@@ -7,16 +8,25 @@ import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 
 public class TETV extends TileEntity {
- private int channel = 0;
+ private int channel;
  public int getChannel()
  {
    return channel;
  }
  public void setChannel(int ch)
  {
+	 
 	 channel = ch;
 	 updateEntity();
  }
+ public void changeChannel() {
+	 channel++;
+	 if(channel > 7)
+	 {
+		 channel = 0;
+	 }
+ }
+ 
  public void readFromNBT(NBTTagCompound par1NBTTagCompound) {
 	    super.readFromNBT(par1NBTTagCompound);
 	    

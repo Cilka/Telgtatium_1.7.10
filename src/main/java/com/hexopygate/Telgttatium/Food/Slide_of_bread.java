@@ -2,8 +2,6 @@ package com.hexopygate.Telgttatium.Food;
 
 import com.hexopygate.Telgttatium.blockarchtype.TelFood;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-
 public class Slide_of_bread extends TelFood{
 	public Slide_of_bread(int hungerRestored, boolean wolfsFavFood) {
 		super(hungerRestored, wolfsFavFood);

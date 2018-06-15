@@ -3,6 +3,7 @@ package com.hexopygate.Telgttatium.blockarchtype;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.world.IBlockAccess;
 
 public class TelLeaves extends Block {
 
@@ -19,5 +20,10 @@ public class TelLeaves extends Block {
 	public TelLeaves()
 	{
 		this(Material.leaves);
+	}
+	@Override
+	public boolean isLeaves(IBlockAccess world, int x, int y, int z)
+	{
+		return true;
 	}
 }

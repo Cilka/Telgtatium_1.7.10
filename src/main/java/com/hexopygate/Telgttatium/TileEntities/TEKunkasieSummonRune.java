@@ -33,6 +33,7 @@ public class TEKunkasieSummonRune extends TileEntity {
  	super.writeToNBT(tag);
  	tag.setInteger("step", step);
  	tag.setBoolean("isActivated", isActivated);
+ 
  	}
  @Override
  public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity packet){

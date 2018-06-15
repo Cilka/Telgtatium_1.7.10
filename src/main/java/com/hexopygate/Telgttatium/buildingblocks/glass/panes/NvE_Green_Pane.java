@@ -1,6 +1,5 @@
 package com.hexopygate.Telgttatium.buildingblocks.glass.panes;
 
-import com.hexopygate.Telgttatium.blockarchtype.TelGlass;
 import com.hexopygate.Telgttatium.blockarchtype.TelNormalGlassPane;
 
 public class NvE_Green_Pane extends TelNormalGlassPane {

@@ -1,6 +1,5 @@
 package com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes;
 
-import com.hexopygate.Telgttatium.blockarchtype.TelGlass;
 import com.hexopygate.Telgttatium.blockarchtype.TelNormalGlassPane;
 
 public class Dark_Green_Glass_Pane extends TelNormalGlassPane {

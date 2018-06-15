@@ -11,9 +11,14 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 public class TreeGenerator extends WorldGenerator {
 
 	int height;
-	Block wood = Telgttatium.blockRef.get("Pine_Tree_Wood");
-	Block leaf = Telgttatium.blockRef.get("Forest_Leaves");
+	Block wood;
+	Block leaf;
 
+	public TreeGenerator(Block wood, Block leaf)
+	{
+		this.wood =  wood;
+		this.leaf =  leaf;
+	}
 	@Override
 	public boolean generate(World world, Random random, int x, int y, int z) {
 		// TODO Auto-generated method stub

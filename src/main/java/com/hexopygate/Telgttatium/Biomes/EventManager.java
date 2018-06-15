@@ -1,15 +1,13 @@
 package com.hexopygate.Telgttatium.Biomes;
 
 
-import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
-import net.minecraft.world.World;
-import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.feature.WorldGenMinable;
-
 import java.util.Random;
 
 import cpw.mods.fml.common.IWorldGenerator;
+import net.minecraft.block.Block;
+import net.minecraft.world.World;
+import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.feature.WorldGenMinable;
  
 public class EventManager implements IWorldGenerator
 {
@@ -23,6 +21,8 @@ public class EventManager implements IWorldGenerator
 			generateSurface(world, random, chunkX * 16, chunkZ * 16);
 		case 1:
 			generateEnd(world, random, chunkX * 16, chunkZ * 16);
+		case 137:
+			generateTelgttatium(world, random, chunkX*16, chunkZ * 16);
 		}
 	}
  
@@ -43,7 +43,11 @@ public class EventManager implements IWorldGenerator
 	    int Zcoord = z + random.nextInt(16);
 	  //  (new WorldGenMinable(Tutorial.tutorialBlock, 1, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
 	}
- 
+	
+	private void generateTelgttatium(World world, Random random, int x, int z)
+	{
+		
+	}
 	/**
 	 * Adds an Ore Spawn to Minecraft. Simply register all Ores to spawn with this method in your Generation method in your IWorldGeneration extending Class
 	 * 
@@ -59,7 +63,7 @@ public class EventManager implements IWorldGenerator
 	 * @param An int for the minimum Y-Coordinate height at which this block may spawn
 	 * @param An int for the maximum Y-Coordinate height at which this block may spawn
 	 **/
-	public void addOreSpawn(Block block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY)
+	public void addOreSpawn(Block block,int metadata ,Block target, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY)
 	{
 		assert maxY > minY : "The maximum Y must be greater than the Minimum Y";
 		assert maxX > 0 && maxX <= 16 : "addOreSpawn: The Maximum X must be greater than 0 and less than 16";
@@ -73,7 +77,7 @@ public class EventManager implements IWorldGenerator
 			int posX = blockXPos + random.nextInt(maxX);
 			int posY = minY + random.nextInt(diffBtwnMinMaxY);
 			int posZ = blockZPos + random.nextInt(maxZ);
-			(new WorldGenMinable(block, maxVeinSize)).generate(world, random, posX, posY, posZ);
+			(new WorldGenMinable(block, metadata, maxVeinSize,target)).generate(world, random, posX, posY, posZ);
 		}
 	}
 }

@@ -1,15 +1,10 @@
 package com.hexopygate.Telgttatium.blockarchtype;
 
-import java.util.HashMap;
-import java.util.Random;
-
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
 
 public class TelGrassHD extends Block  {
 protected IIcon[] icons = new IIcon[6];
