@@ -56,7 +56,6 @@ public class TEKunkasieSummonRune extends TileEntity {
  void canActivateBlock()
  {
 	isActivated =  worldObj.getClosestPlayer(xCoord, yCoord +1, zCoord, 1) != null;
-	System.out.println("Rune is activated: " +isActivated);
  }
  @Override
  public void updateEntity()

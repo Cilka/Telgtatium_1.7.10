@@ -2,7 +2,6 @@ package com.hexopygate.Telgttatium;
 
 import java.util.HashMap;
 
-import com.hexopygate.Telgttatium.Biomes.EventManager;
 import com.hexopygate.Telgttatium.Biomes.Volcano.Lava;
 import com.hexopygate.Telgttatium.Biomes.Volcano.Lava_Rock;
 import com.hexopygate.Telgttatium.Biomes.Volcano.Magma_Cracked_Rock;
@@ -192,6 +191,19 @@ import com.hexopygate.Telgttatium.Food.FastFood.Tea;
 import com.hexopygate.Telgttatium.Food.FastFood.Teshia_Drink;
 import com.hexopygate.Telgttatium.Food.FastFood.Vanilla_ice_cream_bowl;
 import com.hexopygate.Telgttatium.Food.FastFood.Wine_Drink;
+import com.hexopygate.Telgttatium.Items.Pickaxe.Dovah_wing_pickaxe;
+import com.hexopygate.Telgttatium.Items.Pickaxe.Erlashihuru_Pickaxe;
+import com.hexopygate.Telgttatium.Items.Pickaxe.Ghi_wing_pickaxe;
+import com.hexopygate.Telgttatium.Items.Pickaxe.Kifavara_Frozen_Pickaxe;
+import com.hexopygate.Telgttatium.Items.Pickaxe.Lejinka_wing_pickaxe;
+import com.hexopygate.Telgttatium.Items.Pickaxe.Srindintaria_Athemyst_Upgrade_Pickaxe;
+import com.hexopygate.Telgttatium.Items.Pickaxe.Srindintaria_Cyan_Stone_Upgrade_Pickaxe;
+import com.hexopygate.Telgttatium.Items.Pickaxe.Srindintaria_Emerald_Upgrade_Pickaxe;
+import com.hexopygate.Telgttatium.Items.Pickaxe.Srindintaria_Ruby_Upgrade_Pickaxe;
+import com.hexopygate.Telgttatium.Items.Pickaxe.Uonka_wing_pickaxe;
+import com.hexopygate.Telgttatium.Items.Pickaxe.Yuhog_wing_pickaxe;
+import com.hexopygate.Telgttatium.Items.Staff.Gengashesh_Fire_Staff;
+import com.hexopygate.Telgttatium.Items.Staff.Gengashesh_Ice_Staff;
 import com.hexopygate.Telgttatium.TileEntities.TEDecoFence;
 import com.hexopygate.Telgttatium.TileEntities.TEFence;
 import com.hexopygate.Telgttatium.TileEntities.TEHutyveFence;
@@ -266,6 +278,102 @@ import com.hexopygate.Telgttatium.buildingblocks.Empire.Empire_Gray;
 import com.hexopygate.Telgttatium.buildingblocks.Empire.Empire_Orange;
 import com.hexopygate.Telgttatium.buildingblocks.Empire.Empire_Red;
 import com.hexopygate.Telgttatium.buildingblocks.Empire.Empire_Yellow;
+import com.hexopygate.Telgttatium.buildingblocks.GanDeco.Gan_Deco_Black;
+import com.hexopygate.Telgttatium.buildingblocks.GanDeco.Gan_Deco_Blue;
+import com.hexopygate.Telgttatium.buildingblocks.GanDeco.Gan_Deco_Green;
+import com.hexopygate.Telgttatium.buildingblocks.GanDeco.Gan_Deco_Magenta;
+import com.hexopygate.Telgttatium.buildingblocks.GanDeco.Gan_Deco_Orange;
+import com.hexopygate.Telgttatium.buildingblocks.GanDeco.Gan_Deco_Purple;
+import com.hexopygate.Telgttatium.buildingblocks.GanDeco.Gan_Deco_Red;
+import com.hexopygate.Telgttatium.buildingblocks.GanDeco.Gan_Deco_White;
+import com.hexopygate.Telgttatium.buildingblocks.GanDeco.Gan_Deco_White_Black_frame;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Black_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Blue_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Brown_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Cyan_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Daugash_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Daukou_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Dautash_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Fantasy_Solea_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Fusy_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Ganka_Gold_Deco_Chisel;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Ganka_Gold_Deco_Wall;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Ganka_Gold_Fine_Deco_Wall;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Ganka_Gold_Floor_Tile;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Ganka_Gold_Korha_Deco_Chisel;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Ganka_Gold_Korha_Deco_Wall;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Ganka_Gold_Korha_Floor_Tile;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Ganka_Gold_Prisma_Dungeon_Floor_Tile;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Ganka_Gold_Yani_Wall;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Gold_Taya_Athemyst_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Gold_Taya_Clay_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Gold_Taya_Copper_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Gold_Taya_Deco_Copper_Tile;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Gold_Taya_Deco_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Gold_Taya_Deco_Iron_Tile;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Gold_Taya_Deco_Korha_Tile;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Gold_Taya_Deco_Tile;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Gold_Taya_Deco_Wall_block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Gold_Taya_Diamon_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Gold_Taya_Emerald_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Gold_Taya_Iron_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Gold_Taya_Pink_Sparkle_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Gold_Taya_Ruby_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Gold_Taya_Sapphire_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Gold_Taya_White_Clay_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Green_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.KantouchTile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Lime_Green_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Mint_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Modern_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Orange_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Pink_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Purple_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Red_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Sunset_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Touichi_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.White_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.GoldTaya.Yellow_Fine_Tile_Block;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.Akio_Cracked_Ice_Block;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.Akio_Hardened_Cracked_Ice_Block;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.Akio_Hardened_Ice_Block;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.Akio_Ice_Block;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.Akio_Ice_Floor;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.ClevikInkki;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.ClevikInkki_Akio;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.ClevikInkki_Akio_Tile;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.ClevikInkki_Sunset;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.ClevikInkki_Sunset_Tile;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.ClevikInkki_Sunset_Wall;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.ClevikInkki_Tile;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.ClevikInkki_Wall;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.ClevikJaih_Akio_Deco_Wall;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.ClevikJaih_Deco_Wall;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.ClevikJaih_Sunset_Deco_Wall;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.Sunset_Cracked_Ice_Block;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.Sunset_Hardened_Cracked_Ice_Block;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.Sunset_Hardened_Ice_Block;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.Sunset_Ice_Block;
+import com.hexopygate.Telgttatium.buildingblocks.IceDeco.Sunset_Ice_Floor;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Blue;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Bluedu;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Gold;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Green;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Orange;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Purple;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Red;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Wall_Type_1_Blue;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Wall_Type_1_Bluedu;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Wall_Type_1_Gold;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Wall_Type_1_Green;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Wall_Type_1_Orange;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Wall_Type_1_Red;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Wall_Type_2_Blue;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Wall_Type_2_Bluedu;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Wall_Type_2_Gold;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Wall_Type_2_Green;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Wall_Type_2_Orange;
+import com.hexopygate.Telgttatium.buildingblocks.Mokoiv.Mokoiv_Wall_Type_2_Red;
 import com.hexopygate.Telgttatium.buildingblocks.Sridintaria.Srindintaria_Rune;
 import com.hexopygate.Telgttatium.buildingblocks.Sridintaria.Srindintaria_Rune_2;
 import com.hexopygate.Telgttatium.buildingblocks.Sridintaria.Srindintaria_Rune_2_Blue;
@@ -289,6 +397,21 @@ import com.hexopygate.Telgttatium.buildingblocks.Sridintaria.Srindintaria_Wall_F
 import com.hexopygate.Telgttatium.buildingblocks.Sridintaria.Srindintaria_Wall_Redstone;
 import com.hexopygate.Telgttatium.buildingblocks.Sridintaria.Srindintaria_Wall_Sandstone;
 import com.hexopygate.Telgttatium.buildingblocks.Sridintaria.Srindintaria_Wall_Stone;
+import com.hexopygate.Telgttatium.buildingblocks.TuvuCleik.Ara_Autumn;
+import com.hexopygate.Telgttatium.buildingblocks.TuvuCleik.Ara_Crystal;
+import com.hexopygate.Telgttatium.buildingblocks.TuvuCleik.Ara_Lunfa;
+import com.hexopygate.Telgttatium.buildingblocks.TuvuCleik.Ara_Lunfa_Moon;
+import com.hexopygate.Telgttatium.buildingblocks.TuvuCleik.Ara_Sinsa;
+import com.hexopygate.Telgttatium.buildingblocks.TuvuCleik.Ara_Stone;
+import com.hexopygate.Telgttatium.buildingblocks.TuvuCleik.Ara_Stone_Aqua;
+import com.hexopygate.Telgttatium.buildingblocks.TuvuCleik.Ara_Vahier;
+import com.hexopygate.Telgttatium.buildingblocks.TuvuCleik.Ara_Winter;
+import com.hexopygate.Telgttatium.buildingblocks.TuvuCleik.Tuvu_Cleik;
+import com.hexopygate.Telgttatium.buildingblocks.TuvuCleik.Tuvu_Cleik_Gold;
+import com.hexopygate.Telgttatium.buildingblocks.TuvuCleik.Tuvu_Cleik_Green;
+import com.hexopygate.Telgttatium.buildingblocks.TuvuCleik.Tuvu_Cleik_Orange;
+import com.hexopygate.Telgttatium.buildingblocks.TuvuCleik.Tuvu_Cleik_Purple;
+import com.hexopygate.Telgttatium.buildingblocks.TuvuCleik.Tuvu_Cleik_Red;
 import com.hexopygate.Telgttatium.buildingblocks.bricks.Alternative_Brick;
 import com.hexopygate.Telgttatium.buildingblocks.bricks.Black_Brick;
 import com.hexopygate.Telgttatium.buildingblocks.bricks.Blue_Brick;
@@ -327,6 +450,12 @@ import com.hexopygate.Telgttatium.buildingblocks.fences.Hutyve_Red_Glass_fence;
 import com.hexopygate.Telgttatium.buildingblocks.fences.Hutyve_Yellow_Glass_fence;
 import com.hexopygate.Telgttatium.buildingblocks.fences.Hutyve_fence;
 import com.hexopygate.Telgttatium.buildingblocks.fences.Iron_Deco_Fence;
+import com.hexopygate.Telgttatium.buildingblocks.fences.Iron_Fences_x1;
+import com.hexopygate.Telgttatium.buildingblocks.fences.Iron_Fences_xy1;
+import com.hexopygate.Telgttatium.buildingblocks.fences.Iron_Fences_y2;
+import com.hexopygate.Telgttatium.buildingblocks.fences.Oxided_fence_x1;
+import com.hexopygate.Telgttatium.buildingblocks.fences.Oxided_fence_xy1;
+import com.hexopygate.Telgttatium.buildingblocks.fences.Oxided_fence_y2;
 import com.hexopygate.Telgttatium.buildingblocks.fences.Sindrintaria_Athemyst_gem_fence;
 import com.hexopygate.Telgttatium.buildingblocks.fences.Sindrintaria_Diamon_gem_fence;
 import com.hexopygate.Telgttatium.buildingblocks.fences.Sindrintaria_Emerald_gem_fence;
@@ -498,7 +627,22 @@ import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Pink_Glass;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Purple_Glass;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Red_Glass;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.White_Glass;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Wooden_Full_Frame;
 import com.hexopygate.Telgttatium.buildingblocks.glass.fullglass.Yellow_Glass;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.Black_Glass_Pane;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.Clear_Glass_Pane;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.Cyan_Glass_Pane;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.Dark_Blue_Glass_Pane;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.Dark_Green_Glass_Pane;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.Dark_Purple_Glass_Pane;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.Green_Glass_Pane;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.Magenta_Glass_Pane;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.Orange_Glass_Pane;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.Pink_Glass_Pane;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.Purple_Glass_Pane;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.Red_Glass_Pane;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.White_Glass_Pane;
+import com.hexopygate.Telgttatium.buildingblocks.glass.fullglasspanes.Yellow_Glass_Pane;
 import com.hexopygate.Telgttatium.buildingblocks.glass.panes.Celtic_Glass_Another_World_Pane;
 import com.hexopygate.Telgttatium.buildingblocks.glass.panes.Celtic_Glass_Blue_Pane;
 import com.hexopygate.Telgttatium.buildingblocks.glass.panes.Celtic_Glass_Cream_Pane;
@@ -539,21 +683,6 @@ import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.Simple_Gl
 import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.Simple_Glass_Red;
 import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.Simple_Glass_White;
 import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.Simple_Glass_Yellow;
-import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes.Simple_Glass_Black_Pane;
-import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes.Simple_Glass_Blue_Pane;
-import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes.Simple_Glass_Clear_Pane;
-import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes.Simple_Glass_Cyan_Pane;
-import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes.Simple_Glass_Dark_Blue_Pane;
-import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes.Simple_Glass_Dark_Green_Pane;
-import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes.Simple_Glass_Dark_Purple_Pane;
-import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes.Simple_Glass_Green_Pane;
-import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes.Simple_Glass_Magenta_Pane;
-import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes.Simple_Glass_Orange_Pane;
-import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes.Simple_Glass_Pink_Pane;
-import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes.Simple_Glass_Purple_Pane;
-import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes.Simple_Glass_Red_Pane;
-import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes.Simple_Glass_White_Pane;
-import com.hexopygate.Telgttatium.buildingblocks.glass.simplefullglass.panes.Simple_Glass_Yellow_Pane;
 import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.black.BlackSimple_Down_Frame;
 import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.black.BlackSimple_Down_Left_Frame;
 import com.hexopygate.Telgttatium.buildingblocks.glass.simpleglassframes.black.BlackSimple_Down_Right_Frame;
@@ -1127,6 +1256,55 @@ import com.hexopygate.Telgttatium.buildingblocks.runes.Rabic_Rune;
 import com.hexopygate.Telgttatium.buildingblocks.runes.Red_Eel_Rune;
 import com.hexopygate.Telgttatium.buildingblocks.runes.Robot_Rune;
 import com.hexopygate.Telgttatium.buildingblocks.runes.Squid_Rune;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type1.Black_Tile_type_1;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type1.Blue_Tile_type_1;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type1.Brown_Tile_type_1;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type1.Cyan_Tile_type_1;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type1.Dark_Blue_Tile_type_1;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type1.Dark_Green_Tile_type_1;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type1.Green_Tile_type_1;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type1.Grey_Tile_type_1;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type1.Lila_Tile_type_1;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type1.Lime_Green_Tile_type_1;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type1.Orange_Tile_type_1;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type1.PPink_Tile_type_1;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type1.Pink_Tile_type_1;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type1.Purple_Tile_type_1;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type1.Red_Tile_type_1;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type1.Yellow_Tile_type_1;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type2.Blue_Tile_type_2;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type2.Brown_Tile_type_2;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type2.Cyan_Tile_type_2;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type2.Dark_Blue_Tile_type_2;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type2.Dark_Green_Tile_type_2;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type2.Green_Tile_type_2;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type2.Grey_Tile_type_2;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type2.Lila_Tile_type_2;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type2.Lime_Green_Tile_type_2;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type2.Orange_Tile_type_2;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type2.PPink_Tile_type_2;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type2.Pink_Tile_type_2;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type2.Purple_Tile_type_2;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type2.Red_Tile_type_2;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type2.White_Tile_type_2;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type2.Yelllow_Tile_type_2;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type3.Black_Tile_type_2;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type3.Blue_Tile_type_3;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type3.Brown_Tile_type_3;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type3.Cyan_Tile_type_3;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type3.Dark_Blue_Tile_type_3;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type3.Dark_Green_Tile_type_3;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type3.Green_Tile_type_3;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type3.Grey_Tile_type_3;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type3.Lial_Tile_type_3;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type3.Lime_Green_Tile_type_3;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type3.Orange_Tile_type_3;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type3.PPink_Tile_type_3;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type3.Pink_Tile_type_3;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type3.Purple_Tile_type_3;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type3.Red_Tile_type_3;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type3.White_Tile_type_3;
+import com.hexopygate.Telgttatium.buildingblocks.simplelife.type3.Yellow_Tile_type_3;
 import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.CelticWoolAnotherWorld;
 import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.CelticWoolAnotherWorld_Carpet;
 import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.CelticWoolBlue;
@@ -1214,6 +1392,49 @@ import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.WinterMountainBlueWo
 import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.WinterMountainRedWool;
 import com.hexopygate.Telgttatium.buildingblocks.woolcarpet.WinterMountainRedWool_Carpet;
 import com.hexopygate.Telgttatium.events.EventHelper;
+import com.hexopygate.Telgttatium.ore.Athemyst;
+import com.hexopygate.Telgttatium.ore.Athemyst_Ore;
+import com.hexopygate.Telgttatium.ore.Athemyst_Ore_Final_Step;
+import com.hexopygate.Telgttatium.ore.Blue_Moon_Stone;
+import com.hexopygate.Telgttatium.ore.Clay_Ingot;
+import com.hexopygate.Telgttatium.ore.Coal;
+import com.hexopygate.Telgttatium.ore.Copper_Ingot;
+import com.hexopygate.Telgttatium.ore.Copper_Ore;
+import com.hexopygate.Telgttatium.ore.Copper_Ore_Final_Step;
+import com.hexopygate.Telgttatium.ore.Darto;
+import com.hexopygate.Telgttatium.ore.Darto_Ore;
+import com.hexopygate.Telgttatium.ore.Darto_Ore_Final_Step;
+import com.hexopygate.Telgttatium.ore.Diamon_Ingot;
+import com.hexopygate.Telgttatium.ore.Diamon_Ore;
+import com.hexopygate.Telgttatium.ore.Diamon_Ore_Final_Step;
+import com.hexopygate.Telgttatium.ore.Emerald;
+import com.hexopygate.Telgttatium.ore.Emerald_Ore;
+import com.hexopygate.Telgttatium.ore.Emerald_Ore_Final_Step;
+import com.hexopygate.Telgttatium.ore.Gold_Ingot;
+import com.hexopygate.Telgttatium.ore.Gold_Ore;
+import com.hexopygate.Telgttatium.ore.Gold_Ore_Final_Step;
+import com.hexopygate.Telgttatium.ore.Iron_Ingot;
+import com.hexopygate.Telgttatium.ore.Iron_Ore;
+import com.hexopygate.Telgttatium.ore.Iron_Ore_Final_Step;
+import com.hexopygate.Telgttatium.ore.ItemClay;
+import com.hexopygate.Telgttatium.ore.ItemDiamon;
+import com.hexopygate.Telgttatium.ore.Korha;
+import com.hexopygate.Telgttatium.ore.Nightmare_Moon_Stone;
+import com.hexopygate.Telgttatium.ore.Orange_Moon_Stone;
+import com.hexopygate.Telgttatium.ore.Pink_Sparkle_Ore;
+import com.hexopygate.Telgttatium.ore.Pink_Sparkle_Ore_Final_Step;
+import com.hexopygate.Telgttatium.ore.Pink_Sparkles;
+import com.hexopygate.Telgttatium.ore.Purple_Moon_Stone;
+import com.hexopygate.Telgttatium.ore.Ruby;
+import com.hexopygate.Telgttatium.ore.Ruby_Ore;
+import com.hexopygate.Telgttatium.ore.Ruby_Ore_Final_Step;
+import com.hexopygate.Telgttatium.ore.Saphirre;
+import com.hexopygate.Telgttatium.ore.Saphirre_Ore;
+import com.hexopygate.Telgttatium.ore.Saphirre_Ore_Final_Step;
+import com.hexopygate.Telgttatium.ore.Scarlet_Moon_Stone;
+import com.hexopygate.Telgttatium.ore.Unfinished_Athemyst;
+import com.hexopygate.Telgttatium.ore.Unfinished_Pink_Sparkle;
+import com.hexopygate.Telgttatium.ore.Unpolished_Darto;
 import com.hexopygate.Telgttatium.proxy.CommonProxy;
 
 import cpw.mods.fml.common.Mod;
@@ -1228,7 +1449,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.WorldType;
 
 @Mod(modid="tel", name="Telgttatium", version = "1.0")
 
@@ -1241,6 +1461,7 @@ public class Telgttatium {
 
 	public static HashMap<String,Block> blockRef =  new HashMap<String,Block>();
 	public static HashMap<String,Item> itemRef = new HashMap<String,Item>();
+
 	@SidedProxy( clientSide = "com.hexopygate.Telgttatium.proxy.ClientProxy",
 			serverSide = "com.hexopygate.Telgttatium.proxy.CommonProxy")
 	public static CommonProxy proxy;
@@ -1614,7 +1835,7 @@ blockRef.put("WinterMountainRedWool_Carpet",new WinterMountainRedWool_Carpet().s
 	blockRef.put("White_Glass",new White_Glass().setCreativeTab(tabGlass));
 	blockRef.put("Yellow_Glass",new Yellow_Glass().setCreativeTab(tabGlass));
 	
-/*
+
 blockRef.put("Wooden_Full_Frame",new Wooden_Full_Frame().setCreativeTab(tabGlass));
 
 blockRef.put("Black_Glass_Pane",new Black_Glass_Pane("Black_Glass").setCreativeTab(tabGlass));
@@ -1644,7 +1865,7 @@ blockRef.put("Red_Glass_Pane",new Red_Glass_Pane("Red_Glass").setCreativeTab(tab
 blockRef.put("White_Glass_Pane",new White_Glass_Pane("White_Glass").setCreativeTab(tabGlass));
 	
 blockRef.put("Yellow_Glass_Pane",new Yellow_Glass_Pane("Yellow_Glass").setCreativeTab(tabGlass));
-	*/
+	
 	blockRef.put("Simple_Glass_Black",new Simple_Glass_Black().setCreativeTab(tabSimpleLife));
 	
 blockRef.put("Simple_Glass_Blue",new Simple_Glass_Blue().setCreativeTab(tabSimpleLife));
@@ -1674,45 +1895,11 @@ blockRef.put("Simple_Glass_Red",new Simple_Glass_Red().setCreativeTab(tabSimpleL
 blockRef.put("Simple_Glass_White",new Simple_Glass_White().setCreativeTab(tabSimpleLife));
 	
 blockRef.put("Simple_Glass_Yellow",new Simple_Glass_Yellow().setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Simple_Glass_Black_Pane",new Simple_Glass_Black_Pane("Simple_Glass_Black").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Simple_Glass_Blue_Pane",new Simple_Glass_Blue_Pane("Simple_Glass_Blue").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Simple_Glass_Clear_Pane",new Simple_Glass_Clear_Pane("Simple_Glass_Clear").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Simple_Glass_Cyan_Pane",new Simple_Glass_Cyan_Pane("Simple_Glass_Cyan").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Simple_Glass_Dark_Blue_Pane",new Simple_Glass_Dark_Blue_Pane("Simple_Glass_Dark_Blue").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Simple_Glass_Dark_Green_Pane",new Simple_Glass_Dark_Green_Pane("Simple_Glass_Dark_Green").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Simple_Glass_Dark_Purple_Pane",new Simple_Glass_Dark_Purple_Pane("Simple_Glass_Dark_Purple").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Simple_Glass_Green_Pane",new Simple_Glass_Green_Pane("Simple_Glass_Green").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Simple_Glass_Magenta_Pane",new Simple_Glass_Magenta_Pane("Simple_Glass_Magenta").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Simple_Glass_Orange_Pane",new Simple_Glass_Orange_Pane("Simple_Glass_Orange").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Simple_Glass_Pink_Pane",new Simple_Glass_Pink_Pane("Simple_Glass_Pink").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Simple_Glass_Purple_Pane",new Simple_Glass_Purple_Pane("Simple_Glass_Purple").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Simple_Glass_Red_Pane",new Simple_Glass_Red_Pane("Simple_Glass_Red").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Simple_Glass_White_Pane",new Simple_Glass_White_Pane("Simple_Glass_White").setCreativeTab(tabSimpleLife));
-	
-blockRef.put("Simple_Glass_Yellow_Pane",new Simple_Glass_Yellow_Pane("Simple_Glass_Yellow").setCreativeTab(tabSimpleLife));
-
-	
-blockRef.put("Elegant_Wooden_Full_Frame", new Elegant_Wooden_Full_Frame().setCreativeTab(tabElegantLife));
-
 
 blockRef.put("ElegantWooden_Pane", new ElegantWooden_Pane("ElegantWooden").setCreativeTab(tabElegantLife));
 blockRef.put("ElegantWooden_Down_Frame",new ElegantWooden_Down_Frame("ElegantWooden_Down_Frame","Glass_Trim"));
 	
-blockRef.put("ElegantWooden_Bottom_Left_Frame",new ElegantWooden_Down_Left_Frame("ElegantWooden_Bottom_Left_Frame","Glass_Trim"));
+blockRef.put("ElegantWooden_Down_Left_Frame",new ElegantWooden_Down_Left_Frame("ElegantWooden_Down_Left_Frame","Glass_Trim"));
 	
 blockRef.put("ElegantWooden_Down_Single_Frame",new ElegantWooden_Down_Single_Frame("ElegantWooden_Down_Single_Frame","Glass_Trim"));
 	
@@ -1724,11 +1911,11 @@ blockRef.put("ElegantWooden_Left_Frame",new ElegantWooden_Left_Frame("ElegantWoo
 	
 blockRef.put("ElegantWooden_Left_Single_Frame",new ElegantWooden_Left_Single_Frame("ElegantWooden_Left_Single_Frame","Glass_Trim"));
 	
-blockRef.put("ElegantWooden_Left_Top_Frame",new ElegantWooden_Top_Left_Frame("ElegantWooden_Left_Top_Frame","Glass_Trim"));
+blockRef.put("ElegantWooden_Top_Left_Frame",new ElegantWooden_Top_Left_Frame("ElegantWooden_Top_Left_Frame","Glass_Trim"));
 	
 blockRef.put("ElegantWooden_Middle_Frame",new ElegantWooden_Middle_Frame("ElegantWooden_Middle_Frame","Glass_Trim"));
 	
-blockRef.put("ElegantWooden_Right_Down_Corner_Frame",new ElegantWooden_Down_Right_Frame("ElegantWooden_Right_Down_Corner_Frame","Glass_Trim"));
+blockRef.put("ElegantWooden_Down_Right_Frame",new ElegantWooden_Down_Right_Frame("ElegantWooden_Down_Right_Frame","Glass_Trim"));
 	
 blockRef.put("ElegantWooden_Right_Frame",new ElegantWooden_Right_Frame("ElegantWooden_Right_Frame","Glass_Trim"));
 	
@@ -1736,11 +1923,11 @@ blockRef.put("ElegantWooden_Top_Frame",new ElegantWooden_Top_Frame("ElegantWoode
 	
 blockRef.put("ElegantWooden_Top_Single_Frame",new ElegantWooden_Top_Single_Frame("ElegantWooden_Top_Single_Frame","Glass_Trim"));
 	
-blockRef.put("ElegantWooden_Vertial_Middle_Single_Frame",new ElegantWooden_Vertical_Middle_Single_Frame("ElegantWooden_Vertial_Middle_Single_Frame","Glass_Trim"));
+blockRef.put("ElegantWooden_Vertical_Middle_Single_Frame",new ElegantWooden_Vertical_Middle_Single_Frame("ElegantWooden_Vertical_Middle_Single_Frame","Glass_Trim"));
 	
-blockRef.put("Elegant_Wooden_Right_Single_Frame",new ElegantWooden_Right_Single_Frame("Elegant_Wooden_Right_Single_Frame","Glass_Trim"));
+blockRef.put("ElegantWooden_Right_Single_Frame",new ElegantWooden_Right_Single_Frame("ElegantWooden_Right_Single_Frame","Glass_Trim"));
 	
-blockRef.put("Elegant_Wooden_Top_Right_Frame",new ElegantWooden_Top_Right_Frame("Elegant_Wooden_Top_Right_Frame","Glass_Trim"));
+blockRef.put("ElegantWooden_Top_Right_Frame",new ElegantWooden_Top_Right_Frame("ElegantWooden_Top_Right_Frame","Glass_Trim"));
 	
 
 blockRef.put("BlackElegantWooden_Pane", new BlackElegantWooden_Pane("BlackElegantWooden").setCreativeTab(tabElegantLife));
@@ -1844,7 +2031,7 @@ blockRef.put("DarkGreenElegantWooden_Top_Single_Frame",new DarkGreenElegantWoode
 	
 blockRef.put("DarkGreenElegantWooden_Vertical_Middle_Single_Frame",new DarkGreenElegantWooden_Vertical_Middle_Single_Frame("DarkGreenElegantWooden_Vertical_Middle_Single_Frame","Glass_Trim"));
 	
-blockRef.put("DarkGreenElegant_Wooden_Top_Right_Frame",new DarkGreenElegantWooden_Top_Right_Frame("DarkGreenElegant_Wooden_Top_Right_Frame","Glass_Trim"));
+blockRef.put("DarkGreenElegantWooden_Top_Right_Frame",new DarkGreenElegantWooden_Top_Right_Frame("DarkGreenElegantWooden_Top_Right_Frame","Glass_Trim"));
 	
 
 
@@ -1881,6 +2068,7 @@ blockRef.put("LightBlueElegantWooden_Top_Single_Frame",new LightBlueElegantWoode
 blockRef.put("LightBlueElegantWooden_Vertical_Middle_Single_Frame",new LightBlueElegantWooden_Vertical_Middle_Single_Frame("LightBlueElegantWooden_Vertical_Middle_Single_Frame","Glass_Trim"));
 	
 
+blockRef.put("Elegant_Wooden_Full_Frame", new Elegant_Wooden_Full_Frame().setCreativeTab(tabElegantLife));
 
 blockRef.put("Clear_Elegant_Wooden_Full_Frame", new Clear_Elegant_Wooden_Full_Frame().setCreativeTab(tabElegantLife));
 blockRef.put("Dark_Green_Elegant_Wooden_Full_Frame", new Dark_Green_Elegant_Wooden_Full_Frame().setCreativeTab(tabElegantLife));
@@ -3079,12 +3267,12 @@ blockRef.put("Hutyve_Purple_Glass_fence",new Hutyve_Purple_Glass_fence().setCrea
 blockRef.put("Hutyve_Red_Glass_fence",new Hutyve_Red_Glass_fence().setCreativeTab(tabFences));
 blockRef.put("Hutyve_Yellow_Glass_fence",new Hutyve_Yellow_Glass_fence().setCreativeTab(tabFences));
 blockRef.put("Iron_Deco_Fence",new Iron_Deco_Fence().setCreativeTab(tabFences));
-/*blockRef.put("Iron_Fences_x1",new Iron_Fences_x1().setCreativeTab(tabFences));
-blockRef.put("Iron_Fences_xy1",new Iron_Fences_xy1().setCreativeTab(tabFences));
-blockRef.put("Iron_Fences_y2",new Iron_Fences_y2().setCreativeTab(tabFences));
-blockRef.put("Oxided_fence_x1",new Oxided_fence_x1().setCreativeTab(tabFences));
-blockRef.put("Oxided_fence_xy1",new Oxided_fence_xy1().setCreativeTab(tabFences));
-blockRef.put("Oxided_fence_y2",new Oxided_fence_y2().setCreativeTab(tabFences));*/
+blockRef.put("Iron_Fences_x1",new Iron_Fences_x1("Iron_Fences_x1").setCreativeTab(tabFences));
+blockRef.put("Iron_Fences_xy1",new Iron_Fences_xy1("Iron_Fences_xy1").setCreativeTab(tabFences));
+blockRef.put("Iron_Fences_y2",new Iron_Fences_y2("Iron_Fences_y2").setCreativeTab(tabFences));
+blockRef.put("Oxided_fence_x1",new Oxided_fence_x1("Oxided_fence_x1").setCreativeTab(tabFences));
+blockRef.put("Oxided_fence_xy1",new Oxided_fence_xy1("Oxided_fence_xy1").setCreativeTab(tabFences));
+blockRef.put("Oxided_fence_y2",new Oxided_fence_y2("Oxided_fence_y2").setCreativeTab(tabFences));
 
 blockRef.put("Sindrintaria_Athemyst_gem_fence",new Sindrintaria_Athemyst_gem_fence().setCreativeTab(tabFences));
 blockRef.put("Sindrintaria_Diamon_gem_fence",new Sindrintaria_Diamon_gem_fence().setCreativeTab(tabFences));
@@ -3199,6 +3387,400 @@ blockRef.put("Kunkasie_Zuupa_Moon_Blue",new Kunkasie_Zuupa_Moon_Blue().setCreati
 blockRef.put("Kunkasie_Zuupa_Orange_Moon",new Kunkasie_Zuupa_Orange_Moon().setCreativeTab(tabLujillKanses));
 blockRef.put("Kunkasie_Zuupa_Red_Moon",new Kunkasie_Zuupa_Red_Moon().setCreativeTab(tabLujillKanses));
 
+blockRef.put("Athemyst_Ore",new Athemyst_Ore().setCreativeTab(tabOre));
+
+blockRef.put("Copper_Ore",new Copper_Ore().setCreativeTab(tabOre));
+
+blockRef.put("Darto_Ore",new Darto_Ore().setCreativeTab(tabOre));
+
+blockRef.put("Diamon_Ore",new Diamon_Ore().setCreativeTab(tabOre));
+
+blockRef.put("Emerald_Ore",new Emerald_Ore().setCreativeTab(tabOre));
+
+blockRef.put("Gold_Ore",new Gold_Ore().setCreativeTab(tabOre));
+
+blockRef.put("Iron_Ore",new Iron_Ore().setCreativeTab(tabOre));
+
+blockRef.put("Pink_Sparkle_Ore",new Pink_Sparkle_Ore().setCreativeTab(tabOre));
+
+blockRef.put("Ruby_Ore",new Ruby_Ore().setCreativeTab(tabOre));
+
+blockRef.put("Saphirre_Ore",new Saphirre_Ore().setCreativeTab(tabOre));
+
+blockRef.put("Athemyst_Ore_Final_Step",new Athemyst_Ore_Final_Step().setCreativeTab(tabOre));
+blockRef.put("Copper_Ore_Final_Step",new Copper_Ore_Final_Step().setCreativeTab(tabOre));
+blockRef.put("Darto_Ore_Final_Step",new Darto_Ore_Final_Step().setCreativeTab(tabOre));
+blockRef.put("Diamon_Ore_Final_Step",new Diamon_Ore_Final_Step().setCreativeTab(tabOre));
+blockRef.put("Emerald_Ore_Final_Step",new Emerald_Ore_Final_Step().setCreativeTab(tabOre));
+blockRef.put("Gold_Ore_Final_Step",new Gold_Ore_Final_Step().setCreativeTab(tabOre));
+blockRef.put("Iron_Ore_Final_Step",new Iron_Ore_Final_Step().setCreativeTab(tabOre));
+blockRef.put("Pink_Sparkle_Ore_Final_Step",new Pink_Sparkle_Ore_Final_Step().setCreativeTab(tabOre));
+blockRef.put("Ruby_Ore_Final_Step",new Ruby_Ore_Final_Step().setCreativeTab(tabOre));
+blockRef.put("Saphirre_Ore_Final_Step",new Saphirre_Ore_Final_Step().setCreativeTab(tabOre));
+
+
+itemRef.put("Athemyst",new Athemyst().setCreativeTab(tabOre));
+itemRef.put("Blue_Moon_Stone",new Blue_Moon_Stone().setCreativeTab(tabOre));
+itemRef.put("Clay",new ItemClay().setCreativeTab(tabOre));
+itemRef.put("Clay_Ingot",new Clay_Ingot().setCreativeTab(tabOre));
+itemRef.put("Coal",new Coal().setCreativeTab(tabOre));
+itemRef.put("Copper_Ingot",new Copper_Ingot().setCreativeTab(tabOre));
+itemRef.put("Darto",new Darto().setCreativeTab(tabOre));
+itemRef.put("Diamon",new ItemDiamon().setCreativeTab(tabOre));
+itemRef.put("Diamon_Ingot",new Diamon_Ingot().setCreativeTab(tabOre));
+itemRef.put("Emerald",new Emerald().setCreativeTab(tabOre));
+itemRef.put("Gold_Ingot",new Gold_Ingot().setCreativeTab(tabOre));
+itemRef.put("Iron_Ingot",new Iron_Ingot().setCreativeTab(tabOre));
+itemRef.put("Nightmare_Moon_Stone",new Nightmare_Moon_Stone().setCreativeTab(tabOre));
+itemRef.put("Orange_Moon_Stone",new Orange_Moon_Stone().setCreativeTab(tabOre));
+itemRef.put("Pink_Sparkles",new Pink_Sparkles().setCreativeTab(tabOre));
+itemRef.put("Purple_Moon_Stone",new Purple_Moon_Stone().setCreativeTab(tabOre));
+itemRef.put("Ruby",new Ruby().setCreativeTab(tabOre));
+itemRef.put("Saphirre",new Saphirre().setCreativeTab(tabOre));
+itemRef.put("Scarlet_Moon_Stone",new Scarlet_Moon_Stone().setCreativeTab(tabOre));
+itemRef.put("Unfinished_Athemyst",new Unfinished_Athemyst().setCreativeTab(tabOre));
+itemRef.put("Unfinished_Pink_Sparkle",new Unfinished_Pink_Sparkle().setCreativeTab(tabOre));
+itemRef.put("Unpolished_Darto",new Unpolished_Darto().setCreativeTab(tabOre));
+itemRef.put("Korha", new Korha().setCreativeTab(tabOre));
+
+itemRef.put("Dovah_wing_pickaxe",new Dovah_wing_pickaxe().setCreativeTab(tabTools));
+itemRef.put("Erlashihuru_Pickaxe",new Erlashihuru_Pickaxe().setCreativeTab(tabTools));
+itemRef.put("Ghi_wing_pickaxe",new Ghi_wing_pickaxe().setCreativeTab(tabTools));
+itemRef.put("Kifavara_Frozen_Pickaxe",new Kifavara_Frozen_Pickaxe().setCreativeTab(tabTools));
+itemRef.put("Lejinka_wing_pickaxe",new Lejinka_wing_pickaxe().setCreativeTab(tabTools));
+itemRef.put("Srindintaria_Athemyst_Upgrade_Pickaxe",new Srindintaria_Athemyst_Upgrade_Pickaxe().setCreativeTab(tabTools));
+itemRef.put("Srindintaria_Cyan_Stone_Upgrade_Pickaxe",new Srindintaria_Cyan_Stone_Upgrade_Pickaxe().setCreativeTab(tabTools));
+itemRef.put("Srindintaria_Emerald_Upgrade_Pickaxe",new Srindintaria_Emerald_Upgrade_Pickaxe().setCreativeTab(tabTools));
+itemRef.put("Uonka_wing_pickaxe",new Uonka_wing_pickaxe().setCreativeTab(tabTools));
+itemRef.put("Yuhog_wing_pickaxe",new Yuhog_wing_pickaxe().setCreativeTab(tabTools));
+itemRef.put("Srindintaria_Ruby_Upgrade_Pickaxe", new Srindintaria_Ruby_Upgrade_Pickaxe().setCreativeTab(tabTools));
+itemRef.put("Gengashesh_Fire_Staff", new Gengashesh_Fire_Staff().setCreativeTab(tabTools));
+itemRef.put("Gengashesh_Ice_Staff", new Gengashesh_Ice_Staff().setCreativeTab(tabTools));
+
+
+blockRef.put("Gan_Deco_Black",new Gan_Deco_Black().setCreativeTab(tabGan));
+
+blockRef.put("Gan_Deco_Blue",new Gan_Deco_Blue().setCreativeTab(tabGan));
+
+blockRef.put("Gan_Deco_Green",new Gan_Deco_Green().setCreativeTab(tabGan));
+
+blockRef.put("Gan_Deco_Magenta",new Gan_Deco_Magenta().setCreativeTab(tabGan));
+
+blockRef.put("Gan_Deco_Orange",new Gan_Deco_Orange().setCreativeTab(tabGan));
+
+blockRef.put("Gan_Deco_Purple",new Gan_Deco_Purple().setCreativeTab(tabGan));
+
+blockRef.put("Gan_Deco_Red",new Gan_Deco_Red().setCreativeTab(tabGan));
+
+blockRef.put("Gan_Deco_White",new Gan_Deco_White().setCreativeTab(tabGan));
+
+blockRef.put("Gan_Deco_White_Black_frame",new Gan_Deco_White_Black_frame().setCreativeTab(tabGan));
+
+blockRef.put("Black_Tile_Block",new Black_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Blue_Fine_Tile_Block",new Blue_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Brown_Fine_Tile_Block",new Brown_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Cyan_Tile_Block",new Cyan_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Daugash_Tile_Block",new Daugash_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Daukou_Tile_Block",new Daukou_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Dautash_Tile_Block",new Dautash_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Fantasy_Solea_Fine_Tile_Block",new Fantasy_Solea_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Fusy_Fine_Tile_Block",new Fusy_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Ganka_Gold_Deco_Chisel",new Ganka_Gold_Deco_Chisel().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Ganka_Gold_Deco_Wall",new Ganka_Gold_Deco_Wall().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Ganka_Gold_Fine_Deco_Wall",new Ganka_Gold_Fine_Deco_Wall().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Ganka_Gold_Floor_Tile",new Ganka_Gold_Floor_Tile().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Ganka_Gold_Korha_Deco_Chisel",new Ganka_Gold_Korha_Deco_Chisel().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Ganka_Gold_Korha_Deco_Wall",new Ganka_Gold_Korha_Deco_Wall().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Ganka_Gold_Korha_Floor_Tile",new Ganka_Gold_Korha_Floor_Tile().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Ganka_Gold_Prisma_Dungeon_Floor_Tile",new Ganka_Gold_Prisma_Dungeon_Floor_Tile().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Ganka_Gold_Yani_Wall",new Ganka_Gold_Yani_Wall().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Gold_Taya_Athemyst_Fine_Tile_Block",new Gold_Taya_Athemyst_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Gold_Taya_Clay_Fine_Tile_Block",new Gold_Taya_Clay_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Gold_Taya_Copper_Fine_Tile_Block",new Gold_Taya_Copper_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Gold_Taya_Deco_Copper_Tile",new Gold_Taya_Deco_Copper_Tile().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Gold_Taya_Deco_Fine_Tile_Block",new Gold_Taya_Deco_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Gold_Taya_Deco_Iron_Tile",new Gold_Taya_Deco_Iron_Tile().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Gold_Taya_Deco_Korha_Tile",new Gold_Taya_Deco_Korha_Tile().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Gold_Taya_Deco_Tile",new Gold_Taya_Deco_Tile().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Gold_Taya_Deco_Wall_block",new Gold_Taya_Deco_Wall_block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Gold_Taya_Diamon_Fine_Tile_Block",new Gold_Taya_Diamon_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Gold_Taya_Emerald_Fine_Tile_Block",new Gold_Taya_Emerald_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Gold_Taya_Iron_Fine_Tile_Block",new Gold_Taya_Iron_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Gold_Taya_Pink_Sparkle_Fine_Tile_Block",new Gold_Taya_Pink_Sparkle_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Gold_Taya_Ruby_Fine_Tile_Block",new Gold_Taya_Ruby_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Gold_Taya_Sapphire_Fine_Tile_Block",new Gold_Taya_Sapphire_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Gold_Taya_White_Clay_Fine_Tile_Block",new Gold_Taya_White_Clay_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Green_Fine_Tile_Block",new Green_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("KantouchTile_Block",new KantouchTile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Lime_Green_Fine_Tile_Block",new Lime_Green_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Mint_Fine_Tile_Block",new Mint_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Modern_Fine_Tile_Block",new Modern_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Orange_Fine_Tile_Block",new Orange_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Pink_Fine_Tile_Block",new Pink_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Purple_Fine_Tile_Block",new Purple_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Red_Fine_Tile_Block",new Red_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Sunset_Fine_Tile_Block",new Sunset_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Touichi_Fine_Tile_Block",new Touichi_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("White_Fine_Tile_Block",new White_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Yellow_Fine_Tile_Block",new Yellow_Fine_Tile_Block().setCreativeTab(tabGoldTaya));
+
+blockRef.put("Akio_Cracked_Ice_Block",new Akio_Cracked_Ice_Block().setCreativeTab(tabIceDeco));
+
+blockRef.put("Akio_Hardened_Cracked_Ice_Block",new Akio_Hardened_Cracked_Ice_Block().setCreativeTab(tabIceDeco));
+
+blockRef.put("Akio_Hardened_Ice_Block",new Akio_Hardened_Ice_Block().setCreativeTab(tabIceDeco));
+
+blockRef.put("Akio_Ice_Block",new Akio_Ice_Block().setCreativeTab(tabIceDeco));
+
+blockRef.put("Akio_Ice_Floor",new Akio_Ice_Floor().setCreativeTab(tabIceDeco));
+
+blockRef.put("ClevikInkki",new ClevikInkki().setCreativeTab(tabIceDeco));
+
+blockRef.put("ClevikInkki_Akio",new ClevikInkki_Akio().setCreativeTab(tabIceDeco));
+
+blockRef.put("ClevikInkki_Akio_Tile",new ClevikInkki_Akio_Tile().setCreativeTab(tabIceDeco));
+
+blockRef.put("ClevikInkki_Sunset",new ClevikInkki_Sunset().setCreativeTab(tabIceDeco));
+
+blockRef.put("ClevikInkki_Sunset_Tile",new ClevikInkki_Sunset_Tile().setCreativeTab(tabIceDeco));
+
+blockRef.put("ClevikInkki_Sunset_Wall",new ClevikInkki_Sunset_Wall().setCreativeTab(tabIceDeco));
+
+blockRef.put("ClevikInkki_Tile",new ClevikInkki_Tile().setCreativeTab(tabIceDeco));
+
+blockRef.put("ClevikInkki_Wall",new ClevikInkki_Wall().setCreativeTab(tabIceDeco));
+
+blockRef.put("ClevikJaih_Akio_Deco_Wall",new ClevikJaih_Akio_Deco_Wall().setCreativeTab(tabIceDeco));
+
+blockRef.put("ClevikJaih_Deco_Wall",new ClevikJaih_Deco_Wall().setCreativeTab(tabIceDeco));
+
+blockRef.put("ClevikJaih_Sunset_Deco_Wall",new ClevikJaih_Sunset_Deco_Wall().setCreativeTab(tabIceDeco));
+
+blockRef.put("Sunset_Cracked_Ice_Block",new Sunset_Cracked_Ice_Block().setCreativeTab(tabIceDeco));
+
+blockRef.put("Sunset_Hardened_Cracked_Ice_Block",new Sunset_Hardened_Cracked_Ice_Block().setCreativeTab(tabIceDeco));
+
+blockRef.put("Sunset_Hardened_Ice_Block",new Sunset_Hardened_Ice_Block().setCreativeTab(tabIceDeco));
+
+blockRef.put("Sunset_Ice_Block",new Sunset_Ice_Block().setCreativeTab(tabIceDeco));
+
+blockRef.put("Sunset_Ice_Floor",new Sunset_Ice_Floor().setCreativeTab(tabIceDeco));
+
+blockRef.put("Mokoiv_Blue",new Mokoiv_Blue().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Bluedu",new Mokoiv_Bluedu().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Gold",new Mokoiv_Gold().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Green",new Mokoiv_Green().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Orange",new Mokoiv_Orange().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Purple",new Mokoiv_Purple().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Red",new Mokoiv_Red().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Wall_Type_1_Blue",new Mokoiv_Wall_Type_1_Blue().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Wall_Type_1_Bluedu",new Mokoiv_Wall_Type_1_Bluedu().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Wall_Type_1_Gold",new Mokoiv_Wall_Type_1_Gold().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Wall_Type_1_Green",new Mokoiv_Wall_Type_1_Green().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Wall_Type_1_Orange",new Mokoiv_Wall_Type_1_Orange().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Wall_Type_1_Red",new Mokoiv_Wall_Type_1_Red().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Wall_Type_2_Blue",new Mokoiv_Wall_Type_2_Blue().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Wall_Type_2_Bluedu",new Mokoiv_Wall_Type_2_Bluedu().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Wall_Type_2_Gold",new Mokoiv_Wall_Type_2_Gold().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Wall_Type_2_Green",new Mokoiv_Wall_Type_2_Green().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Wall_Type_2_Orange",new Mokoiv_Wall_Type_2_Orange().setCreativeTab(tabMokoiv));
+
+blockRef.put("Mokoiv_Wall_Type_2_Red",new Mokoiv_Wall_Type_2_Red().setCreativeTab(tabMokoiv));
+
+blockRef.put("Black_Tile_type_1",new Black_Tile_type_1().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Blue_Tile_type_1",new Blue_Tile_type_1().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Brown_Tile_type_1",new Brown_Tile_type_1().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Cyan_Tile_type_1",new Cyan_Tile_type_1().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Dark_Blue_Tile_type_1",new Dark_Blue_Tile_type_1().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Dark_Green_Tile_type_1",new Dark_Green_Tile_type_1().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Green_Tile_type_1",new Green_Tile_type_1().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Grey_Tile_type_1",new Grey_Tile_type_1().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Lila_Tile_type_1",new Lila_Tile_type_1().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Lime_Green_Tile_type_1",new Lime_Green_Tile_type_1().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Orange_Tile_type_1",new Orange_Tile_type_1().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Pink_Tile_type_1",new Pink_Tile_type_1().setCreativeTab(tabSimpleLife));
+
+blockRef.put("PPink_Tile_type_1",new PPink_Tile_type_1().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Purple_Tile_type_1",new Purple_Tile_type_1().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Red_Tile_type_1",new Red_Tile_type_1().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Yellow_Tile_type_1",new Yellow_Tile_type_1().setCreativeTab(tabSimpleLife));
+
+
+blockRef.put("Blue_Tile_type_2",new Blue_Tile_type_2().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Brown_Tile_type_2",new Brown_Tile_type_2().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Cyan_Tile_type_2",new Cyan_Tile_type_2().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Dark_Blue_Tile_type_2",new Dark_Blue_Tile_type_2().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Dark_Green_Tile_type_2",new Dark_Green_Tile_type_2().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Green_Tile_type_2",new Green_Tile_type_2().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Grey_Tile_type_2",new Grey_Tile_type_2().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Lila_Tile_type_2",new Lila_Tile_type_2().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Lime_Green_Tile_type_2",new Lime_Green_Tile_type_2().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Orange_Tile_type_2",new Orange_Tile_type_2().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Pink_Tile_type_2",new Pink_Tile_type_2().setCreativeTab(tabSimpleLife));
+
+blockRef.put("PPink_Tile_type_2",new PPink_Tile_type_2().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Purple_Tile_type_2",new Purple_Tile_type_2().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Red_Tile_type_2",new Red_Tile_type_2().setCreativeTab(tabSimpleLife));
+
+blockRef.put("White_Tile_type_2",new White_Tile_type_2().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Yelllow_Tile_type_2",new Yelllow_Tile_type_2().setCreativeTab(tabSimpleLife));
+
+
+blockRef.put("Black_Tile_type_2",new Black_Tile_type_2().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Blue_Tile_type_3",new Blue_Tile_type_3().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Brown_Tile_type_3",new Brown_Tile_type_3().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Cyan_Tile_type_3",new Cyan_Tile_type_3().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Dark_Blue_Tile_type_3",new Dark_Blue_Tile_type_3().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Dark_Green_Tile_type_3",new Dark_Green_Tile_type_3().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Green_Tile_type_3",new Green_Tile_type_3().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Grey_Tile_type_3",new Grey_Tile_type_3().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Lial_Tile_type_3",new Lial_Tile_type_3().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Lime_Green_Tile_type_3",new Lime_Green_Tile_type_3().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Orange_Tile_type_3",new Orange_Tile_type_3().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Pink_Tile_type_3",new Pink_Tile_type_3().setCreativeTab(tabSimpleLife));
+
+blockRef.put("PPink_Tile_type_3",new PPink_Tile_type_3().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Purple_Tile_type_3",new Purple_Tile_type_3().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Red_Tile_type_3",new Red_Tile_type_3().setCreativeTab(tabSimpleLife));
+
+blockRef.put("White_Tile_type_3",new White_Tile_type_3().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Yellow_Tile_type_3",new Yellow_Tile_type_3().setCreativeTab(tabSimpleLife));
+
+blockRef.put("Ara_Autumn",new Ara_Autumn().setCreativeTab(tabTuvuCleik));
+
+blockRef.put("Ara_Crystal",new Ara_Crystal().setCreativeTab(tabTuvuCleik));
+
+blockRef.put("Ara_Lunfa",new Ara_Lunfa().setCreativeTab(tabTuvuCleik));
+
+blockRef.put("Ara_Lunfa_Moon",new Ara_Lunfa_Moon().setCreativeTab(tabTuvuCleik));
+
+blockRef.put("Ara_Sinsa",new Ara_Sinsa().setCreativeTab(tabTuvuCleik));
+
+blockRef.put("Ara_Stone",new Ara_Stone().setCreativeTab(tabTuvuCleik));
+
+blockRef.put("Ara_Stone_Aqua",new Ara_Stone_Aqua().setCreativeTab(tabTuvuCleik));
+
+blockRef.put("Ara_Vahier",new Ara_Vahier().setCreativeTab(tabTuvuCleik));
+
+blockRef.put("Ara_Winter",new Ara_Winter().setCreativeTab(tabTuvuCleik));
+
+blockRef.put("Tuvu_Cleik",new Tuvu_Cleik().setCreativeTab(tabTuvuCleik));
+
+blockRef.put("Tuvu_Cleik_Gold",new Tuvu_Cleik_Gold().setCreativeTab(tabTuvuCleik));
+
+blockRef.put("Tuvu_Cleik_Green",new Tuvu_Cleik_Green().setCreativeTab(tabTuvuCleik));
+
+blockRef.put("Tuvu_Cleik_Orange",new Tuvu_Cleik_Orange().setCreativeTab(tabTuvuCleik));
+
+blockRef.put("Tuvu_Cleik_Purple",new Tuvu_Cleik_Purple().setCreativeTab(tabTuvuCleik));
+
+blockRef.put("Tuvu_Cleik_Red",new Tuvu_Cleik_Red().setCreativeTab(tabTuvuCleik));
+
+
 
 GameRegistry.registerTileEntity(TEFence.class,"TEFence");
 GameRegistry.registerTileEntity(TEDecoFence.class,"TEDecoFence");
@@ -3208,7 +3790,6 @@ GameRegistry.registerTileEntity(TEWoodFence.class,"TEWoodFence");
 GameRegistry.registerTileEntity(TEWoodType2Fence.class,"TEWoodType2Fence");
 GameRegistry.registerTileEntity(TEWoodFlowerFence.class,"TEWoodFlowerFence");
 GameRegistry.registerTileEntity(TEWoodVineFence.class,"TEWoodVineFence");
-
 
 }
 	
@@ -3324,5 +3905,46 @@ public static CreativeTabs tabFences = new CreativeTabs("telFences") {
 		return new ItemStack(blockRef.get("Bamboo_fence")).getItem();
 	}
 };
-
+public static CreativeTabs tabOre = new CreativeTabs("Ores") {
+	@Override
+	public Item getTabIconItem() {
+		return new ItemStack(blockRef.get("Athemyst_Ore")).getItem();
+	}
+};
+public static CreativeTabs tabTools = new CreativeTabs("Tools and Weapons") {
+	@Override
+	public Item getTabIconItem() {
+		return new ItemStack(itemRef.get("Erlashihuru_Pickaxe")).getItem();
+	}
+};
+public static CreativeTabs tabGan= new CreativeTabs("Gan Deco") {
+	@Override
+	public Item getTabIconItem() {
+		return new ItemStack(blockRef.get("Gan_Deco_Black")).getItem();
+	}
+};
+public static CreativeTabs tabGoldTaya= new CreativeTabs("Gold Taya") {
+	@Override
+	public Item getTabIconItem() {
+		return new ItemStack(blockRef.get("Daugash_Tile_Block")).getItem();
+	}
+};
+public static CreativeTabs tabIceDeco = new CreativeTabs("Ice Deco") {
+	@Override
+	public Item getTabIconItem() {
+		return new ItemStack(blockRef.get("ClevikInkki")).getItem();
+	}
+};
+public static CreativeTabs tabMokoiv = new CreativeTabs("Mokoiv") {
+	@Override
+	public Item getTabIconItem() {
+		return new ItemStack(blockRef.get("Mokoiv_Blue")).getItem();
+	}
+};
+public static CreativeTabs tabTuvuCleik = new CreativeTabs("Tuvu Cleik") {
+	@Override
+	public Item getTabIconItem() {
+		return new ItemStack(blockRef.get("Gan_Deco_Black")).getItem();
+	}
+};
 }

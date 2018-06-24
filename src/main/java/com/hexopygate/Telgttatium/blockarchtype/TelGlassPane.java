@@ -15,6 +15,7 @@ public class TelGlassPane extends BlockPane {
 		 
 
 		this.setBlockName(name).setBlockTextureName("tel:"+name);
+		this.setCreativeTab(null);
        GameRegistry.registerBlock(this, this.getUnlocalizedName().substring(5));
 		
 	}
