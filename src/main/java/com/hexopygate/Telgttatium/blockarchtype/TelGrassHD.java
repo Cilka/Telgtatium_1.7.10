@@ -5,6 +5,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.IBlockAccess;
+import net.minecraftforge.common.IPlantable;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public class TelGrassHD extends Block  {
 protected IIcon[] icons = new IIcon[6];
@@ -26,6 +29,19 @@ String name = null;
 	   @Override
 	    public void registerBlockIcons(IIconRegister reg)
 	    {
+		   
+		   if(name.contains("mound"))
+		   {
+			   
+			   for(int i=0; i <  icons.length; i++)
+			   {
+				   icons[i]=reg.registerIcon("tel:"+name.substring(0,name.lastIndexOf('_')));
+			   }
+		   }
+		   else
+		   {
+			   
+		   
 		   String [] nameArray = name.split("_");
 		   String dirtName = null;
 		   String grassName = nameArray[0] + "_" +nameArray[1];
@@ -51,7 +67,7 @@ String name = null;
 			   icons[4]=reg.registerIcon("tel:"+name+"_Side");
 			   icons[5]=reg.registerIcon("tel:"+name+"_Side");
 		   
-		 
+		   }
 	    
 	    }
 	   @Override
@@ -59,5 +75,9 @@ String name = null;
 	    {
 	        return icons[side];
 	    }
-	
+	   @Override
+	    public boolean canSustainPlant(IBlockAccess world, int x, int y, int z, ForgeDirection direction, IPlantable plantable)
+	    {
+		   return true;
+	    }
 }

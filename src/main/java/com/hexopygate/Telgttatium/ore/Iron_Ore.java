@@ -7,5 +7,9 @@ import com.hexopygate.Telgttatium.blockarchtype.TelOre;
 
 import net.minecraft.item.Item;
 public class Iron_Ore extends TelOre {
-
+ public Iron_Ore()
+ {
+	 super();
+	 this.setHarvestLevel("Pickaxe", 1);
+ }
 }

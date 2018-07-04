@@ -3,13 +3,16 @@ package com.hexopygate.Telgttatium.Biomes;
 
 import java.util.Random;
 
+import com.hexopygate.Telgttatium.Telgttatium;
+
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
  
-public class EventManager implements IWorldGenerator
+public class OreManager implements IWorldGenerator
 {
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider)
 	{
@@ -23,6 +26,8 @@ public class EventManager implements IWorldGenerator
 			generateEnd(world, random, chunkX * 16, chunkZ * 16);
 		case 137:
 			generateTelgttatium(world, random, chunkX*16, chunkZ * 16);
+		case 13:
+			generateSurface(world, random, chunkX * 16, chunkZ * 16);
 		}
 	}
  
@@ -33,7 +38,22 @@ public class EventManager implements IWorldGenerator
  
 	private void generateSurface(World world, Random random, int x, int z)
 	{
-		//this.addOreSpawn(Tutorial.tutorialBlock, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 15, 50);
+		this.addOreSpawn(Telgttatium.blockRef.get("Athemyst_Ore"), world,Blocks.stone ,random, x, z, 16, 16, 2 + random.nextInt(1), 5, 30, 50);
+		this.addOreSpawn(Telgttatium.blockRef.get("Copper_Ore"), world,Blocks.stone ,random, x, z, 16, 16, 4 + random.nextInt(3), 30, 30, 50);
+		this.addOreSpawn(Telgttatium.blockRef.get("Darto_Ore"), world,Blocks.stone ,random, x, z, 16, 16, 2 + random.nextInt(1), 5, 30, 50);
+		this.addOreSpawn(Telgttatium.blockRef.get("Diamon_Ore"), world,Blocks.stone ,random, x, z, 16, 16, 2 + random.nextInt(2), 14, 15, 35);
+		this.addOreSpawn(Telgttatium.blockRef.get("Diamon_Ore"), world,Blocks.stone ,random, x, z, 16, 16, 1 + random.nextInt(1), 8, 80, 110);
+		this.addOreSpawn(Telgttatium.blockRef.get("Emerald_Ore"), world,Blocks.stone ,random, x, z, 16, 16, 1 + random.nextInt(1), 10, 15, 50);
+		this.addOreSpawn(Telgttatium.blockRef.get("Gold_Ore"), world,Blocks.stone ,random, x, z, 16, 16, 1 + random.nextInt(3), 20, 15, 35);
+		this.addOreSpawn(Telgttatium.blockRef.get("Iron_Ore"), world,Blocks.stone ,random, x, z, 16, 16, 2 + random.nextInt(3), 25, 15, 50);
+		//addOreSpawn(Block block, World world ,Block target, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY)
+		this.addOreSpawn(Telgttatium.blockRef.get("Pink_Sparkle_Ore"), world,Blocks.stone ,random, x, z, 16, 16, 1 + random.nextInt(2), 3, 80, 120);
+		this.addOreSpawn(Telgttatium.blockRef.get("Pink_Sparkle_Ore"), world,Blocks.stone ,random, x, z, 16, 16, 1 + random.nextInt(2), 15, 45, 58);
+		this.addOreSpawn(Telgttatium.blockRef.get("Ruby_Ore"), world,Blocks.stone ,random, x, z, 16, 16, 1 + random.nextInt(3), 10, 30, 50);
+		this.addOreSpawn(Telgttatium.blockRef.get("Saphirre_Ore"), world,Blocks.stone ,random, x, z, 16, 16, 1 + random.nextInt(4), 10, 15, 50);
+		this.addOreSpawn(Telgttatium.blockRef.get("Clay_Ore"), world,Blocks.clay ,random, x, z, 16, 16, 2 + random.nextInt(3), 50, 30, 80);
+		//this.addOreSpawn(Telgttatium.blockRef.get("Coal_Ore"), world,Blocks.coal_ore ,random, x, z, 16, 16, 4 + random.nextInt(3), 100, 10, 150);
+		
 	}
  
 	private void generateNether(World world, Random random, int x, int z)
@@ -63,7 +83,7 @@ public class EventManager implements IWorldGenerator
 	 * @param An int for the minimum Y-Coordinate height at which this block may spawn
 	 * @param An int for the maximum Y-Coordinate height at which this block may spawn
 	 **/
-	public void addOreSpawn(Block block,int metadata ,Block target, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY)
+	public void addOreSpawn(Block block, World world ,Block target, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY)
 	{
 		assert maxY > minY : "The maximum Y must be greater than the Minimum Y";
 		assert maxX > 0 && maxX <= 16 : "addOreSpawn: The Maximum X must be greater than 0 and less than 16";
@@ -77,7 +97,8 @@ public class EventManager implements IWorldGenerator
 			int posX = blockXPos + random.nextInt(maxX);
 			int posY = minY + random.nextInt(diffBtwnMinMaxY);
 			int posZ = blockZPos + random.nextInt(maxZ);
-			(new WorldGenMinable(block, metadata, maxVeinSize,target)).generate(world, random, posX, posY, posZ);
+			(new WorldGenMinable(block, maxVeinSize,target)).generate(world, random, posX, posY, posZ);
 		}
 	}
+	
 }

@@ -1,6 +1,6 @@
 package com.hexopygate.Telgttatium.events;
 
-import com.hexopygate.Telgttatium.blockarchtype.Tools.PickaxeWing;
+import com.hexopygate.Telgttatium.blockarchtype.Tools.PickaxeSrindintaria;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.item.ItemStack;
@@ -18,6 +18,7 @@ public class EventHelper {
 			((BlockModLightSapling)Blockss.lightSapling).func_149878_d(event.world, event.x, event.y, event.z, event.world.rand);
 		}*/
 	}
+
 /*
 	@SubscribeEvent
 	public void wingPickaxeUsed(PlayerInteractEvent event) {

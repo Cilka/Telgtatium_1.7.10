@@ -1,9 +1,22 @@
 package com.hexopygate.Telgttatium.blockarchtype.Tools;
 
 import com.hexopygate.Telgttatium.Items.ToolMaterials;
+import com.hexopygate.Telgttatium.Items.Pickaxe.Srindintaria_Athemyst_Upgrade_Pickaxe;
+import com.hexopygate.Telgttatium.Items.Pickaxe.Srindintaria_Cyan_Stone_Upgrade_Pickaxe;
+import com.hexopygate.Telgttatium.Items.Pickaxe.Srindintaria_Emerald_Upgrade_Pickaxe;
+import com.hexopygate.Telgttatium.Items.Pickaxe.Srindintaria_Ruby_Upgrade_Pickaxe;
+import com.hexopygate.Telgttatium.blockarchtype.TelOre;
+import com.hexopygate.Telgttatium.ore.Diamon_Ore_Final_Step;
+import com.hexopygate.Telgttatium.ore.Gold_Ore_Final_Step;
+import com.hexopygate.Telgttatium.ore.Iron_Ore_Final_Step;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 public class PickaxeSrindintaria extends ItemPickaxe {
 
@@ -19,4 +32,6 @@ public class PickaxeSrindintaria extends ItemPickaxe {
 		this(ToolMaterials.SrindintariaMaterial);
 	}
 
+	
+	
 }

@@ -2,6 +2,7 @@ package com.hexopygate.Telgttatium.proxy;
 
 import com.hexopygate.Telgttatium.Telgttatium;
 import com.hexopygate.Telgttatium.Items.GenericBlockItemRenderer;
+import com.hexopygate.Telgttatium.TileEntities.TEColumn;
 import com.hexopygate.Telgttatium.TileEntities.TEDecoFence;
 import com.hexopygate.Telgttatium.TileEntities.TEFence;
 import com.hexopygate.Telgttatium.TileEntities.TEHutyveFence;
@@ -10,14 +11,15 @@ import com.hexopygate.Telgttatium.TileEntities.TEWoodFence;
 import com.hexopygate.Telgttatium.TileEntities.TEWoodFlowerFence;
 import com.hexopygate.Telgttatium.TileEntities.TEWoodType2Fence;
 import com.hexopygate.Telgttatium.TileEntities.TEWoodVineFence;
-import com.hexopygate.Telgttatium.models.RenderBambooFence;
-import com.hexopygate.Telgttatium.models.RenderDecoFence;
-import com.hexopygate.Telgttatium.models.RenderHutyveFence;
-import com.hexopygate.Telgttatium.models.RenderSindrintariaFence;
-import com.hexopygate.Telgttatium.models.RenderWoodenFence;
-import com.hexopygate.Telgttatium.models.RenderWoodenFlowerFence;
-import com.hexopygate.Telgttatium.models.RenderWoodenType2Fence;
-import com.hexopygate.Telgttatium.models.RenderWoodenVineFence;
+import com.hexopygate.Telgttatium.models.Renders.RenderBambooFence;
+import com.hexopygate.Telgttatium.models.Renders.RenderColumn;
+import com.hexopygate.Telgttatium.models.Renders.RenderDecoFence;
+import com.hexopygate.Telgttatium.models.Renders.RenderHutyveFence;
+import com.hexopygate.Telgttatium.models.Renders.RenderSindrintariaFence;
+import com.hexopygate.Telgttatium.models.Renders.RenderWoodenFence;
+import com.hexopygate.Telgttatium.models.Renders.RenderWoodenFlowerFence;
+import com.hexopygate.Telgttatium.models.Renders.RenderWoodenType2Fence;
+import com.hexopygate.Telgttatium.models.Renders.RenderWoodenVineFence;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import net.minecraft.item.Item;
@@ -36,7 +38,7 @@ public void registerRendering(){
 	ClientRegistry.bindTileEntitySpecialRenderer(TEWoodType2Fence.class, new RenderWoodenType2Fence());
 	ClientRegistry.bindTileEntitySpecialRenderer(TEWoodFlowerFence.class, new RenderWoodenFlowerFence());
 	ClientRegistry.bindTileEntitySpecialRenderer(TEWoodVineFence.class, new RenderWoodenVineFence());
-	
+	ClientRegistry.bindTileEntitySpecialRenderer(TEColumn.class, new RenderColumn());
 	registerItemRenderers();
 }
 public void registerItemRenderers() {
@@ -339,6 +341,10 @@ MinecraftForgeClient.registerItemRenderer(
 				Telgttatium.blockRef.get("Wood_fence_type_2_Solea")), 
 		new GenericBlockItemRenderer(new TEWoodVineFence(Telgttatium.blockRef.get("Wood_fence_type_2_Solea").getClass().getSimpleName(),1), new RenderWoodenType2Fence()));
 
+MinecraftForgeClient.registerItemRenderer(
+		Item.getItemFromBlock(
+				Telgttatium.blockRef.get("Black_Diamond_Column")), 
+		new GenericBlockItemRenderer(new TEColumn("Black_Diamond_Column"), new RenderColumn()));
 
 }
 public void registerEntities() {

@@ -3,6 +3,9 @@ package com.hexopygate.Telgttatium.blockarchtype;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.world.IBlockAccess;
+import net.minecraftforge.common.IPlantable;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public class TelDirt extends Block {
 
@@ -18,4 +21,9 @@ public class TelDirt extends Block {
 	{
 		this(Material.ground);
 	}
+	@Override
+    public boolean canSustainPlant(IBlockAccess world, int x, int y, int z, ForgeDirection direction, IPlantable plantable)
+    {
+	   return true;
+    }
 }
